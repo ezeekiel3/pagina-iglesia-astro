@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logoBody from '../img/logo2.png'
+import BigButton from '../components/BigButton.astro';
+import Conocenos from '../components/Conocenos.astro';
+import CreemosEn from "../components/CreemosEn.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main class='flex justify-center w-full min-h-full'>
+		<div class='container flex items-center flex-col'>
+			<div class='my-6'>
+				<img src={logoBody.src} alt='' class='xl:h-80 h-28' />
+			</div>
+			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
+			<BigButton text="Conocenos" className='my-12'/>
+			<Conocenos />
+			<BigButton className='my-12' text="Creemos en ..." />
+			<CreemosEn />
+			<BigButton className='mb-9' text='Ubicaciones' />
+		</div>
+	</main>
+</Layout>
