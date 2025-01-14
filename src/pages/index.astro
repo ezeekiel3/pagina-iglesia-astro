@@ -4,9 +4,7 @@ import logoBody from '../img/logo2.png'
 import BigButton from '../components/BigButton.astro';
 import Conocenos from '../components/Conocenos.astro';
 import CreemosEn from "../components/CreemosEn.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { showConocenos } from '../store';
 ---
 
 <Layout>
@@ -17,10 +15,26 @@ import CreemosEn from "../components/CreemosEn.astro";
 			</div>
 			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
 			<BigButton text="Conocenos" className='my-12'/>
-			<Conocenos />
-			<BigButton className='my-12' text="Creemos en ..." />
+			<div class={`${showConocenos} flex-col items-center`} id="container-conocenos">
+				<Conocenos />
+				<div>
+					<BigButton className='my-12' text="Creemos en ..." />
+				</div>
+			</div>
 			<CreemosEn />
 			<BigButton className='mb-9' text='Ubicaciones' />
 		</div>
 	</main>
 </Layout>
+<script>
+	import { showConocenos } from "../store";
+
+	showConocenos.subscribe(showConocenos => {
+		if (showConocenos) {
+			document.getElementById("container-conocenos")?.classList.remove("hidden")
+			document.getElementById("container-conocenos")?.classList.add("flex")
+		} else {
+			document.getElementById("container-conocenos")?.classList.add("hidden")
+		}
+	})
+</script>

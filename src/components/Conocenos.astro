@@ -1,9 +1,9 @@
 ---
-import { showInformacion } from "../store";
+import { showConocenos } from "../store";
 ---
 
 <div
-            class={`${showInformacion} flex-col items-center w-full transition-all duration-500 ease-out`} id="conocenosInfo">
+            class={`${showConocenos} flex-col items-center w-full transition-all duration-500 ease-out`} id="conocenosInfo">
             <h2 class='xl:text-4xl text-2xl text-logo font-bold font-sans'>
                 ¡Queremos que nos conozcas!
             </h2>
@@ -26,10 +26,10 @@ import { showInformacion } from "../store";
         </div>
 
 <script>
-    import { showInformacion } from "../store";
+    import { showConocenos } from "../store";
 
-    showInformacion.subscribe(showInformacion => {
-        if (showInformacion) {
+    showConocenos.subscribe(showConocenos => {
+        if (showConocenos) {
             document.getElementById("conocenosInfo")?.classList.remove("hidden")
             document.getElementById("conocenosInfo")?.classList.add("flex")
         } else {
