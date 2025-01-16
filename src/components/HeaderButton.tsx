@@ -12,9 +12,8 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
     return (
         <div className='relative'>
             <button
-                onClick={() => {
-                    setHoveringButton(true)
-                }}
+                id='button-header'
+                onClick={() => setHoveringButton(true)}
                 onMouseEnter={() => setHoveringButton(true)}
                 onMouseLeave={() => setHoveringButton(false)}
                 className={`text-xl text-logo transition-colors duration-200 hover:text-orange-300 ${
@@ -32,9 +31,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                 onMouseLeave={() => setHoveringDropdown(false)}>
                 {children &&
                     children.map((link, i) => (
-                        <li
-                            className='py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200 '
-                            key={i}>
+                        <li className='py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200' key={i}>
                             {link}
                         </li>
                     ))}

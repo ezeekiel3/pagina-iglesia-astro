@@ -4,6 +4,6 @@ export const showConocenos = atom(false)
 
 export const showCreencias = atom(false)
 
-export const estado = atom(0)
+export const hoveringButton = atom(false)
 
-export const estados = ['show_conocenos', 'show_conocenos2', 'show_conocenos3', 'show_conocenos4']
+export const hoveringDropDown = atom(false)

@@ -1,9 +1,7 @@
 ---
 import logoHeader from '../img/logo1.png'
-import HeaderButton from '../components/HeaderButton'
-import arrowBack from '../img/arrowBack.png'
 import menu from "../img/menu.png"
-import close from '../img/close.png'
+import HeaderButton from '../components/HeaderButton.astro'
 ---
 
 <!doctype html>
@@ -22,27 +20,35 @@ import close from '../img/close.png'
 			</a>
 			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:w-2/5 xl:justify-center'>
 				<HeaderButton buttonText='Iglesia'>
-					<a href='#'>Creemos en...</a>
-					<a href='#'>Ubicaciones</a>
-					<a href='#'>Agenda</a>
-					<a href='#'>Grupos Celulares</a>
-					<a href='#'>Asociacion Filantrópica</a>
-					<a href='#'>Nuestro Pastor</a>
+					<div class="flex-col justify-center container-children" id="container-iglesia">
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Grupos Celulares</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Asociacion Filantrópica</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Nuestro Pastor</a>
+					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Material'>
-					<a href='#'>Estudios Inductivos</a>
-					<a href='#'>Discipulados</a>
-					<a href='#'>Otros Escritos</a>
-					<a href='#'>Guias De Oración</a>
+					<div class="hidden flex-col justify-center container-children" id="container-material">
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Guias De Oración</a>
+					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Niños'>
-					<a href='#'>Trabajo</a>
-					<a href='#'>Material</a>
+					<div class="hidden flex-col justify-center container-children" id="container-kids">
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
+					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Centro de desarrollo'>
-					<a href='#'>Descripción</a>
-					<a href='#'>Ubicación</a>
-					<a href='#'>Reservas</a>
+					<div class="hidden flex-col justify-center container-children" id="container-centro">
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
+						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
+					</div>			
 				</HeaderButton>
 				<HeaderButton buttonText='Contacto'></HeaderButton>
 			</div>
@@ -68,3 +74,16 @@ import close from '../img/close.png'
 		height: 100%;
 	}
 </style>
+
+<script>
+	import { hoveringButton } from "../store";
+
+	hoveringButton.subscribe(hoveringButton => {
+		if (hoveringButton) {
+			document.getElementById("container-iglesia")?.classList.remove("hidden")
+			document.getElementById("container-iglesia")?.classList.add("flex")
+		} else {
+			document.getElementById("container-iglesia")?.classList.add("hidden")
+		}
+})
+</script>
