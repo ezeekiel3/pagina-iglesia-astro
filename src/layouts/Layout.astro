@@ -2,6 +2,7 @@
 import logoHeader from '../img/logo1.png'
 import menu from "../img/menu.png"
 import HeaderButton from '../components/HeaderButton.astro'
+import { hoveringButton } from '../store'
 ---
 
 <!doctype html>
@@ -20,7 +21,7 @@ import HeaderButton from '../components/HeaderButton.astro'
 			</a>
 			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:w-2/5 xl:justify-center'>
 				<HeaderButton buttonText='Iglesia'>
-					<div class="flex-col justify-center container-children" id="container-iglesia">
+					<div class={`${hoveringButton.value ? "flex" : "hidden"} flex-col justify-center`} id="container-iglesia">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
@@ -30,7 +31,7 @@ import HeaderButton from '../components/HeaderButton.astro'
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Material'>
-					<div class="hidden flex-col justify-center container-children" id="container-material">
+					<div class="hidden flex-col justify-center" id="container-material">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
@@ -38,13 +39,13 @@ import HeaderButton from '../components/HeaderButton.astro'
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Niños'>
-					<div class="hidden flex-col justify-center container-children" id="container-kids">
+					<div class="hidden flex-col justify-center" id="container-kids">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Centro de desarrollo'>
-					<div class="hidden flex-col justify-center container-children" id="container-centro">
+					<div class="hidden flex-col justify-center" id="container-centro">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
@@ -85,5 +86,5 @@ import HeaderButton from '../components/HeaderButton.astro'
 		} else {
 			document.getElementById("container-iglesia")?.classList.add("hidden")
 		}
-})
+	})
 </script>

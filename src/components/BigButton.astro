@@ -5,28 +5,17 @@ const {text, className} = Astro.props
 ---
 
 <button
-    class={`boton-clase xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo ${className}`} id="show-conocenos">
-    <span class='z-10 relative'>{text}</span>
+    class={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo ${className}`} id="show-conocenos">
+    <span class='z-10 relative' id="textbutton">{text}</span>
     <div
         class={`bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0`}></div>
 </button>
 
 <script>
     import { showConocenos } from "../store";
-    import { showCreencias } from "../store";
-    let estadoIndex = 0
 
     function toggleId() {
-        switch (estadoIndex) {
-            case 1:
-                console.log(showCreencias.value)
-                showCreencias.set(true)
-                break
-            default:
-                showConocenos.set(true)
-                break
-        }
-        estadoIndex = estadoIndex + 1
+        showConocenos.set(true)
     }
 
     document.getElementById("show-conocenos")?.addEventListener("click", toggleId)
