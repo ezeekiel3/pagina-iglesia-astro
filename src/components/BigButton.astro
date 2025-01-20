@@ -6,7 +6,7 @@ const {text, className} = Astro.props
 
 <button
     class={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo ${className}`} id="show-conocenos">
-    <span class='z-10 relative' id="textbutton">{text}</span>
+    <span class='z-10 relative' id="span-text">{text}</span>
     <div
         class={`bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0`}></div>
 </button>
@@ -16,7 +16,7 @@ const {text, className} = Astro.props
 
     function toggleId() {
         showConocenos.set(true)
+        
     }
-
     document.getElementById("show-conocenos")?.addEventListener("click", toggleId)
 </script>
