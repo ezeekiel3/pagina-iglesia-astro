@@ -1,7 +1,7 @@
 ---
 import logoHeader from '../img/logo1.png'
 import menu from "../img/menu.png"
-import HeaderButton from '../components/HeaderButton.astro'
+import HeaderButton from '../components/HeaderButton'
 import { hoveringButton } from '../store'
 ---
 
@@ -19,7 +19,7 @@ import { hoveringButton } from '../store'
 			<a href='/paginaIglesia/'>
 				<img src={logoHeader.src} class='h-14 p-2' />
 			</a>
-			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:w-2/5 xl:justify-center'>
+			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
 				<HeaderButton />
 			</div>
 			<div class="flex xl:hidden">
