@@ -20,38 +20,7 @@ import { hoveringButton } from '../store'
 				<img src={logoHeader.src} class='h-14 p-2' />
 			</a>
 			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:w-2/5 xl:justify-center'>
-				<HeaderButton buttonText='Iglesia'>
-					<div class="hidden flex-col justify-center container-iglesia">
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Grupos Celulares</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Asociacion Filantrópica</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Nuestro Pastor</a>
-					</div>
-				</HeaderButton>
-				<HeaderButton buttonText='Material'>
-					<div class="hidden flex-col justify-center container-material">
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Guias De Oración</a>
-					</div>
-				</HeaderButton>
-				<HeaderButton buttonText='Niños'>
-					<div class="hidden flex-col justify-center container-kids">
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
-					</div>
-				</HeaderButton>
-				<HeaderButton buttonText='Centro de desarrollo'>
-					<div class="hidden flex-col justify-center container-centro">
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
-						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
-					</div>			
-				</HeaderButton>
-				<HeaderButton buttonText='Contacto'></HeaderButton>
+				<HeaderButton />
 			</div>
 			<div class="flex xl:hidden">
 				<img src={menu.src} alt="" class="h-12">
@@ -75,16 +44,3 @@ import { hoveringButton } from '../store'
 		height: 100%;
 	}
 </style>
-
-<script>
-	import { hoveringButton } from "../store";
-
-	hoveringButton.subscribe(hoveringButton => {
-		if (hoveringButton) {
-			document.querySelectorAll(".container-iglesia .container-material .container-kids .container-centro").forEach((clase) => {
-				clase.classList.remove("hidden")
-				clase.classList.add("flex")
-			})
-		}
-	})
-</script>

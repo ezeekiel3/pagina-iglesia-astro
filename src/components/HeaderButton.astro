@@ -1,20 +1,50 @@
----
-interface Props {buttonText: string}
-
-let {buttonText} = Astro.props
----
-
-<div class="relative" id="button-header">
-    <button id="button-header" class="text-xl text-logo transition-colors duration-200 hover:text-orange-300">
-        {buttonText}
-    </button>
+<div class="relative">
+    <div>
+        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-iglesia">Iglesia</button>
+        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-material">Material</button>
+        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-kids">Niños</button>
+        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-desarrollo">Centro de desarrollo</button>
+        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300">Contacto</button>
+    </div>
     <ul class="absolute min-w-full flex justify-center flex-col bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo">
-        <slot/>
+        <li>
+            <div class="" id="container-iglesia">
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Grupos Celulares</a>
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Asociacion Filantrópica</a>
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Nuestro Pastor</a>
+            </div>
+        </li>
+        <li>
+            <div class="" id="container-material">
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Guias De Oración</a>
+            </div>
+        </li>
+        <li>
+            <div class="" id="container-kids">
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
+            </div>
+        </li>
+        <li>
+            <div class="" id="container-desarrollo">
+                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
+			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
+            </div>
+        </li>
     </ul>
 </div>
 
 <script>
     import { hoveringButton } from "../store";
+
+    const nameArr: string[] = ["button-iglesia", "button-material", "button-kids", "button-desarrollo"]
 
     function hoveringButtonTrue() {
         hoveringButton.set(true)
@@ -23,8 +53,4 @@ let {buttonText} = Astro.props
     function hoveringButtonFalse() {
         hoveringButton.set(false)
     }
-
-    document.getElementById("button-header")?.addEventListener("click", hoveringButtonTrue)
-    document.getElementById("button-header")?.addEventListener("mouseenter", hoveringButtonTrue)
-    document.getElementById("button-header")?.addEventListener("mouseleave", hoveringButtonFalse)
 </script>
