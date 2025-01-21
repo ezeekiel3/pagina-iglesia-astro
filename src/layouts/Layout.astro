@@ -21,7 +21,7 @@ import { hoveringButton } from '../store'
 			</a>
 			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:w-2/5 xl:justify-center'>
 				<HeaderButton buttonText='Iglesia'>
-					<div class={`${hoveringButton.value ? "flex" : "hidden"} flex-col justify-center`} id="container-iglesia">
+					<div class="hidden flex-col justify-center container-iglesia">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
@@ -31,7 +31,7 @@ import { hoveringButton } from '../store'
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Material'>
-					<div class="hidden flex-col justify-center" id="container-material">
+					<div class="hidden flex-col justify-center container-material">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
@@ -39,13 +39,13 @@ import { hoveringButton } from '../store'
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Niños'>
-					<div class="hidden flex-col justify-center" id="container-kids">
+					<div class="hidden flex-col justify-center container-kids">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
 					</div>
 				</HeaderButton>
 				<HeaderButton buttonText='Centro de desarrollo'>
-					<div class="hidden flex-col justify-center" id="container-centro">
+					<div class="hidden flex-col justify-center container-centro">
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
 						<a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
@@ -81,10 +81,10 @@ import { hoveringButton } from '../store'
 
 	hoveringButton.subscribe(hoveringButton => {
 		if (hoveringButton) {
-			document.getElementById("container-iglesia")?.classList.remove("hidden")
-			document.getElementById("container-iglesia")?.classList.add("flex")
-		} else {
-			document.getElementById("container-iglesia")?.classList.add("hidden")
+			document.querySelectorAll(".container-iglesia .container-material .container-kids .container-centro").forEach((clase) => {
+				clase.classList.remove("hidden")
+				clase.classList.add("flex")
+			})
 		}
 	})
 </script>

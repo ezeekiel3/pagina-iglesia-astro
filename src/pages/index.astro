@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import logoBody from '../img/logo2.png'
-import BigButton from '../components/BigButton.tsx';
 import Conocenos from '../components/Conocenos.astro';
 import CreemosEn from "../components/CreemosEn.astro";
-import { showCreencias } from '../store';
 ---
 
 <Layout>
@@ -14,17 +12,28 @@ import { showCreencias } from '../store';
 				<img src={logoBody.src} alt='' class='xl:h-80 h-28' />
 			</div>
 			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
-			<BigButton text="Conocenos" className='my-12'/>
-			<div class="hidden flex-col items-center" id="container-conocenos">
+			<div class=`flex flex-col items-center` id="container-conocenos">
 				<Conocenos />
-				<div>
-					<BigButton text="Creemos en ..."/>
-				</div>
 			</div>
-			<div class={`${showCreencias.value ? "flex" : "hidden"} flex-col items-center" id="container-creencias`}>
+			<div class="flex flex-col items-center" id="container-creencias">
 				<CreemosEn />
 			</div>
-			<BigButton className='mb-9' text='Ubicaciones'/>
+			<button
+            class="xl:text-3xl text-2xl hidden relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 mb-9 hover:bg-logo" id="button-ubicaciones">
+            <span class='z-10 relative'>Ubicaciones</span>
+            <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
+        </button>
 		</div>
 	</main>
 </Layout>
+
+<script>
+	import { creencias } from "../store";
+
+	creencias.subscribe(creencias => {
+		if (creencias) {
+			document.getElementById("button-ubicaciones")?.classList.remove("hidden")
+			document.getElementById("button-ubicaciones")?.classList.add("flex")
+		}
+	})
+</script>
