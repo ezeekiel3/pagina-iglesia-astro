@@ -1,46 +1,14 @@
-// HACER TODO DE NUEVO
+---
+interface Props {buttonText:string, className?: string, idElement?: string, clickListenerName?: string}
 
-{
-    /* <div class="relative">
-    <div>
-        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-iglesia">Iglesia</button>
-        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-material">Material</button>
-        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-kids">Niños</button>
-        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300" id="button-desarrollo">Centro de desarrollo</button>
-        <button class="text-xl px-2 text-logo transition-colors duration-200 hover:text-orange-300">Contacto</button>
-    </div>
-    <ul class="absolute w-1/4 flex justify-center flex-col bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo">
-        <li>
-            <div class="hidden flex-col" id="container-iglesia">
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Creemos en...</a>
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicaciones</a>
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Agenda</a>
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Grupos Celulares</a>
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Asociacion Filantrópica</a>
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Nuestro Pastor</a>
-            </div>
-        </li>
-        <li>
-            <div class="hidden flex-col" id="container-material">
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Estudios Inductivos</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Discipulados</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Otros Escritos</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Guias De Oración</a>
-            </div>
-        </li>
-        <li>
-            <div class="hidden flex-col" id="container-kids">
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Trabajo</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Material</a>
-            </div>
-        </li>
-        <li>
-            <div class="hidden flex-col" id="container-desarrollo">
-                <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Descripción</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Ubicación</a>
-			    <a href='#' class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">Reservas</a>
-            </div>
-        </li>
+const {buttonText, className, idElement, clickListenerName} = Astro.props
+---
+
+<div class="relative" id={clickListenerName}>
+    <button class="text-xl text-logo transition-colors duration-200 hover:text-orange-300">
+        {buttonText}
+    </button>
+    <ul class=`absolute min-w-full bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo ${className}` id={idElement}>
+        <slot />
     </ul>
-</div> */
-}
+</div>

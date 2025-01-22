@@ -1,8 +1,6 @@
 ---
 import logoHeader from '../img/logo1.png'
-import menu from "../img/menu.png"
-import HeaderButton from '../components/HeaderButton'
-import { hoveringButton } from '../store'
+import HeaderButton from '../components/HeaderButton.astro'
 ---
 
 <!doctype html>
@@ -20,10 +18,60 @@ import { hoveringButton } from '../store'
 				<img src={logoHeader.src} class='h-14 p-2' />
 			</a>
 			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
-				<HeaderButton />
-			</div>
-			<div class="flex xl:hidden">
-				<img src={menu.src} alt="" class="h-12">
+					<HeaderButton buttonText="Iglesia" idElement="container-iglesia" className='invisible' clickListenerName='button-iglesia'>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Creemos en...</a>
+							</li>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Ubicaciones</a>
+							</li>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Agenda</a>
+							</li>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Grupos Celulares</a>
+							</li>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Asociacion Filantrópica</a>
+							</li>
+							<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+								<a href='#'>Nuestro Pastor</a>
+							</li>
+					</HeaderButton>
+					<HeaderButton buttonText='Material' idElement="container-material" className='invisible' clickListenerName='button-material'>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Estudios Inductivos</a>
+						</li>
+                        <li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Discipulados</a>
+						</li>
+                        <li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Otros Escritos</a>
+						</li>
+                        <li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Guias De Oración</a>
+						</li>
+					</HeaderButton>
+					<HeaderButton buttonText="Niños" idElement="container-kids" className='invisible' clickListenerName='button-kids'>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Trabajo</a>
+						</li>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Material</a>
+						</li>
+					</HeaderButton>
+					<HeaderButton buttonText="Centro de Desarrollo" idElement="container-desarrollo" className='invisible' clickListenerName='button-desarrollo'>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Descripción</a>
+						</li>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Ubicación</a>
+						</li>
+						<li class="py-2 px-6 hover:text-white hover:bg-logo transition-colors duration-200">
+							<a href='#'>Reservas</a>
+						</li>
+					</HeaderButton>
+				<HeaderButton buttonText="Contacto"/>
 			</div>
 		</div>
 	</header>
@@ -44,3 +92,57 @@ import { hoveringButton } from '../store'
 		height: 100%;
 	}
 </style>
+<script>
+	document.getElementById("button-iglesia")?.addEventListener("click", () => {
+		document.getElementById("container-iglesia")?.classList.remove("invisible")
+		document.getElementById("container-iglesia")?.classList.add("visible")
+	})
+	document.getElementById("button-iglesia")?.addEventListener("mouseenter", () => {
+		document.getElementById("container-iglesia")?.classList.remove("invisible")
+		document.getElementById("container-iglesia")?.classList.add("visible")
+	})
+	document.getElementById("button-iglesia")?.addEventListener("mouseleave", () => {
+		document.getElementById("container-iglesia")?.classList.remove("visible")
+		document.getElementById("container-iglesia")?.classList.add("invisible")
+	})
+
+	document.getElementById("button-material")?.addEventListener("click", () => {
+		document.getElementById("container-material")?.classList.remove("invisible")
+		document.getElementById("container-material")?.classList.add("visible")
+	})
+	document.getElementById("button-material")?.addEventListener("mouseenter", () => {
+		document.getElementById("container-material")?.classList.remove("invisible")
+		document.getElementById("container-material")?.classList.add("visible")
+	})
+	document.getElementById("button-material")?.addEventListener("mouseleave", () => {
+		document.getElementById("container-material")?.classList.remove("visible")
+		document.getElementById("container-material")?.classList.add("invisible")
+	})
+
+	document.getElementById("button-kids")?.addEventListener("click", () => {
+		document.getElementById("container-kids")?.classList.remove("invisible")
+		document.getElementById("container-kids")?.classList.add("visible")
+	})
+	document.getElementById("button-kids")?.addEventListener("mouseenter", () => {
+		document.getElementById("container-kids")?.classList.remove("invisible")
+		document.getElementById("container-kids")?.classList.add("visible")
+	})
+	document.getElementById("button-kids")?.addEventListener("mouseleave", () => {
+		document.getElementById("container-kids")?.classList.remove("visible")
+		document.getElementById("container-kids")?.classList.add("invisible")
+	})
+	
+	document.getElementById("button-desarrollo")?.addEventListener("click", () => {
+		document.getElementById("container-desarrollo")?.classList.remove("invisible")
+		document.getElementById("container-desarrollo")?.classList.add("visible")
+	})
+	document.getElementById("button-desarrollo")?.addEventListener("mouseenter", () => {
+		document.getElementById("container-desarrollo")?.classList.remove("invisible")
+		document.getElementById("container-desarrollo")?.classList.add("visible")
+	})
+	document.getElementById("button-desarrollo")?.addEventListener("mouseleave", () => {
+		document.getElementById("container-desarrollo")?.classList.remove("visible")
+		document.getElementById("container-desarrollo")?.classList.add("invisible")
+	})
+
+</script>
