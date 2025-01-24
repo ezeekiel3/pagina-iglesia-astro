@@ -7,7 +7,7 @@ import SantaCena from "./SantaCena.astro"
     <span class='z-10 relative'>Creemos En ...</span>
     <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
 </button>
-<div class="hidden flex-col items-center mb-16" id="container-creencia">
+<div class="flex invisible opacity-0 transition-opacity duration-500 flex-col items-center mb-16" id="container-creencia">
     <Creencia
         titulo={'Creemos en Dios'}
         informacion={'En un Dios personal, todopoderoso, creador del Universo que siente, piensa, decide y está presente en todas las circunstancias de nuestra vida; al cual oramos y a quien confiamos el cuidado de nuestras vidas sabiendo que todo lo que nos sucede resultará para nuestro bien. No solo creemos en su existencia sino también en su amor, demostrado al enviar a su único Hijo, Jesucristo, a la tierra a morir en nuestro lugar y adoptarnos para que nosotros también seamos llamados "hijos de Dios".'}
@@ -39,8 +39,8 @@ import SantaCena from "./SantaCena.astro"
 
     creencias.subscribe(creencias => {
         if (creencias) {
-            document.getElementById("container-creencia")?.classList.remove("hidden")
-            document.getElementById("container-creencia")?.classList.add("flex")
+            document.getElementById("container-creencia")?.classList.remove("opacity-0","invisible")
+            document.getElementById("container-creencia")?.classList.add("visible", "opacity-100")
         }
     })
 </script>

@@ -3,7 +3,7 @@
     <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
 </button>
 <div
-            class={"hidden flex-col items-center w-full transition-all duration-500 ease-out"} id="conocenosInfo">
+            class={"flex opacity-0 flex-col items-center w-full transition-all invisible duration-500 ease-out"} id="conocenosInfo">
             <h2 class='xl:text-4xl text-2xl text-logo font-bold font-sans'>
                 ¡Queremos que nos conozcas!
             </h2>
@@ -35,8 +35,8 @@
 
     conocenos.subscribe(conocenos => {
         if (conocenos) {
-            document.getElementById("conocenosInfo")?.classList.remove("hidden")
-            document.getElementById("conocenosInfo")?.classList.add("flex")
+            document.getElementById("conocenosInfo")?.classList.remove("opacity-0","invisible")
+            document.getElementById("conocenosInfo")?.classList.add("visible", "opacity-100")
         }
     })
 </script>
