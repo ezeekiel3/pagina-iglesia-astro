@@ -3,13 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import logoBody from '../img/logo2.png'
 import Conocenos from '../components/Conocenos.astro';
 import CreemosEn from "../components/CreemosEn.astro";
+import { Image } from 'astro:assets';
 ---
 
 <Layout>
 	<main class='flex justify-center w-full min-h-full'>
 		<div class='container flex items-center flex-col'>
 			<div class='my-6'>
-				<img src={logoBody.src} alt='' class='xl:h-80 h-28' />
+				<Image src={logoBody} alt="" class='xl:h-80 xl:w-full h-28'/>
 			</div>
 			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
 			<div class=`flex flex-col items-center` id="container-conocenos">
@@ -20,7 +21,7 @@ import CreemosEn from "../components/CreemosEn.astro";
 			</div>
 			<button
             class="xl:text-3xl text-2xl hidden relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 mb-9 hover:bg-logo" id="button-ubicaciones">
-            <span class='z-10 relative'>Ubicaciones</span>
+			<a href="/Ubicaciones" class="z-10 relative">Ubicaciones</a>
             <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
         </button>
 		</div>
