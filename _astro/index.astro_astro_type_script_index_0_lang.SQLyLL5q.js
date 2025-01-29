@@ -1,0 +1,1 @@
+import{c as t}from"./store.Bp8BYI4f.js";t.subscribe(e=>{e&&(document.getElementById("button-ubicaciones")?.classList.remove("hidden"),document.getElementById("button-ubicaciones")?.classList.add("flex"))});

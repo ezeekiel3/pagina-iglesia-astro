@@ -1,0 +1,1 @@
+import{a as o}from"./store.Bp8BYI4f.js";function n(){o.set(!0)}document.getElementById("button-conocenos")?.addEventListener("click",n);o.subscribe(e=>{e&&(document.getElementById("conocenosInfo")?.classList.remove("opacity-0","invisible"),document.getElementById("conocenosInfo")?.classList.add("visible","opacity-100"))});
