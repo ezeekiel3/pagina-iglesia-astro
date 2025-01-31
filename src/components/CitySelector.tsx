@@ -5,17 +5,10 @@ const locations = ['Berisso', 'Ensenada', 'La Plata', 'CABA', 'PBA']
 export default function CitySelector() {
     const [activeTab, setActiveTab] = useState('Berisso')
 
-    function disappearDiv() {
-        setTimeout(() => {
-            return 'hidden'
-        }, 300)
-        return 'grid opacity-0 -translate-x-full'
-    }
-
     return (
         <div className='flex justify-center items-center w-full flex-grow'>
             <div className='h-full w-full flex items-center flex-col'>
-                <div className='h-16 w-1/3 font-sans flex justify-evenly items-center font-bold text-logo text-xl'>
+                <div className='h-16 xl:w-1/3 w-full font-sans flex justify-evenly items-center font-bold text-logo xl:text-xl'>
                     {locations.map((location, i) => (
                         <button
                             key={i}
@@ -27,11 +20,11 @@ export default function CitySelector() {
                         </button>
                     ))}
                 </div>
-                <div className='flex flex-col w-full h-2/3 justify-center items-center'>
+                <div className='flex flex-col w-full xl:h-2/3 h-auto justify-center items-center'>
                     <div
                         className={`${
                             activeTab === 'Berisso' ? 'grid' : 'hidden'
-                        } xl:grid-rows-3 xl:grid-cols-3 h-2/3 w-2/3 transition-all duration-500`}>
+                        } xl:grid-rows-3 xl:grid-cols-3 grid-rows-2 grid-cols-2 xl:h-2/3 xl:w-2/3 gap-2 text-center`}>
                         <Location
                             barrio='Templo Central'
                             ubicacion='Calle 165 (Ostende) Nº 861 entre 10 y 11'
@@ -68,7 +61,7 @@ export default function CitySelector() {
                     <div
                         className={`${
                             activeTab === 'Ensenada' ? 'grid' : 'hidden'
-                        } xl:grid-rows-3 xl:grid-cols-3 h-2/3 w-2/3 transition-all duration-500 translate-x-0`}>
+                        } xl:grid-rows-3 xl:grid-cols-3 xl:h-2/3 grid-rows-2 grid-cols-2 text-center gap-2 h-auto w-auto xl:w-2/3`}>
                         <Location
                             barrio='Ensenada Centro'
                             ubicacion='Avenida Horacio Cestino Nº 430'
@@ -93,7 +86,7 @@ export default function CitySelector() {
                     <div
                         className={`${
                             activeTab === 'La Plata' ? 'grid' : 'hidden'
-                        } xl:grid-cols-3 xl:grid-rows-3 h-2/3 w-2/3 transition-all duration-500 translate-x-0`}>
+                        } xl:grid-rows-3 xl:grid-cols-3 xl:h-2/3 grid-rows-2 grid-cols-2 text-center gap-2 h-auto w-auto xl:w-2/3`}>
                         <Location
                             barrio='En Tu Presencia'
                             ubicacion='Avenida 72 Nº 150 entre 516 y 517'
@@ -126,7 +119,7 @@ export default function CitySelector() {
                     <div
                         className={`${
                             activeTab === 'CABA' ? 'grid' : 'hidden'
-                        } xl:grid-cols-3 xl:grid-rows-3 h-2/3 w-2/3 transition-all duration-500 translate-x-0`}>
+                        } xl:grid-rows-3 xl:grid-cols-3 xl:h-2/3 grid-rows-2 grid-cols-2 gap-2 text-center h-auto w-auto xl:w-2/3`}>
                         <Location
                             barrio='Villa Soldati'
                             ubicacion='Avenida Pergamino Nº 3010'
@@ -156,7 +149,7 @@ export default function CitySelector() {
                     <div
                         className={`${
                             activeTab === 'PBA' ? 'grid' : 'hidden'
-                        } xl:grid-cols-3 xl:grid-rows-3 h-2/3 w-2/3 transition-all duration-500 translate-x-0`}>
+                        } xl:grid-rows-3 xl:grid-cols-3 xl:h-2/3 grid-rows-2 grid-cols-2 gap-2 text-center h-auto w-auto xl:w-2/3`}>
                         <Location
                             barrio='Hudson'
                             ubicacion='Calle 53 Nº 5564 bis entre 155 y 156'
