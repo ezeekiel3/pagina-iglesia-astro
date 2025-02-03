@@ -6,6 +6,7 @@ export default {
             colors: { logo: '#b22c2d' },
             fontFamily: {
                 logo: ['Helvetica'],
+                roboto: ['roboto'],
             },
         },
     },
