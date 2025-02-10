@@ -18,7 +18,7 @@ import HeaderButton from '../components/HeaderButton.tsx'
 			<a href='/pagina-iglesia-astro/'>
 				<img src={logoHeader.src} class='h-14 p-2' />
 			</a>
-			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center' id="contenedor-header">
+			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
 				<HeaderButton buttonText="Iglesia" client:load>
 					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
 						<a href='#'>Creemos en...</a>
@@ -67,6 +67,9 @@ import HeaderButton from '../components/HeaderButton.tsx'
 					</li>
 				</HeaderButton>
 				<HeaderButton buttonText="Contacto"/>
+			</div>
+			<div class='xl:hidden flex xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
+				<HeaderButton client:load/>
 			</div>
 		</div>
 	</header>
