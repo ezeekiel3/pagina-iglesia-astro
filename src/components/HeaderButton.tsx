@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import menuImg from '../img/menu.png'
 import closeImg from '../img/close.png'
 import arrowRight from '../img/arrowRight.png'
+import arrowBack from '../img/arrowBack.png'
 
 type HeaderButtonProps = { buttonText?: string; children?: React.ReactNode }
 
@@ -58,30 +59,53 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                     openMenu ? 'translate-x-0' : 'translate-x-full'
                 }`}>
                 <div className='p-4 h-full'>
-                    <button onClick={() => setOpenMenu(false)}>
-                        <img src={closeImg.src} alt='' className='h-10' />
+                    <button>
+                        {hoveringButton ? (
+                            <img src={arrowBack.src} alt='' className='h-11' />
+                        ) : (
+                            <img src={closeImg.src} alt='' className='h-11' onClick={() => setOpenMenu(false)} />
+                        )}
                     </button>
                     <nav className='h-2/3'>
                         <ul className='flex items-center justify-center text-xl text-logo gap-8 h-full flex-col'>
-                            <li className='flex items-center'>
-                                <button className='hover:text-orange-300 transition-all duration-300'>Iglesia</button>
+                            <li
+                                className={`flex items-center transition-all duration-300 ${
+                                    hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}>
+                                <button
+                                    className={`hover:text-orange-300 transition-all duration-300`}
+                                    onClick={() => setHoveringButton(true)}>
+                                    Iglesia
+                                </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
-                            <li className='flex items-center'>
+                            <li
+                                className={`flex items-center transition-all duration-300 ${
+                                    hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}>
                                 <button className='hover:text-orange-300 transition-all duration-300'>Material</button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
-                            <li className='flex items-center'>
+                            <li
+                                className={`flex items-center transition-all duration-300 ${
+                                    hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}>
                                 <button className='hover:text-orange-300 transition-all duration-300'>Niños</button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
-                            <li className='flex items-center'>
-                                <button className='hover:text-orange-300 transition-all duration-300'>
+                            <li
+                                className={`flex items-center transition-all duration-300 ${
+                                    hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}>
+                                <button className='hover:text-orange-300 transition-all duration-100'>
                                     Centro de Desarrollo
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
-                            <li>
+                            <li
+                                className={`flex items-center transition-all duration-300 ${
+                                    hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
+                                }`}>
                                 <button className='hover:text-orange-300 transition-all duration-300'>Contacto</button>
                             </li>
                         </ul>
