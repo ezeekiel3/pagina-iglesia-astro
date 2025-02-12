@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import logoBody from '../img/logo2.png'
-import Conocenos from '../components/Conocenos.astro';
-import CreemosEn from "../components/CreemosEn.astro";
+import Conocenos from '../components/Conocenos.tsx';
+import CreemosEn from "../components/CreemosEn.tsx";
 import { Image } from 'astro:assets';
 ---
 
@@ -13,12 +13,8 @@ import { Image } from 'astro:assets';
 				<Image src={logoBody} alt="" class='xl:h-80 xl:w-full h-28'/>
 			</div>
 			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
-			<div class=`flex flex-col items-center` id="container-conocenos">
-				<Conocenos />
-			</div>
-			<div class="flex flex-col items-center" id="container-creencias">
-				<CreemosEn />
-			</div>
+			<Conocenos client:load/>
+			<CreemosEn client:load/>
 			<button
             class="xl:text-3xl text-2xl hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 mb-9 hover:bg-logo" id="button-ubicaciones">
 			<a href="/pagina-iglesia-astro/Ubicaciones" class="z-10 relative">Ubicaciones</a>
