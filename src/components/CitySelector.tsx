@@ -1,5 +1,5 @@
 import Location from './Location.tsx'
-import { act, useState } from 'react'
+import { useState } from 'react'
 const locations = ['Berisso', 'Ensenada', 'La Plata', 'CABA', 'PBA']
 
 export default function CitySelector() {
@@ -13,7 +13,7 @@ export default function CitySelector() {
                         <button
                             key={i}
                             onClick={() => setActiveTab(location)}
-                            className={`h-2/3 transition-all duration-500 border-b-2 ${
+                            className={`h-2/3 transition-all duration-300 border-b-2 ${
                                 activeTab === location ? 'border-logo' : 'border-transparent'
                             }`}>
                             {location}

@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import Creencia from './Creencia'
-import Bautismo from './Bautismo.astro'
-import SantaCena from './SantaCena.astro'
+import Bautismo from './Bautismo'
+import SantaCena from './SantaCena.tsx'
 import { useStore } from '@nanostores/react'
 import { showConocenos } from '../store'
+import { useState } from 'react'
 
 export default function CreemosEn() {
     const [showCreencias, setShowCreencias] = useState(false)
@@ -12,7 +12,7 @@ export default function CreemosEn() {
     return (
         <div className='flex flex-col items-center'>
             <button
-                className={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo my-12 ${
+                className={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo mt-12 mb-7 ${
                     $showConocenos ? 'h-auto opacity-100 overflow-visible' : 'h-0 opacity-0 overflow-hidden'
                 }`}
                 onClick={() => setShowCreencias(true)}>
@@ -41,8 +41,17 @@ export default function CreemosEn() {
                         'Que tiene la misión de convencernos de nuestras faltas, infundir el deseo de cambiar de actitud, producir una vida nueva; de consolarnos en nuestras tribulaciones, ayudarnos en la oración, crear sentimientos de amor, gozo, paz, paciencia, bondad, fe, humildad y dominio propio y de capacitamos para servir a Dios. Creemos que cuando una persona se convierte a Dios, es sellada por el Espíritu Santo como propiedad divina y, el mismo Espíritu le da la seguridad de que es un hijo de Dios.'
                     }
                 />
-                {/* <Bautismo />
-                <SantaCena /> */}
+                <Bautismo />
+                <SantaCena />
+                <button
+                    className={`xl:text-3xl text-2xl font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 m-9 hover:bg-logo ${
+                        showCreencias ? 'h-auto opacity-100 overflow-visible' : 'h-0 opacity-0 overflow-hidden'
+                    }`}>
+                    <a href='/pagina-iglesia-astro/Ubicaciones' className='z-10 relative'>
+                        Ubicaciones
+                    </a>
+                    <div className='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
+                </button>
             </div>
         </div>
     )
