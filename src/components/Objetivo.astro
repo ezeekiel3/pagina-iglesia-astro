@@ -1,0 +1,20 @@
+---
+import { getImage } from "astro:assets"
+import type { ImageMetadata } from "astro"
+
+interface Props {titulo: string, img: string | ImageMetadata, className?: string}
+
+const {titulo, img, className} = Astro.props
+
+const objetiveImg = await getImage({
+    src: img,
+    format: "png",
+})
+---
+
+<div class="flex flex-col gap-4 items-center justify-between mb-10">
+    <h2 class={`font-roboto text-logo font-semibold text-lg text-center ${className}`}>{titulo}</h2>
+    <picture>
+        <img src={objetiveImg.src} alt="" class="rounded-lg h-[296px] border-2 shadow border-black">
+    </picture>
+</div>
