@@ -12,9 +12,9 @@ const objetiveImg = await getImage({
 })
 ---
 
-<div class="flex flex-col gap-4 items-center justify-between mb-10">
-    <h2 class={`font-roboto text-logo font-semibold text-lg text-center ${className}`}>{titulo}</h2>
-    <picture>
-        <img src={objetiveImg.src} alt="" class="rounded-lg h-[296px] border-2 shadow border-black">
+<div class="flex flex-col xl:gap-4 items-center xl:justify-between mb-10">
+    <h2 class={`font-roboto text-logo font-semibold xl:text-lg text-center ${className}`}>{titulo}</h2>
+    <picture class="xl:block flex justify-center mt-7">
+        <img src={objetiveImg.src} alt="" class="rounded-lg xl:h-[296px] h-56 border-2 shadow border-black">
     </picture>
 </div>

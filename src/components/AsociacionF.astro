@@ -12,19 +12,19 @@ import objetivo8 from "../img/objetivo8.png"
 import Image from "astro/components/Image.astro"
 ---
 
-<div class="flex flex-col items-center mt-10 h-auto w-full">
-    <Image src={AFimg} alt="" class="h-[170px] w-[200px]"/>
-    <h2 class="text-logo font-roboto font-bold text-[22px] m-10">Asociación Filantrópica Bautista Pueblo Nuevo</h2>
-    <p class="font-normal font-roboto text-lg leading-9 text-center w-[490px]">Hemos organizado una asociación sin fines de lucro, con personería jurídica: ASOCIACIÓN FILANTRÓPICA BAUTISTA PUEBLO NUEVO Sede legal: 165 (Ostende) N° 861 CP 1923 Berisso. Buenos Aires.</p>
-    <p class="font-roboto font-normal text-xl m-10">Algunos de sus objetivos son:</p>
-    <div class="grid grid-cols-3 grid-rows-3">
-        <Objetivo titulo="Promover el progreso general de la zona donde ejerce su acción." img={objetivo1} className="w-80"/>
-        <Objetivo titulo="Enfocar la atención en el desarrollo integral de las personas, especialmente en lo físico, emocional y espiritual." img={objetivo2} className="w-auto"/>
-        <Objetivo titulo="Ofrecer cursos de capacitación y perfeccionamiento." img={objetivo3} className="w-80"/>
-        <Objetivo titulo="Brindar asesoramiento gratuito en cualquiera de las disciplinas por medio de profesionales habilitados." img={objetivo4} className="w-5/6"/>
-        <Objetivo titulo="Desarrollar actividades recreativas" img={objetivo5} className="w-auto"/>
-        <Objetivo titulo="Organizar viajes misioneros" img={objetivo6} className="w-auto"/>
-        <Objetivo titulo="Relacionarse con diversas entidades y organismos para el logro de las finalidades" img={objetivo7} className="w-5/6"/>
-        <Objetivo titulo="Dar cobertura legal a las propiedades y templos de todas las congregaciones de Pueblo Nuevo" img={objetivo8} className="w-5/6"/>
+<div class="flex flex-col items-center xl:mt-10 mt-5 h-auto w-full">
+    <Image src={AFimg} alt="" class="xl:h-[170px] xl:w-[200px] h-24 w-28"/>
+    <h2 class="text-logo font-roboto text-center text-xl font-bold xl:text-[22px] xl:m-10 m-8">Asociación Filantrópica Bautista Pueblo Nuevo</h2>
+    <p class="font-normal font-roboto xl:text-lg leading-9 text-center xl:w-[490px]">Hemos organizado una asociación sin fines de lucro, con personería jurídica: ASOCIACIÓN FILANTRÓPICA BAUTISTA PUEBLO NUEVO Sede legal: 165 (Ostende) N° 861 CP 1923 Berisso. Buenos Aires.</p>
+    <p class="font-roboto font-normal xl:text-xl m-10">Algunos de sus objetivos son:</p>
+    <div class="grid xl:grid-cols-3 xl:grid-rows-3 grid-cols-1 grid-rows-1">
+        <Objetivo titulo="Promover el progreso general de la zona donde ejerce su acción." img={objetivo1} className="xl:w-80 w-11/12"/>
+        <Objetivo titulo="Enfocar la atención en el desarrollo integral de las personas, especialmente en lo físico, emocional y espiritual." img={objetivo2} className="xl:w-auto w-11/12"/>
+        <Objetivo titulo="Ofrecer cursos de capacitación y perfeccionamiento." img={objetivo3} className="xl:w-80"/>
+        <Objetivo titulo="Brindar asesoramiento gratuito en cualquiera de las disciplinas por medio de profesionales habilitados." img={objetivo4} className="xl:w-5/6 w-11/12"/>
+        <Objetivo titulo="Desarrollar actividades recreativas" img={objetivo5} className="xl:w-auto"/>
+        <Objetivo titulo="Organizar viajes misioneros" img={objetivo6} className="xl:w-auto"/>
+        <Objetivo titulo="Relacionarse con diversas entidades y organismos para el logro de las finalidades" img={objetivo7} className="xl:w-5/6"/>
+        <Objetivo titulo="Dar cobertura legal a las propiedades y templos de todas las congregaciones de Pueblo Nuevo" img={objetivo8} className="xl:w-5/6 w-11/12"/>
     </div>
 </div>
