@@ -10,6 +10,11 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
     const [hoveringButton, setHoveringButton] = useState(false)
     const [hoveringDropdown, setHoveringDropdown] = useState(false)
     const [openMenu, setOpenMenu] = useState(false)
+    const [buttonName, setButtonName] = useState('')
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setButtonName(event.currentTarget.textContent || '')
+    }
 
     children = children && !Array.isArray(children) ? [children] : children
 
@@ -61,7 +66,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                 <div className='p-4 h-full'>
                     <button>
                         {hoveringButton ? (
-                            <img src={arrowBack.src} alt='' className='h-11' />
+                            <img src={arrowBack.src} alt='' className='h-11' onClick={() => setHoveringButton(false)} />
                         ) : (
                             <img src={closeImg.src} alt='' className='h-11' onClick={() => setOpenMenu(false)} />
                         )}
@@ -74,7 +79,10 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                 }`}>
                                 <button
                                     className={`hover:text-orange-300 transition-all duration-300`}
-                                    onClick={() => setHoveringButton(true)}>
+                                    onClick={() => {
+                                        setHoveringButton(true)
+                                        handleClick
+                                    }}>
                                     Iglesia
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
@@ -83,21 +91,40 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                                 }`}>
-                                <button className='hover:text-orange-300 transition-all duration-300'>Material</button>
+                                <button
+                                    className='hover:text-orange-300 transition-all duration-300'
+                                    onClick={() => {
+                                        setHoveringButton(true)
+                                        handleClick
+                                    }}>
+                                    Material
+                                </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
                             <li
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                                 }`}>
-                                <button className='hover:text-orange-300 transition-all duration-300'>Niños</button>
+                                <button
+                                    className='hover:text-orange-300 transition-all duration-300'
+                                    onClick={() => {
+                                        setHoveringButton(true)
+                                        handleClick
+                                    }}>
+                                    Niños
+                                </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
                             <li
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                                 }`}>
-                                <button className='hover:text-orange-300 transition-all duration-100'>
+                                <button
+                                    className='hover:text-orange-300 transition-all duration-100'
+                                    onClick={() => {
+                                        setHoveringButton(true)
+                                        handleClick
+                                    }}>
                                     Centro de Desarrollo
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
