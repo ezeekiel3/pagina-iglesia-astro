@@ -100,7 +100,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                         <a href='/pagina-iglesia-astro/Ubicaciones'>Ubicaciones</a>
                                     </button>
                                     <button>
-                                        <a href='/pagina-iglesia-astro/#'>Agenda</a>
+                                        <a href='/pagina-iglesia-astro/Agenda'>Agenda</a>
                                     </button>
                                     <button>
                                         <a href='/pagina-iglesia-astro/NuestraComunidad'>Nuestra Comunidad</a>
