@@ -12,10 +12,6 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
     const [openMenu, setOpenMenu] = useState(false)
     const [buttonName, setButtonName] = useState('')
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setButtonName(event.currentTarget.textContent || '')
-    }
-
     children = children && !Array.isArray(children) ? [children] : children
 
     useEffect(() => {
@@ -66,7 +62,12 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                 <div className='p-4 h-full'>
                     <button>
                         {hoveringButton ? (
-                            <img src={arrowBack.src} alt='' className='h-11' onClick={() => setHoveringButton(false)} />
+                            <img
+                                src={arrowBack.src}
+                                alt=''
+                                className='h-11 fixed top-4 z-20'
+                                onClick={() => setHoveringButton(false)}
+                            />
                         ) : (
                             <img src={closeImg.src} alt='' className='h-11' onClick={() => setOpenMenu(false)} />
                         )}
@@ -81,12 +82,33 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                     className={`hover:text-orange-300 transition-all duration-300`}
                                     onClick={() => {
                                         setHoveringButton(true)
-                                        handleClick
+                                        setButtonName('Iglesia')
                                     }}>
                                     Iglesia
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
+                            {buttonName === 'Iglesia' ? (
+                                <li
+                                    className={`flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${
+                                        hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                                    }`}>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Creemos en</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/Ubicaciones'>Ubicaciones</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Agenda</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/NuestraComunidad'>Nuestra Comunidad</a>
+                                    </button>
+                                </li>
+                            ) : (
+                                ''
+                            )}
                             <li
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
@@ -95,12 +117,33 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                     className='hover:text-orange-300 transition-all duration-300'
                                     onClick={() => {
                                         setHoveringButton(true)
-                                        handleClick
+                                        setButtonName('Material')
                                     }}>
                                     Material
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
+                            {buttonName === 'Material' ? (
+                                <li
+                                    className={`flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${
+                                        hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                                    }`}>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Estudio Inductivos</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Discipulado</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Otros Escritos</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Guías de Oración</a>
+                                    </button>
+                                </li>
+                            ) : (
+                                ''
+                            )}
                             <li
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
@@ -109,26 +152,59 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                     className='hover:text-orange-300 transition-all duration-300'
                                     onClick={() => {
                                         setHoveringButton(true)
-                                        handleClick
+                                        setButtonName('Niños')
                                     }}>
                                     Niños
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
+                            {buttonName === 'Niños' ? (
+                                <li
+                                    className={`flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${
+                                        hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                                    }`}>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Trabajo</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Material</a>
+                                    </button>
+                                </li>
+                            ) : (
+                                ''
+                            )}
                             <li
-                                className={`flex items-center transition-all duration-300 ${
+                                className={`flex items-center w-1/2 leading-7 transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                                 }`}>
                                 <button
                                     className='hover:text-orange-300 transition-all duration-100'
                                     onClick={() => {
                                         setHoveringButton(true)
-                                        handleClick
+                                        setButtonName('Centro de Desarrollo')
                                     }}>
                                     Centro de Desarrollo
                                 </button>
                                 <img src={arrowRight.src} alt='' className='h-6' />
                             </li>
+                            {buttonName === 'Centro de Desarrollo' ? (
+                                <li
+                                    className={`flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${
+                                        hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                                    }`}>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Descripción</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Ubicación</a>
+                                    </button>
+                                    <button>
+                                        <a href='/pagina-iglesia-astro/#'>Reservas</a>
+                                    </button>
+                                </li>
+                            ) : (
+                                ''
+                            )}
                             <li
                                 className={`flex items-center transition-all duration-300 ${
                                     hoveringButton ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
