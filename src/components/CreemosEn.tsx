@@ -3,11 +3,19 @@ import Bautismo from './Bautismo'
 import SantaCena from './SantaCena.tsx'
 import { useStore } from '@nanostores/react'
 import { showConocenos } from '../store'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export default function CreemosEn() {
     const [showCreencias, setShowCreencias] = useState(false)
     const $showConocenos = useStore(showConocenos)
+    const creemosEnRef = useRef<HTMLDivElement | null>(null)
+
+    const handleScroll = () => {
+        setShowCreencias(true)
+        setTimeout(() => {
+            creemosEnRef.current?.scrollIntoView({ behavior: 'smooth' })
+        }, 200)
+    }
 
     return (
         <div className='flex flex-col items-center'>
@@ -15,14 +23,15 @@ export default function CreemosEn() {
                 className={`xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo mt-12 mb-7 ${
                     $showConocenos ? 'h-auto opacity-100 overflow-visible' : 'h-0 opacity-0 overflow-hidden'
                 }`}
-                onClick={() => setShowCreencias(true)}>
+                onClick={() => handleScroll()}>
                 <span className='z-10 relative'>Creemos En ...</span>
                 <div className='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
             </button>
             <div
                 className={`flex transition-opacity duration-500 flex-col items-center mb-16 ${
                     showCreencias ? 'h-auto opacity-100 overflow-visible' : 'h-0 opacity-0 overflow-hidden'
-                }`}>
+                }`}
+                ref={creemosEnRef}>
                 <Creencia
                     titulo={'Creemos en Dios'}
                     informacion={

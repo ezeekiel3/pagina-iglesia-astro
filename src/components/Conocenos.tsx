@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useStore } from '@nanostores/react'
 import { showConocenos } from '../store'
 
 export default function Conocenos() {
     const $showConocenos = useStore(showConocenos)
+    const conocenosRef = useRef<HTMLDivElement | null>(null)
+
+    const handleScroll = () => {
+        showConocenos.set(true)
+        setTimeout(() => {
+            conocenosRef.current?.scrollIntoView({ behavior: 'smooth' })
+        }, 200)
+    }
 
     return (
         <div className='flex flex-col items-center'>
             <button
                 className='xl:text-3xl text-2xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo my-12'
-                onClick={() => showConocenos.set(true)}>
+                onClick={() => handleScroll()}>
                 <span className='z-10 relative'>Conocenos</span>
                 <div className='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
             </button>
             <div
                 className={`flex flex-col items-center w-full transition-opacity duration-500 ease-out ${
-                    $showConocenos ? 'h-auto opacity-100 overflow-visible' : 'h-0 opacity-0 overflow-hidden'
+                    $showConocenos
+                        ? 'h-auto opacity-100 overflow-visible translate-y-0'
+                        : 'h-0 opacity-0 overflow-hidden translate-y-10'
                 }`}>
-                <h2 className='xl:text-4xl text-2xl text-logo font-bold font-sans'>¡Queremos que nos conozcas!</h2>
+                <h2 className='xl:text-4xl text-2xl text-logo font-bold font-sans' ref={conocenosRef}>
+                    ¡Queremos que nos conozcas!
+                </h2>
                 <p className='xl:text-2xl text-center my-6 font-roboto'>
                     La mayoría de la gente rechaza lo que no conoce, por <b>mala información, prejuicios o temor.</b>
                 </p>
