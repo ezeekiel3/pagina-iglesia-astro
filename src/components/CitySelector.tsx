@@ -178,7 +178,7 @@ export default function CitySelector() {
                     </div>
                 </div>
                 <button className='xl:text-3xl text-2xl relative font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 mt-10 xl:mt-0 hover:bg-logo'>
-                    <a href='#' className='z-10 relative'>
+                    <a href='/pagina-iglesia-astro/Agenda' className='z-10 relative'>
                         Agenda
                     </a>
                     <div className='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
