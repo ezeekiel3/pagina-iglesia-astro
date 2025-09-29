@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import SeccionMaterial2 from "../components/SeccionMaterial2.astro";
+---
+
+<Layout>
+    <main class="h-full w-full flex flex-col items-center">
+        <div class="flex flex-col items-center">
+            <h1 class="text-logo font-bold font-roboto mt-10 text-lg xl:text-2xl">Material de Estudio</h1>
+            <p class="mt-5 font-roboto xl:text-xl">Accede a materiales de estudio bíblico en PDF, organizados por secciones para una consulta rápida y un aprendizaje más profundo.</p>
+        </div>
+        <div class="grid h-full w-full grid-cols-2 grid-rows-2">
+            <SeccionMaterial2 cantidadPdfs="50" titleSection="Estudios del Nuevo Testamento" descriptionSection="cantidad de libros para estudiar"/>
+        </div>
+    </main>
+</Layout>
