@@ -1,21 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import SeccionMaterial2 from "../components/SeccionMaterial2.astro";
+import SeccionBiblica from "../components/SeccionBiblica.tsx"
 ---
 
 <Layout>
     <main class="h-full w-full flex flex-col items-center">
-        <div class="flex flex-col items-center">
-            <h1 class="text-logo font-bold font-roboto mt-10 text-lg xl:text-2xl">Material de Estudio</h1>
-            <p id="parrafo" class="mt-5 font-roboto xl:text-xl">Accede a materiales de estudio bíblico en PDF, organizados por secciones para una consulta rápida y un aprendizaje más profundo.</p>
+        <div class="flex flex-col items-center mt-10 gap-4">
+            <h1 class="text-logo font-roboto font-bold text-3xl">Materiales de Estudio Bíblico</h1>
+            <p class="text-xl opacity-75">Recursos para profundizar en la Palabra de Dios y crecer en tu fe</p>
         </div>
-        <!-- <div id="fondo-negro" class={`bg-black h-full w-full bg-opacity-70 absolute ${toggleBackground ? '' : 'invisible'}`} data-state={toggleBackground}>p</div> -->
-        <div id="main-container-section" class="grid w-1/3 h-1/3 grid-cols-2 gap-10 grid-rows-2 justify-items-center">
-            <SeccionMaterial2 cantidadPdfs={50} titleSection="Estudios del Nuevo Testamento" id="nuevo-testamento" client:load/>
-            <SeccionMaterial2 cantidadPdfs={40} titleSection="Estudios nombres de Jesus" id="nombre-jesus" client:load/>
-            <SeccionMaterial2 cantidadPdfs={4} titleSection="Discipulados" id="discipulado" client:load/>
-            <SeccionMaterial2 cantidadPdfs={52} titleSection="Cristo el fundamento en toda la Biblia" id="cristo-fundamento" client:load/>
-        </div>
+        <SeccionBiblica client:load/>
     </main>
 </Layout>
