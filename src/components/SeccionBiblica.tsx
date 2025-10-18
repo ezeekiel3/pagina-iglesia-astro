@@ -1,9 +1,27 @@
 import React, { useState } from 'react'
 import folderIcon from '../img/folderIcon.png'
+import SectionItem from './SectionItem'
 
-type SeccionBiblicaProps = {
-    isFolder: boolean
-}
+const nuevoTestamento = [
+    { id: 'evangelio', name: 'Los Cuatro Evangelios', icon: 'folder' },
+    { id: 'hechos', name: 'Hechos', icon: 'folder' },
+    { id: 'romanos', name: 'Romanos', icon: 'folder' },
+    { id: 'corintios', name: 'Cartas de los Corintios', icon: 'folder' },
+    { id: 'galatas', name: 'Galatas', icon: 'folder' },
+    { id: 'efesios', name: 'Efesios', icon: 'folder' },
+    { id: 'filipenses', name: 'Filipenses', icon: 'folder' },
+    { id: 'colosenses', name: 'Colosenses', icon: 'folder' },
+    { id: 'tesalonica', name: 'Cartas de Tesalonica', icon: 'folder' },
+    { id: 'timoteo', name: 'Cartas a Timoteo', icon: 'folder' },
+    { id: 'tito', name: 'Tito', icon: 'folder' },
+    { id: 'filemon', name: 'Filemon', icon: 'folder' },
+    { id: 'hebreos', name: 'Hebreos', icon: 'folder' },
+    { id: 'santiago', name: 'Santiago', icon: 'folder' },
+    { id: 'pedro', name: 'Cartas de Pedro', icon: 'folder' },
+    { id: 'juan', name: 'Cartas de Juan', icon: 'folder' },
+    { id: 'judas', name: 'Judas', icon: 'folder' },
+    { id: 'apocalipsis', name: 'Apocalipsis', icon: 'folder' },
+]
 
 export default function SeccionBiblica() {
     const [showMore, setShowMore] = useState(false)
@@ -19,33 +37,15 @@ export default function SeccionBiblica() {
                 </div>
             </div>
             <div className='w-full flex items-center flex-col gap-4'>
-                <div className='border border-black hover:bg-logo hover:bg-opacity-10 duration-100 border-opacity-30 rounded-lg h-min w-11/12'>
-                    <div className='flex flex-row pl-7 gap-3 py-4'>
-                        <img src={folderIcon.src} alt='' />
-                        <p className='text-xl'>Los cuatro Evangelios</p>
-                    </div>
-                </div>
-                <div className='border border-black hover:bg-logo hover:bg-opacity-10 duration-100 border-opacity-30 rounded-lg h-min w-11/12'>
-                    <div className='flex flex-row pl-7 gap-3 py-4'>
-                        <img src={folderIcon.src} alt='' />
-                        <p className='text-xl'>Hechos</p>
-                    </div>
-                </div>
-                <div className='border border-black hover:bg-logo hover:bg-opacity-10 duration-100 border-opacity-30 rounded-lg h-min w-11/12'>
-                    <div className='flex flex-row pl-7 gap-3 py-4'>
-                        <img src={folderIcon.src} alt='' />
-                        <p className='text-xl'>Romanos</p>
-                    </div>
-                </div>
-                <div
-                    className={`border border-black hover:bg-logo hover:bg-opacity-10 duration-100 border-opacity-30 rounded-lg h-min w-11/12 ${
-                        showMore ? 'visible' : 'invisible'
-                    }`}>
-                    <div className='flex flex-row pl-7 gap-3 py-4'>
-                        <img src={folderIcon.src} alt='' />
-                        <p className='text-xl'>Cartas de Corintios</p>
-                    </div>
-                </div>
+                {showMore
+                    ? nuevoTestamento.map((element) => (
+                          <SectionItem key={element.id} itemSection={element} showMore={showMore} />
+                      ))
+                    : nuevoTestamento.map((element, i) => {
+                          if (i < 3) {
+                              return <SectionItem key={element.id} itemSection={element} showMore={true} />
+                          }
+                      })}
             </div>
             <button
                 className='font-medium border border-black h-min py-2 px-3 rounded-lg hover:bg-orange-800 hover:bg-opacity-15 duration-100 border-opacity-50 mt-6'

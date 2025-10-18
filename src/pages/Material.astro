@@ -1,76 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import ComoEstudiar from "../components/ComoEstudiar"
-import primerosPasos from '../img/primerosPasos.jpg'
-import crecimientoIglesias from '../img/crecimientoIglesias.jpg'
-import manualgbc from '../img/manualgbc.jpg'
-import didaktikos from '../img/didaktikos.jpg'
-import { Image } from "astro:assets"
+import Layout from "../layouts/Layout.astro";
+
+import SeccionBiblica from "../components/SeccionBiblica.tsx"
 ---
 
-
 <Layout>
-    <main id='container-material' class='min-h-full w-full flex flex-col items-center'>
-        <h1 class='text-logo xl:text-2xl text-xl font-bold font-roboto mt-10'>Material de Estudio</h1>
-        <p class='w-1/3 font-normal text-lg mt-5 leading-10'>
-            Aquí encontrarás recursos y estudios diseñados para profundizar en el conocimiento de la Biblia. Ya
-            sea que busques entender mejor un pasaje, explorar doctrinas clave o fortalecer tu fe, este material
-            te ayudará a crecer espiritualmente y aplicar la Palabra de Dios en tu vida diaria.
-        </p>
-        <button
-            id='button-estudiar'
-            class='text-xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo my-12'>
-            <span class='z-10 relative'>Como estudiar la biblia en Grupo?</span>
-            <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
-        </button>
-        <ComoEstudiar client:load/>
-        <h2 class="font-roboto text-logo font-bold text-2xl">Estudios Inductivos Biblicos</h2>
-        <p class="font-normal font-roboto text-lg leading-10 w-1/3 mt-8 text-center">Estudiaremos la Biblia a través del Método Inductivo. Es un método que Jesús mismo utilizó en Mateo 16:13-20 donde le hizo a sus discípulos una serie progresiva de preguntas que los llevaron a verbalizar, explicar y llegar a una conclusión con la asistencia del Espíritu Santo y la revelación del Padre.</p>
-        <button
-            id='button-estudiar'
-            class='text-xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo mt-10 mb-5'>
-            <span class='z-10 relative'>Estudios del Nuevo Testamento</span>
-            <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
-        </button>
-        <button
-            id='button-estudiar'
-            class='text-xl relative overflow-hidden font-semibold rounded-xl text-center text-logo bg-transparent p-4 border-4 border-logo hover:text-white transition-colors duration-300 hover:bg-logo mt-10'>
-            <span class='z-10 relative'>Estudios Nombres de Jesus</span>
-            <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
-        </button>
-        <h2 class="font-roboto text-logo font-bold text-2xl my-10">Discipulados</h2>
-        <div class="grid grid-cols-2 grid-rows-2 xl:gap-24 gap-12 md:gap-16">
-            <button>
-                <div class="xl:h-[436px] xl:w-[281px] h-[300px] w-[190px] md:h-[560px] md:w-[355px] absolute hover:bg-black hover:bg-opacity-50 transition-all flex justify-center items-center duration-200">
-                    <a id="button-libro" href="https://www.pueblonuevobautista.com.ar/3material/discipulado/LOS_PRIMEROS_PASOS.pdf" target="_blank" class="xl:h-full xl:w-full h-full w-full"></a>
-                </div>
-                <Image src={primerosPasos} alt="" class="xl:h-[436px] xl:w-[281px] h-full md:h-full"/>
-            </button>
-            <button>
-                <div class="xl:h-[436px] xl:w-[281px] h-[300px] w-[190px] md:h-[560px] md:w-[355px] absolute hover:bg-black hover:bg-opacity-50 transition-all flex justify-center items-center duration-200">
-                    <a id="button-libro" href="https://www.pueblonuevobautista.com.ar/3material/discipulado/DIDAKTIKOS_2015.pdf" target="_blank" class="xl:h-full xl:w-full h-full w-full"></a>
-                </div>
-                <Image src={didaktikos} alt="" class="xl:h-[436px] xl:w-[281px] h-full md:h-full"/>
-            </button>
-            <button>
-                <div class="xl:h-[436px] xl:w-[281px] h-[300px] w-[190px] md:h-[560px] md:w-[355px] absolute hover:bg-black hover:bg-opacity-50 transition-all flex justify-center items-center duration-200">
-                    <a id="button-libro" href="https://www.pueblonuevobautista.com.ar/3material/discipulado/Manual_GBC.pdf" target="_blank" class="xl:h-full xl:w-full h-full w-full"></a>
-                </div>
-                <Image src={manualgbc} alt="" class="xl:h-[436px] xl:w-[281px] h-full md:h-full md:w-full"/>
-            </button>
-            <button>
-                <div class="xl:h-[436px] xl:w-[281px] h-[300px] w-[190px] md:h-[560px] md:w-[355px] absolute hover:bg-black hover:bg-opacity-50 transition-all flex justify-center items-center duration-200">
-                    <a id="button-libro" href="https://www.pueblonuevobautista.com.ar/3material/discipulado/BASES%20Y%20PRIMER%20PRINCIPIOS%20DE%20CRECIMIENTO.pdf" target="_blank" class="xl:h-full xl:w-full h-full w-full"></a>
-                </div>
-                <Image src={crecimientoIglesias} alt="" class="xl:h-[436px] xl:w-[281px] h-full md:h-full md:w-full"/>
-            </button>
+    <main class="h-full w-full flex flex-col items-center overflow-scroll">
+        <div class="flex flex-col items-center mt-10 gap-4">
+            <h1 class="text-logo font-roboto font-bold text-3xl">Materiales de Estudio Bíblico</h1>
+            <p class="text-xl opacity-75">Recursos para profundizar en la Palabra de Dios y crecer en tu fe</p>
         </div>
+        <SeccionBiblica client:load/>
     </main>
 </Layout>
-
-<script>
-    import { showComoEstudiar } from "../store"
-    const buttonEstudiar = document.getElementById("button-estudiar")
-
-    buttonEstudiar?.addEventListener("click", () => showComoEstudiar.set(true))
-</script>
