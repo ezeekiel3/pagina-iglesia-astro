@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
-import folderIcon from '../img/folderIcon.png'
 import SectionItem from './SectionItem'
+
+type SeccionBiblicaProps = {
+    section: string
+    titleSection: string
+    descriptionSection: string
+    cantidadMaterial: string
+}
 
 const nuevoTestamento = [
     { id: 'evangelio', name: 'Los Cuatro Evangelios', icon: 'folder' },
@@ -23,7 +29,19 @@ const nuevoTestamento = [
     { id: 'apocalipsis', name: 'Apocalipsis', icon: 'folder' },
 ]
 
-export default function SeccionBiblica() {
+const nombresJesus = [
+    { id: 'salvador', name: 'Jesus, El Salvador.', icon: 'file' },
+    { id: 'senior', name: 'Jesus, El Señor', icon: 'file' },
+    { id: 'maestro', name: 'Jesus, El Maestro', icon: 'file' },
+    { id: 'profeta', name: 'Jesus, El Profeta', icon: 'file' },
+]
+
+export default function SeccionBiblica({
+    section,
+    titleSection,
+    descriptionSection,
+    cantidadMaterial,
+}: SeccionBiblicaProps) {
     const [showMore, setShowMore] = useState(false)
 
     return (
@@ -31,9 +49,9 @@ export default function SeccionBiblica() {
             <div className='bg-orange-100 bg-opacity-70 mt-7 mb-7 h-1/5 w-full flex flex-row items-center pl-7'>
                 <p className='text-4xl'>📖</p>
                 <div className='ml-5 flex flex-col gap-2 h-auto'>
-                    <p className='opacity-50 font-sans'>Seccion 1</p>
-                    <h2 className='text-2xl text-logo font-semibold opacity-90'>Estudios del Nuevo Testamento</h2>
-                    <p className='opacity-65'>Profundiza en las enseñanzas y mensajes del Nuevo Testamento</p>
+                    <p className='opacity-50 font-sans'>Seccion {section}</p>
+                    <h2 className='text-2xl text-logo font-semibold opacity-90'>{titleSection}</h2>
+                    <p className='opacity-65'>{descriptionSection}</p>
                 </div>
             </div>
             <div className='w-full flex items-center flex-col gap-4'>
@@ -50,10 +68,10 @@ export default function SeccionBiblica() {
             <button
                 className='font-medium border border-black h-min py-2 px-3 rounded-lg hover:bg-orange-800 hover:bg-opacity-15 duration-100 border-opacity-50 mt-6'
                 onClick={() => setShowMore(!showMore)}>
-                {showMore ? 'Ver Menos' : 'Ver 15 Mas'}
+                {showMore ? 'Ver Menos' : 'Ver Mas'}
             </button>
             <div className='h-2 w-11/12 border-t mt-5 border-black border-opacity-20'></div>
-            <p className='text-lg mt-4'>Total de Recursos: 345 PDFs</p>
+            <p className='text-lg mt-4'>Total de Recursos: {cantidadMaterial} PDFs</p>
         </div>
     )
 }
