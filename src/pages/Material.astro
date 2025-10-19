@@ -10,6 +10,43 @@ import SeccionBiblica from "../components/SeccionBiblica.tsx"
             <h1 class="text-logo font-roboto font-bold text-3xl">Materiales de Estudio Bíblico</h1>
             <p class="text-xl opacity-75">Recursos para profundizar en la Palabra de Dios y crecer en tu fe</p>
         </div>
-        <SeccionBiblica section="1" titleSection="Estudios del Nuevo Testamento" descriptionSection="Profundiza en las enseñanzas y mensajes del Nuevo Testamento" cantidadMaterial="493" client:load/>
+        <SeccionBiblica section="1" titleSection="Estudios del Nuevo Testamento" descriptionSection="Profundiza en las enseñanzas y mensajes del Nuevo Testamento" cantidadMaterial="493" emoji="📖" contenido={[
+    { id: 'evangelio', name: 'Los Cuatro Evangelios', icon: 'folder' },
+    { id: 'hechos', name: 'Hechos', icon: 'folder' },
+    { id: 'romanos', name: 'Romanos', icon: 'folder' },
+    { id: 'corintios', name: 'Cartas de los Corintios', icon: 'folder' },
+    { id: 'galatas', name: 'Galatas', icon: 'folder' },
+    { id: 'efesios', name: 'Efesios', icon: 'folder' },
+    { id: 'filipenses', name: 'Filipenses', icon: 'folder' },
+    { id: 'colosenses', name: 'Colosenses', icon: 'folder' },
+    { id: 'tesalonica', name: 'Cartas de Tesalonica', icon: 'folder' },
+    { id: 'timoteo', name: 'Cartas a Timoteo', icon: 'folder' },
+    { id: 'tito', name: 'Tito', icon: 'folder' },
+    { id: 'filemon', name: 'Filemon', icon: 'folder' },
+    { id: 'hebreos', name: 'Hebreos', icon: 'folder' },
+    { id: 'santiago', name: 'Santiago', icon: 'folder' },
+    { id: 'pedro', name: 'Cartas de Pedro', icon: 'folder' },
+    { id: 'juan', name: 'Cartas de Juan', icon: 'folder' },
+    { id: 'judas', name: 'Judas', icon: 'folder' },
+    { id: 'apocalipsis', name: 'Apocalipsis', icon: 'folder' },
+]} client:load/>
+        <SeccionBiblica section="2" titleSection="Estudios Nombres de Jesús" descriptionSection="Descubre el significado profundo de cada nombre de Cristo" cantidadMaterial="250" emoji="✝️" contenido={[
+    { id: 'salvador', name: 'Jesus, El Salvador.', icon: 'file' },
+    { id: 'senior', name: 'Jesus, El Señor', icon: 'file' },
+    { id: 'maestro', name: 'Jesus, El Maestro', icon: 'file' },
+    { id: 'profeta', name: 'Jesus, El Profeta', icon: 'file' },
+]} client:load/>
+ <SeccionBiblica section="3" titleSection="Discipulados" descriptionSection="Recursos para el crecimiento y formación de discípulos" cantidadMaterial="4" emoji="🙏" contenido={[
+    { id: 'primeros-pasos', name: 'Primeros Pasos en la vida Cristiana', icon: 'file' },
+    { id: 'didaktikos', name: 'Didaktikos, Aptos Para Enseñar', icon: 'file' },
+    { id: 'manual', name: 'Manual para Grupos de Bendicion y Crecimiento', icon: 'file' },
+    { id: 'bases', name: 'Bases y Principios de crecimiento de la Iglesia', icon: 'file' },
+]} client:load/>
+<SeccionBiblica section="4" titleSection="Cristo el Fundamento en toda la Biblia" descriptionSection="Explorando a Cristo desde Génesis hasta Apocalipsis" cantidadMaterial="52" emoji="⛪" contenido={[
+    { id: 'genesis', name: 'Genesis', icon: 'file' },
+    { id: 'exodo', name: 'Exodo', icon: 'file' },
+    { id: 'levitico', name: 'Levitico', icon: 'file' },
+    { id: 'numeros', name: 'Numeros', icon: 'file' },
+]} client:load/>
     </main>
 </Layout>

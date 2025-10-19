@@ -18,7 +18,11 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                 showMore ? 'visible' : 'invisible'
             }`}>
             <div className='flex flex-row pl-7 gap-3 py-4'>
-                {itemSection.icon === 'folder' ? <img src={folderIcon.src} alt='' /> : <img src={pdfIcon.src} alt='' />}
+                {itemSection.icon === 'folder' ? (
+                    <img src={folderIcon.src} alt='' />
+                ) : (
+                    <img src={pdfIcon.src} alt='' className='' />
+                )}
                 <p className='text-xl'>{itemSection.name}</p>
             </div>
         </div>
