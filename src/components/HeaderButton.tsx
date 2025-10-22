@@ -39,7 +39,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                 <img src={menuImg.src} alt='' className='h-12' />
             </button>
             <ul
-                className={`absolute min-w-full xl:flex hidden flex-col bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo
+                className={`absolute z-10 min-w-full xl:flex hidden flex-col bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo
                 ${
                     children && (hoveringButton || hoveringDropdown)
                         ? 'pointer-events-auto opacity-100'
@@ -129,7 +129,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                         hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                                     }`}>
                                     <button>
-                                        <a href='/pagina-iglesia-astro/#'>Estudio Inductivos</a>
+                                        <a href='/pagina-iglesia-astro/Material'>Estudio Inductivos</a>
                                     </button>
                                     <button>
                                         <a href='/pagina-iglesia-astro/#'>Discipulado</a>
