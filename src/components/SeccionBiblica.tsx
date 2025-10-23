@@ -7,7 +7,13 @@ type SeccionBiblicaProps = {
     descriptionSection: string
     cantidadMaterial: string
     emoji: string
-    contenido: { id: string; name: string; icon: string; pdfs?: { versiculo: string; filePath: string }[] }[]
+    contenido: {
+        id: string
+        name: string
+        icon: string
+        pdfs?: { versiculo: string; filePath: string }[]
+        pdfPath?: string
+    }[]
 }
 
 export default function SeccionBiblica({
