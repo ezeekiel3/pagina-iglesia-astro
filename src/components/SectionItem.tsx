@@ -13,6 +13,8 @@ type SectionItemProps = {
 
 export default function SectionItem({ itemSection, showMore }: SectionItemProps) {
     const [openFolder, setOpenFolder] = useState<boolean>(false)
+    const [hoveringTitle, setHoveringTitle] = useState<boolean>(false)
+    const [editingTitle, setEditingTitle] = useState<boolean>(false)
 
     return (
         <div
@@ -22,7 +24,7 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
             <div
                 className={`flex flex-row pl-7 gap-3 ${itemSection.icon === 'folder' ? 'py-4' : ''} items-center`}
                 onClick={() => {
-                    if (itemSection.icon === 'folder') {
+                    if (itemSection.icon === 'folder' && hoveringTitle === false) {
                         setOpenFolder(!openFolder)
                     }
                 }}>
@@ -46,7 +48,17 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                     </svg>
                 )}
                 {itemSection.icon === 'folder' ? (
-                    <p className='xl:text-xl text-lg text-logo font-semibold'>{itemSection.name}</p>
+                    <p
+                        className='xl:text-xl text-lg text-logo font-semibold'
+                        onMouseEnter={() => setHoveringTitle(true)}
+                        onMouseLeave={() => setHoveringTitle(false)}>
+                        {itemSection.name}
+                        <button
+                            className={`${hoveringTitle ? 'inline' : 'hidden'}`}
+                            onClick={() => setEditingTitle(true)}>
+                            editar
+                        </button>
+                    </p>
                 ) : (
                     <a
                         href={itemSection.pdfPath}

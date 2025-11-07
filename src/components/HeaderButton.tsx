@@ -164,7 +164,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                         hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                                     }`}>
                                     <button>
-                                        <a href='/pagina-iglesia-astro/#'>Trabajo</a>
+                                        <a href='/pagina-iglesia-astro/Nenes'>Trabajo</a>
                                     </button>
                                     <button>
                                         <a href='/pagina-iglesia-astro/#'>Material</a>
@@ -193,7 +193,7 @@ export default function HeaderButton({ buttonText, children }: HeaderButtonProps
                                         hoveringButton ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                                     }`}>
                                     <button>
-                                        <a href='/pagina-iglesia-astro/#'>Descripción</a>
+                                        <a href='/pagina-iglesia-astro/Cdc'>Descripción</a>
                                     </button>
                                     <button>
                                         <a href='/pagina-iglesia-astro/#'>Ubicación</a>

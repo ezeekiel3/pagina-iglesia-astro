@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import fotoscamping from '../img/fotoscamping.jpg'
+import CdcImages from '../components/CdcImages.astro'
+
+import edificio1 from '../img/edificio1.jpg'
+import edificio2 from '../img/edificio2.jpg'
+import edificio3 from '../img/edificio3.jpg'
+import edificio4 from '../img/edificio4.jpg'
+import interior1 from '../img/interior1.jpg'
+import interior2 from '../img/interior2.jpg'
+import cocina from '../img/cocina.jpg'
+import patio from '../img/patio.jpg'
+import habitacion from '../img/habitacion1.jpg'
+import habitacion2 from '../img/habitacion2.jpg'
+import habitacion3 from '../img/habitacion3.jpg'
+import banio from '../img/banio.jpg'
+import parque from '../img/parque.jpg'
+import parque2 from '../img/parque2.jpg'
+import parque3 from '../img/parque3.jpg'
+
+Layout
+---
+
+<Layout>
+    <main class='flex w-full h-auto items-center flex-col'>
+        <h1 class='text-logo font-logo text-2xl mt-8 font-bold'>Centro de Desarrollo Cristiano Pueblo Nuevo</h1>
+        <Image src={fotoscamping} alt='' class='mt-5 rounded-lg' />
+        <p class='text-lg font-merriweather w-1/2 leading-10 mt-5'>
+            La Iglesia cuenta con un predio en La Balandra, Partido de Berisso, de dos hectáreas y media, que
+            denominamos Centro de Desarrollo Cristiano, totalmente parquizado y arbolado donde llevamos a cabo reuniones
+            especiales de la iglesia, bautismos, campamentos para niños, adolescentes, jóvenes y familias; retiros
+            espirituales, vigilias de oración, cursos de entrenamientos de líderes, encuentros deportivos y conciertos
+            juveniles , reuniones de pastores, y donde además, celebramos bodas y cumpleaños.
+        </p>
+        <p class='text-lg font-merriweather leading-10 mt-5 mb-10 w-1/2'>
+            El lugar cuenta con un edificio de tres pisos; en planta baja un salón actos para 400 personas sentadas. En
+            un primer piso dos salones uno con capacidad de 50 personas, y otro para 20, baños y habitaciones y en
+            segundo piso con habitaciones, todo amueblado. Para su área de servicios tiene cocina y una batería de
+            baños. En su amplio parque cuanta además con canchas de fútbol, vóley, y espacios verdes; una piscina para
+            niños pequeños y otra circular para mayores.
+        </p>
+        <CdcImages lugar='Vistas del Edificio y Salón Multiuso'>
+            <Image src={edificio1} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={edificio2} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={edificio3} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={edificio4} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={interior1} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={interior2} alt='' class='h-96 w-96 rounded-lg' />
+        </CdcImages>
+        <CdcImages lugar='Cocina, Patio interior ingreso a Cocina, Dormitorios'>
+            <Image src={cocina} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={patio} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={habitacion} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={habitacion2} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={habitacion3} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={banio} alt='' class='h-96 w-96 rounded-lg' />
+        </CdcImages>
+        <CdcImages lugar='Vistas del Parque, Piletas y canchas recreativas'>
+            <Image src={parque} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={parque2} alt='' class='h-96 w-96 rounded-lg' />
+            <Image src={parque3} alt='' class='h-96 w-96 rounded-lg' />
+        </CdcImages>
+    </main>
+</Layout>

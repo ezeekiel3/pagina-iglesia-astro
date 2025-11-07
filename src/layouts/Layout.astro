@@ -4,92 +4,95 @@ import HeaderButton from '../components/HeaderButton.tsx'
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/pagina-iglesia-astro/favicon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-	 	<title>Iglesia Pueblo Nuevo</title>
-	</head>
-	<header class='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
-		<div class='container flex justify-between items-center'>
-			<a href='/pagina-iglesia-astro/'>
-				<img src={logoHeader.src} class='h-14 p-2' />
-			</a>
-			<div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
-				<HeaderButton buttonText="Iglesia" client:load>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Creemos en...</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='/pagina-iglesia-astro/Ubicaciones'>Ubicaciones</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='/pagina-iglesia-astro/Agenda'>Agenda</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='/pagina-iglesia-astro/NuestraComunidad'>Nuestra Comunidad</a>
-					</li>
-				</HeaderButton>
-				<HeaderButton buttonText='Material' client:load>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='/pagina-iglesia-astro/Material'>Estudios Inductivos</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Discipulados</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Otros Escritos</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Guias De Oración</a>
-					</li>
-				</HeaderButton>
-				<HeaderButton buttonText="Niños" client:load>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Trabajo</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Material</a>
-					</li>
-				</HeaderButton>
-				<HeaderButton buttonText="Centro de Desarrollo" client:load>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Descripción</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Ubicación</a>
-					</li>
-					<li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
-						<a href='#'>Reservas</a>
-					</li>
-				</HeaderButton>
-				<HeaderButton buttonText="Contacto"/>
-			</div>
-			<div class='xl:hidden flex xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
-				<HeaderButton client:load/>
-			</div>
-		</div>
-	</header>
-	<body>
-		<slot />
-	</body>
-	<footer class='w-full bg-logo flex-col flex items-center'>
-		<h1 class='text-white xl:text-4xl py-5'>Nos gustaría que nos contactes</h1>
-	</footer>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width' />
+        <link rel='icon' type='image/svg+xml' href='/pagina-iglesia-astro/favicon.png' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+        <link
+            href='https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'
+            rel='stylesheet'
+        />
+        <meta name='generator' content={Astro.generator} />
+        <title>Iglesia Pueblo Nuevo</title>
+    </head>
+    <header class='bg-orange-200 flex justify-center bg-opacity-50 w-full px-4'>
+        <div class='container flex justify-between items-center'>
+            <a href='/pagina-iglesia-astro/'>
+                <img src={logoHeader.src} class='h-14 p-2' />
+            </a>
+            <div class='xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
+                <HeaderButton buttonText='Iglesia' client:load>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Creemos en...</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/Ubicaciones'>Ubicaciones</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/Agenda'>Agenda</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/NuestraComunidad'>Nuestra Comunidad</a>
+                    </li>
+                </HeaderButton>
+                <HeaderButton buttonText='Material' client:load>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/Material'>Estudios Inductivos</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Discipulados</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Otros Escritos</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Guias De Oración</a>
+                    </li>
+                </HeaderButton>
+                <HeaderButton buttonText='Niños' client:load>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/Nenes'>Trabajo</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Material</a>
+                    </li>
+                </HeaderButton>
+                <HeaderButton buttonText='Centro de Desarrollo' client:load>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='/pagina-iglesia-astro/Cdc'>Descripción</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Ubicación</a>
+                    </li>
+                    <li class='py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200'>
+                        <a href='#'>Reservas</a>
+                    </li>
+                </HeaderButton>
+                <HeaderButton buttonText='Contacto' />
+            </div>
+            <div class='xl:hidden flex xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center'>
+                <HeaderButton client:load />
+            </div>
+        </div>
+    </header>
+    <body>
+        <slot />
+    </body>
+    <footer class='w-full bg-logo flex-col flex items-center'>
+        <h1 class='text-white xl:text-4xl py-5'>Nos gustaría que nos contactes</h1>
+    </footer>
+
+    <style>
+        html,
+        body {
+            background-color: rgb(255, 237, 213);
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
 </html>
-
-<style>
-	html,
-	body {
-		background-color: rgb(255, 237, 213);
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
-

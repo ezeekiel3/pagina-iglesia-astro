@@ -30,10 +30,10 @@ export default function Conocenos() {
                 <h2 className='xl:text-4xl text-2xl text-logo font-bold font-sans' ref={conocenosRef}>
                     ¡Queremos que nos conozcas!
                 </h2>
-                <p className='xl:text-2xl text-center my-6 font-roboto'>
+                <p className='xl:text-2xl text-center opacity-80 my-6 font-merriweather leading-7'>
                     La mayoría de la gente rechaza lo que no conoce, por <b>mala información, prejuicios o temor.</b>
                 </p>
-                <p className='xl:text-2xl/10 font-roboto xl:font-normal xl:w-2/3 w-3/4 text-base/8 xl:h-72 my-6'>
+                <p className='xl:text-2xl/10 opacity-80 font-merriweather xl:font-normal text-center xl:w-2/3 w-3/4 text-base/8 xl:h-72 my-6'>
                     Aquello de <b className='italic'>"Mejor es malo conocido que bueno por conocer"</b>; es una triste
                     realidad y un tremendo error de principios. Porque nunca puede ser <b className='italic'>"mejor"</b>
                     ; lo que se considera malo; ni el conformarse en la ignorancia puede ser garantía de una vida
@@ -42,7 +42,7 @@ export default function Conocenos() {
                     consigo mismas, que no aceptarían ni rechazarían una información sin haberla analizado y comparado a
                     fin de comprobar su veracidad.
                 </p>
-                <p className='xl:text-2xl/10 my-6 text-center font-roboto font-normal w-2/3 text-base/8'>
+                <p className='xl:text-2xl/10 my-6 text-center font-merriweather opacity-80 font-normal w-2/3 text-base/8'>
                     Si vos perteneces a este segundo grupo, te invitamos a leer nuestras creencias y a sacar tus propias
                     conclusiones.
                 </p>
