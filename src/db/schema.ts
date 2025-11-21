@@ -1,5 +1,4 @@
 import { pgEnum, pgTable, varchar, serial, integer, text } from 'drizzle-orm/pg-core'
-import { relations } from 'drizzle-orm'
 
 export const itemTypeEnum = pgEnum('item_type', ['folder', 'file'])
 

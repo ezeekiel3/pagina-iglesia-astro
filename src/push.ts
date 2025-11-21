@@ -1,4 +1,27 @@
-const sections = [
+type Section = {
+    title: string
+    description: string
+    emoji: string
+    content: (
+        | {
+              id: string
+              name: string
+              icon: 'folder'
+              pdfs: {
+                  versiculo: string
+                  filePath: string
+              }[]
+          }
+        | {
+              id: string
+              name: string
+              icon: 'file'
+              pdfPath: string
+          }
+    )[]
+}
+
+const sectionsData: Section[] = [
     {
         title: 'Estudios del Nuevo Testamento',
         description: 'Profundiza en las enseñanzas y mensajes del Nuevo Testamento',
@@ -7,7 +30,7 @@ const sections = [
             {
                 id: 'evangelio',
                 name: 'Los Cuatro Evangelios',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01 Lucas 1:1-4',
@@ -542,7 +565,7 @@ const sections = [
             {
                 id: 'hechos',
                 name: 'Hechos',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01 Hechos 1:1-11',
@@ -869,7 +892,7 @@ const sections = [
             {
                 id: 'romanos',
                 name: 'Romanos',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Romanos 1:1-7',
@@ -1004,7 +1027,7 @@ const sections = [
             {
                 id: 'corintios',
                 name: 'Cartas de los Corintios',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. 1° Corintios 1: 1-9',
@@ -1223,7 +1246,7 @@ const sections = [
             {
                 id: 'galatas',
                 name: 'Galatas',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Gálatas 1:1-5',
@@ -1294,7 +1317,7 @@ const sections = [
             {
                 id: 'efesios',
                 name: 'Efesios',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Efesios 1:1-8',
@@ -1365,7 +1388,7 @@ const sections = [
             {
                 id: 'filipenses',
                 name: 'Filipenses',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Filipenses 1:1-11',
@@ -1416,7 +1439,7 @@ const sections = [
             {
                 id: 'colosenses',
                 name: 'Colosenses',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Colosenses 1:1-12',
@@ -1471,7 +1494,7 @@ const sections = [
             {
                 id: 'tesalonica',
                 name: 'Cartas de Tesalonica',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. 1° Tesalonicenses 1:1-10',
@@ -1526,7 +1549,7 @@ const sections = [
             {
                 id: 'timoteo',
                 name: 'Cartas a Timoteo',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. 1° Timoteo 1:1-11',
@@ -1633,7 +1656,7 @@ const sections = [
             {
                 id: 'tito',
                 name: 'Tito',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Tito 1:1-4',
@@ -1668,7 +1691,7 @@ const sections = [
             {
                 id: 'filemon',
                 name: 'Filemon',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: 'Filemón.',
@@ -1679,7 +1702,7 @@ const sections = [
             {
                 id: 'hebreos',
                 name: 'Hebreos',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Hebreos 1:1-14',
@@ -1798,7 +1821,7 @@ const sections = [
             {
                 id: 'santiago',
                 name: 'Santiago',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Santiago 1:1-8',
@@ -1845,7 +1868,7 @@ const sections = [
             {
                 id: 'pedro',
                 name: 'Cartas de Pedro',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. 1 Pedro 1:1-9',
@@ -1920,7 +1943,7 @@ const sections = [
             {
                 id: 'juan',
                 name: 'Cartas de Juan',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. 1° Juan 1:1-10',
@@ -1955,7 +1978,7 @@ const sections = [
             {
                 id: 'judas',
                 name: 'Judas',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Judas 1:1-11.',
@@ -1970,7 +1993,7 @@ const sections = [
             {
                 id: 'apocalipsis',
                 name: 'Apocalipsis',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Apocalipsis 1:1-20',
@@ -2076,308 +2099,308 @@ const sections = [
             {
                 id: 'salvador',
                 name: '01 Jesus, El Salvador.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/01_JESUS_EL_SALVADOR.pdf',
             },
             {
                 id: 'senior',
                 name: '02 Jesus, El Señor.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/02_JESUS_EL_SENOR.pdf',
             },
             {
                 id: 'maestro',
                 name: '03 Jesus, El Maestro.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/03_JESUS_EL_MAESTRO.pdf',
             },
             {
                 id: 'profeta',
                 name: '04 Jesus, El Profeta.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/04_JESUS_EL_PROFETA.pdf',
             },
             {
                 id: 'logos',
                 name: '05 Jesús, El Logos',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/05_JESUS_EL_LOGOS.pdf',
             },
             {
                 id: 'mesias',
                 name: '06 Jesús, El Mesías',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/06_JESUS_EL_MESIAS.pdf',
             },
             {
                 id: 'renuevo',
                 name: '07 Jesús, El Renuevo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/07_JESUS_EL_RENUEVO.pdf',
             },
             {
                 id: 'hijo-hombre',
                 name: '08 Jesús, El Hijo del Hombre',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/08_JESUS_EL_HIJO_DE_HOMBRE.pdf',
             },
             {
                 id: 'hijo-dios',
                 name: '09 Jesús, Hijo de Dios',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/09_JESUS_HIJO_DE_DIOS.pdf',
             },
             {
                 id: 'puerta',
                 name: '10 Jesús, La Puerta',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/10_JESUS_LA_PUERTA.pdf',
             },
             {
                 id: 'camino',
                 name: '11 Jesús, El Camino',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/11_JESUS_EL-CAMINO.pdf',
             },
             {
                 id: 'verdad',
                 name: '12 Jesús, La Verdad',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/12_JESUS_LA_VERDAD.pdf',
             },
             {
                 id: 'vida',
                 name: '13 Jesús, La Vida',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/13_JESUS_LA_VIDA.pdf',
             },
             {
                 id: 'resurreccion',
                 name: '14 Jesús, La Resurrección',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/14_JESUS_LA_RESURRECCION.pdf',
             },
             {
                 id: 'amen',
                 name: '15 Jesús, El Amén',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/15_JESUS_EL_AMEN.pdf',
             },
             {
                 id: 'alfa-omega',
                 name: '16 Jesús, El Alfa y La Omega',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/16_JESUS_EL_ALFA_Y_LA_OMEGA.pdf',
             },
             {
                 id: 'admirable',
                 name: '17 Jesús, Admirable',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/17_JESUS_ADMIRABLE.pdf',
             },
             {
                 id: 'consejero',
                 name: '18 Jesús, Consejero',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/17_JESUS_ADMIRABLE.pdf',
             },
             {
                 id: 'Dios-fuerte',
                 name: '19 Jesús, Dios Fuerte',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/19_JESUS_DIOS_FUERTE.pdf',
             },
             {
                 id: 'Padre-Eterno',
                 name: '20 Jesús, Padre Eterno',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/20_JESUS_PADRE_ETERNO.pdf',
             },
             {
                 id: 'principe-paz',
                 name: '21 Jesús, Príncipe de Paz',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/21_JESUS_PRINCIPE_DE_PAZ.pdf',
             },
             {
                 id: 'raiz',
                 name: '22 Jesús, La Raíz',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/22_JESUS_LA_RAIZ.pdf',
             },
             {
                 id: 'leon',
                 name: '23 Jesús, El León',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/23_JESUS_EL_LEON.pdf',
             },
             {
                 id: 'pastor',
                 name: '24 Jesús, El Buen Pastor',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/24_JESUS_EL_BUEN_PASTOR.pdf',
             },
             {
                 id: 'vid-verdadera',
                 name: '25 Jesús, La Vid Verdadera',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/25_JESUS_LA_VID_VERDADERA.pdf',
             },
             {
                 id: 'pan-vida',
                 name: '26 Jesús, El Pan de la Vida',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/26_JESUS_EL_PAN_DE_VIDA.pdf',
             },
             {
                 id: 'mediador',
                 name: '27 Jesús, El Medidador',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/27_JESUS_EL_MEDIADOR.pdf',
             },
             {
                 id: 'justo',
                 name: '28 Jesús, El Justo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/28_JESUS_EL_JUSTO.pdf',
             },
             {
                 id: 'testigo',
                 name: '29 Jesús, El Testigo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/29_JESUS_EL_TESTIGO_FIEL.pdf',
             },
             {
                 id: 'libertador',
                 name: '30 Jesús, El Libertador',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/30_JESUS_EL_LIBERTADOR.pdf',
             },
             {
                 id: 'santo',
                 name: '31 Jesús, El Santo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/30_JESUS_EL_LIBERTADOR.pdf',
             },
             {
                 id: 'luz-mundo',
                 name: '32 Jesús, La Luz del Mundo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/32_JESUS_LA_LUZ_DEL_MUNDO.pdf',
             },
             {
                 id: 'apostol',
                 name: '33 Jesús, El Apóstol',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/33_JESUS_EL_APOSTOL.pdf',
             },
             {
                 id: 'fiel-verdadero',
                 name: '34 Jesús, Fiel y Verdadero',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/34_JESUS_FIEL_Y_VERDADERO.pdf',
             },
             {
                 id: 'esposo',
                 name: '35 Jesús, El Esposo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/35_JESUS_EL_ESPOSO.pdf',
             },
             {
                 id: 'redentor',
                 name: '36 Jesús, El Redentor',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/36_JESUS_EL_REDENTOR.pdf',
             },
             {
                 id: 'autor-vida',
                 name: '37 Jesús, Autor de la Vida',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/37_JESUS_AUTOR_DE_LA_VIDA.pdf',
             },
             {
                 id: 'sumo-sacerdote',
                 name: '38 Jesús, Sumo Sacerdote',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/38_%20JESUS_SUMO_SACERDOTE.pdf',
             },
             {
                 id: 'cabeza-iglesia',
                 name: '39 Jesús, Cabeza de la Iglesia',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/39_JESUS_CABEZA_DE_LA_IGLESIA.pdf',
             },
             {
                 id: 'juez',
                 name: '40 Jesús, el Juez',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/40_JESUS_EL_JUEZ.pdf',
             },
             {
                 id: 'yo-soy',
                 name: '41 Jesús, el Yo Soy',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/41_JESUS_EL_YO_SOY.pdf',
             },
             {
                 id: 'postrer-adan',
                 name: '42 Jesús, el Postrer Adán',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/42_JESUS_EL_POSTRER_ADAN.pdf',
             },
             {
                 id: 'creador',
                 name: '43 Jesús, el Creador',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/43_JESUS_EL_CREADOR.pdf',
             },
             {
                 id: 'cordero-Dios',
                 name: '44 Jesús, el Cordero de Dios',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/44_JESUS_EL_CORDERO_DE_DIOS.pdf',
             },
             {
                 id: 'rey-siglos',
                 name: '45 Jesús, el Rey de los Siglos',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/45_JESUS_REY_DE_LOS_SIGLOS.pdf',
             },
             {
                 id: 'amado',
                 name: '46 Jesús, el Amado',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/46_JESUS_EL_AMADO.pdf',
             },
             {
                 id: 'primogenito-creacion',
                 name: '47 Jesús, Primogénito de la Creación',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/47_PRIMOGENITO_DE_LA_CREACION.pdf',
             },
             {
                 id: 'nuestra-paz',
                 name: '48 Jesús, nuestra Paz',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/48_JESUS_NUESTRA_PAZ.pdf',
             },
             {
                 id: 'fuente',
                 name: '49 Jesús, la Fuente',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/49_JESUS_LA_FUENTE.pdf',
             },
             {
                 id: 'piedra-angulo',
                 name: '50 Jesús, la Piedra del Ángulo',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/50_JESUS_LA_PIEDRA_DEL_ANGULO.pdf',
             },
@@ -2391,25 +2414,25 @@ const sections = [
             {
                 id: 'primeros-pasos',
                 name: 'Primeros Pasos en la vida Cristiana',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/LOS_PRIMEROS_PASOS.pdf',
             },
             {
                 id: 'didaktikos',
                 name: 'Didaktikos, Aptos Para Enseñar',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/DIDAKTIKOS_2015.pdf',
             },
             {
                 id: 'manual',
                 name: 'Manual para Grupos de Bendicion y Crecimiento',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/Manual_GBC.pdf',
             },
             {
                 id: 'bases',
                 name: 'Bases y Principios de crecimiento de la Iglesia',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/discipulado/BASES%20Y%20PRIMER%20PRINCIPIOS%20DE%20CRECIMIENTO.pdf',
             },
@@ -2423,7 +2446,7 @@ const sections = [
             {
                 id: 'principio',
                 name: 'CRISTO EL FUNDAMENTO DEL PRINCIPIO DE TODO EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Génesis.',
@@ -2455,7 +2478,7 @@ const sections = [
             {
                 id: 'historia',
                 name: 'CRISTO EL FUNDAMENTO DE LA HISTORIA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '06. Josué.',
@@ -2482,7 +2505,7 @@ const sections = [
             {
                 id: 'restauracion',
                 name: 'CRISTO EL FUNDAMENTO DE LA RESTAURACIÓN EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '10. Esdras.',
@@ -2509,7 +2532,7 @@ const sections = [
             {
                 id: 'alabanza',
                 name: 'CRISTO EL FUNDAMENTO DE LA ALABANZA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '14. Los Salmos.',
@@ -2536,7 +2559,7 @@ const sections = [
             {
                 id: 'profecia',
                 name: 'CRISTO EL FUNDAMENTO DE LA PROFECÍA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '18. Isaías.',
@@ -2568,7 +2591,7 @@ const sections = [
             {
                 id: 'justicia',
                 name: 'CRISTO EL FUNDAMENTO DE LA JUSTICIA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '23. Oseas.',
@@ -2595,7 +2618,7 @@ const sections = [
             {
                 id: 'integridad',
                 name: 'CRISTO EL FUNDAMENTO DE LA INTEGRIDAD EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '27. Nahúm y Habacuc.',
@@ -2622,7 +2645,7 @@ const sections = [
             {
                 id: 'evangelio-hechos',
                 name: 'CRISTO EL FUNDAMENTO DEL EVANGELIO Y LOS HECHOS EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '31. Mateo.',
@@ -2654,7 +2677,7 @@ const sections = [
             {
                 id: 'gracia',
                 name: 'CRISTO EL FUNDAMENTO DE LA GRACIA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '36. Romanos.',
@@ -2681,7 +2704,7 @@ const sections = [
             {
                 id: 'riqueza-amor',
                 name: 'CRISTO EL FUNDAMENTO DE NUESTRA RIQUEZA Y AMOR EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '40. Efesios.',
@@ -2713,7 +2736,7 @@ const sections = [
             {
                 id: 'ministerio',
                 name: 'CRISTO EL FUNDAMENTO DE NUESTRO MINISTERIO EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '45. 1° Timoteo.',
@@ -2740,7 +2763,7 @@ const sections = [
             {
                 id: 'perseverancia',
                 name: 'CRISTO EL FUNDAMENTO DE LA PERSEVERANCIA EN:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '49. Santiago.',
@@ -2774,7 +2797,7 @@ const sections = [
             {
                 id: 'inicios',
                 name: 'EL CONSEJO DE DIOS DESDE LOS INICIOS:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. El Valor de Todo el Consejo de Dios.',
@@ -2806,7 +2829,7 @@ const sections = [
             {
                 id: 'precursores',
                 name: 'EL CONSEJO DE DIOS A LOS PRECURSORES:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '06. Noé.',
@@ -2833,7 +2856,7 @@ const sections = [
             {
                 id: 'liderazgo',
                 name: 'EL CONSEJO DE DIOS PARA EL LIDERAZGO:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '10. José.',
@@ -2860,7 +2883,7 @@ const sections = [
             {
                 id: 'tiempos-turbulentos',
                 name: 'EL CONSEJO DE DIOS EN TIEMPOS TURBULENTOS:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '14. Jueces.',
@@ -2887,7 +2910,7 @@ const sections = [
             {
                 id: 'gobernar',
                 name: 'EL CONSEJO DE DIOS PARA GOBERNAR:',
-                icon: '',
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '18. Saúl.',
@@ -2919,7 +2942,7 @@ const sections = [
             {
                 id: 'carisma',
                 name: 'EL CONSEJO DE DIOS POR MEDIO DEL CARISMA PROFÉTICO:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '23. El Carisma Profético.',
@@ -2946,7 +2969,7 @@ const sections = [
             {
                 id: 'profetas',
                 name: 'EL CONSEJO DE DIOS POR MEDIO DE LOS PROFETAS MAYORES:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '27. Isaías I.',
@@ -2978,7 +3001,7 @@ const sections = [
             {
                 id: 'restauracion',
                 name: 'EL CONSEJO DE DIOS PARA LA RESTAURACION:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '32. Esdras y Nehemías.',
@@ -3005,7 +3028,7 @@ const sections = [
             {
                 id: 'sabiduria',
                 name: 'EL CONSEJO DE DIOS MEDIANTE LA SABIDURÍA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '36. Job.',
@@ -3032,7 +3055,7 @@ const sections = [
             {
                 id: 'evangelios',
                 name: 'EL CONSEJO DE DIOS MEDIANTE LOS EVANGELIOS:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '40. Las Bienventuranzas.',
@@ -3064,7 +3087,7 @@ const sections = [
             {
                 id: 'iglesia',
                 name: 'EL CONSEJO DE DIOS PARA LA IGLESIA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '45. El Espíritu Santo.',
@@ -3091,7 +3114,7 @@ const sections = [
             {
                 id: 'fe',
                 name: 'EL CONSEJO DE DIOS PARA LA SUSTENTACIÓN DE LA FE:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '49. La Doctrina de la Gracia.',
@@ -3125,335 +3148,335 @@ const sections = [
             {
                 id: 'Dios',
                 name: '01. Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: '',
             },
             {
                 id: 'omnipotente',
                 name: '02. El Omnipotente.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/2_MI_EXPERIENCIA_CON_EL_OMNIPOTENTE,_EL_TODOPODEROSO.docx',
             },
             {
                 id: 'altisimo',
                 name: '03. El Altísimo.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/3_MI_EXPERIENCIA_CON_EL_ALTiSIMO.docx',
             },
             {
                 id: 'eterno',
                 name: '04. El Dios Eterno.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/4_MI_EXPERIENCIA_CON_EL_DIOS_ETERNO.docx',
             },
             {
                 id: 'gloria',
                 name: '05. El Dios de Gloria.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/5_MI_EXPERIENCIA_CON_EL_DIOS_DE_GLORIA.docx',
             },
             {
                 id: 'rey',
                 name: '06. Dios Nuestro Rey.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/6_MI_EXPERIENCIA_CON_DIOS_NUESTRO_REY.docx',
             },
             {
                 id: 'defensa-Dios',
                 name: '07. La Defensa de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/7_MI_EXPERIENCIA_CON_LA_DEFENSA_DE_DIOS.docx',
             },
             {
                 id: 'fortaleza-Dios',
                 name: '08. La Fortaleza de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/8_MI_EXPERIENCIA_CON_LA_FORTALEZA_DE_DIOS.docx',
             },
             {
                 id: 'libertador',
                 name: '09. Dios mi Libertador.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/9_MI_EXPERIENCIA_CON_DIOS_MI_LIBERTADOR.docx',
             },
             {
                 id: 'redentor',
                 name: '10. Dios mi Redentor.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/10%20_MI_EXPERIENCIA_CON_MI_REDENTOR.docx',
             },
             {
                 id: 'resucitado',
                 name: '11. Cristo Resucitado.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/11_MI_EXPERIENCIA_CON_EL_RESUCITADO.docx',
             },
             {
                 id: 'salvador',
                 name: '12. Dios mi Salvador.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/12_MI_EXPERIENCIA_CON_DIOS_MI_SALVADOR.docx',
             },
             {
                 id: 'sanador',
                 name: '13. Dios mi Sanador.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/13_MI_EXPERIENCIA_CON_DIOS_MI_SANADOR.docx',
             },
             {
                 id: 'senior',
                 name: '14. Dios mi Señor.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/14_Mi_experiencia_con_Dios_mi_Se%C3%B1or.docx',
             },
             {
                 id: 'esperanza',
                 name: '15. Dios mi Esperanza.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/15_MI_EXPERIENCIA_CON_DIOS_MI_ESPERANZA.docx',
             },
             {
                 id: 'paz',
                 name: '16. El Dios de Paz.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/16_MI_EXPERIENCIA_CON_EL_DIOS_DE_PAZ.docx',
             },
             {
                 id: 'ejercitos',
                 name: '17. El Señor de los Ejercitos.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/17_Mi_experiencia_con_el_Senor_de_los_ejercitos.docx',
             },
             {
                 id: 'soberano',
                 name: '18. Dios Soberano.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/18_MI_EXPERIENCIA_CON_DIOS_SOBERANO.docx',
             },
             {
                 id: 'juez',
                 name: '19. Dios el Juez.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/19_MI_EXPERIENCIA_CON_DIOS_EL_JUEZ.docx',
             },
             {
                 id: 'Dios-padre',
                 name: '20. El Dios de Nuestros Padres.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/20_MI_EXPERIENCIA_CON_EL_DIOS_DE_NUESTROS_PADRES.docx',
             },
             {
                 id: 'misericordioso',
                 name: '21. Dios Misericordioso.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/20_MI_EXPERIENCIA_CON_EL_DIOS_DE_NUESTROS_PADRES.docx',
             },
             {
                 id: 'bondad',
                 name: '22. La Bondad de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/22_MI_EXPERIENCIA_CON_LA_BONDAD_DE_DIOS.docx',
             },
             {
                 id: 'amor',
                 name: '23. El Amor de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/23_MI_EXPERIENCIA_CON_EL_AMOR_DE_DIOS.docx',
             },
             {
                 id: 'celos',
                 name: '24. Los Celos de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/24_MI_EXPERIENCIA_CON_LOS_CELOS_DE_DIOS.docx',
             },
             {
                 id: 'santidad',
                 name: '25. La Santidad de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/25_MI_EXPERIENCIA_CON_LA_SANTIDAD_DE_DIOS.docx',
             },
             {
                 id: 'fuego',
                 name: '26. El Fuego de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/26_MI_EXPERIENCIA_CON_EL_FUEGO_DE_DIOS.docx',
             },
             {
                 id: 'luz',
                 name: '27. La Luz de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/27_MI_EXPERIENCIA_CON_LA_LUZ_DE_DIOS.docx',
             },
             {
                 id: 'dador',
                 name: '28. Dios el Dador de Vida.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/28_MI_EXPERIENCIA_CON_DIOS_EL_DADOR_DE_VIDA.docx',
             },
             {
                 id: 'fidelidad',
                 name: '29. La Fidelidad de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/29_MI_EXPERIENCIA_CON_LA_FIDELIDAD_DE_DIOS.docx',
             },
             {
                 id: 'oficios',
                 name: '30. Los Oficios de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/30_MI_EXPERIENCIA_CON_LOS_OFICIOS_DE_DIOS.docx',
             },
             {
                 id: 'pastoreo',
                 name: '31. El Pastoreo de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/31_MI_EXPERIENCIA_CON_EL_PASTOREO_DE_DIOS.docx',
             },
             {
                 id: 'primero-ultimo',
                 name: '32. Dios el Primero y el Último.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/32_MI_EXPERIENCIA_CON_DIOS_EL_PRIMERO_Y_EL_ULTIMO.docx',
             },
             {
                 id: 'yo-soy',
                 name: '33. El Yo Soy.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/33_MI_EXPERIENCIA_CON_EL_YO_SOY.docx',
             },
             {
                 id: 'verdad',
                 name: '34. El Dios de Verdad.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/34_MI_EXPERIENCIA_CON_EL_DIOS_DE_VERDAD.docx',
             },
             {
                 id: 'unico',
                 name: '35. El Único Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/35_MI_EXPERIENCIA_CON_EL_UNICO_DIOS.docx',
             },
             {
                 id: 'escudrinia-Dios',
                 name: '36. El Dios que Escudriña.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/36_MI_EXPERIENCIA_CON_DIOS_QUE_ESCUDRINA.docx',
             },
             {
                 id: 'revela',
                 name: '37. El Dios que Revela.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/37_MI_EXPERIENCIA_CON_DIOS_QUE_REVELA.docx',
             },
             {
                 id: 'perdona',
                 name: '38. El Dios que Perdona.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/38%20_MI_EXPERIENCIA_CON_EL_DIOS_QUE_PERDONA.docx',
             },
             {
                 id: 'consuela',
                 name: '39. El Dios que Consuela.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/39_MI_EXPERIENCIA_CON_DIOS_QUE_CONSUELA.docx',
             },
             {
                 id: 'padre',
                 name: '40. Dios el Padre.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/40_MI_EXPERIENCIA_CON_DIOS_EL_PADRE_(Eli).docx',
             },
             {
                 id: 'hijo',
                 name: '41. Dios el Hijo.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/41_MI_EXPERIENCIA_CON_DIOS_EL_HIJO_(Daniel).docx',
             },
             {
                 id: 'Espiritu-Santo',
                 name: '42. Dios Espíritu Santo.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/42_MI_EXPERIENCIA_CON_DIOS_EL_ESPIRITU_SANTO.docx',
             },
             {
                 id: 'uno',
                 name: '43. Dios Uno.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/43_MI_EXPERIENCIA_CON_DIOS_UNO.docx',
             },
             {
                 id: 'alabanza',
                 name: '44. El Dios de mi Alabanza.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/44_MI_EXPERIENCIA_CON_EL_DIOS_DE_MI_ALABANZA.docx',
             },
             {
                 id: 'amado',
                 name: '45. Dios el Amado.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/45_MI_EXPERIENCIA_CON_DIOS_EL_AMADO.docx',
             },
             {
                 id: 'amparo',
                 name: '46. El Amaparo de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/46_MI_EXPERIENCIA_CON_EL_AMPARO_DE_DIOS.docx',
             },
             {
                 id: 'escudo',
                 name: '47. El Escudo de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/47_MI_EXPERIENCIA_CON_EL_ESCUDO_DE_DIOS.docx',
             },
             {
                 id: 'nombres',
                 name: '48. Los nombres de Dios.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/48_MI_EXPERIENCIA_CON_LOS_NOMBRES_DE_DIOS.docx',
             },
@@ -3467,7 +3490,7 @@ const sections = [
             {
                 id: 'noe',
                 name: 'NOÉ:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Avancemos en la Gracia Como Noé.',
@@ -3493,7 +3516,7 @@ const sections = [
             {
                 id: 'abraham',
                 name: 'ABRAHAM:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '05. Con Abraham Avanzamos en el Llamado.',
@@ -3525,7 +3548,7 @@ const sections = [
             {
                 id: 'isaac',
                 name: 'ISAAC:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '10. Avanzamos con Isaac en la Total Dependencia de Dios.',
@@ -3552,7 +3575,7 @@ const sections = [
             {
                 id: 'jacob',
                 name: 'JACOB:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '14. Avanzamos con Jacob en Busca de la Bendición.',
@@ -3584,7 +3607,7 @@ const sections = [
             {
                 id: 'jose',
                 name: 'JOSÉ:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '19. Avancemos con José Cuando se Rompen los Sueños.',
@@ -3611,7 +3634,7 @@ const sections = [
             {
                 id: 'moises',
                 name: 'MOISÉS:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '23. Avancemos con Moisés en el Origen del Éxodo.',
@@ -3658,7 +3681,7 @@ const sections = [
             {
                 id: 'josue',
                 name: 'JOSUÉ:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '31. Avancemos con Josué en los Preparativos.',
@@ -3685,7 +3708,7 @@ const sections = [
             {
                 id: 'jueces-ruth',
                 name: 'JUECES Y RUTH:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '35. Avancemos Corrigiendo el Rumbo.',
@@ -3717,7 +3740,7 @@ const sections = [
             {
                 id: 'samuel-saul',
                 name: 'SAMUEL Y SAÚL:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '40. Avancemos en el Canto Profético de Ana.',
@@ -3754,7 +3777,7 @@ const sections = [
             {
                 id: 'anio-nuevo',
                 name: 'MIRANDO AL NUEVO AÑO:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '46. Avancemos aprendiendo de la Navidad.',
@@ -3778,7 +3801,7 @@ const sections = [
             {
                 id: 'levantate-vida',
                 name: 'LEVANTATE Y EDIFICA TU NUEVA VIDA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '01. Soñando.',
@@ -3804,7 +3827,7 @@ const sections = [
             {
                 id: 'levantate-preguntas',
                 name: 'EDIFICADOS POR LA PREGUNTAS:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '05. Aprender de las Preguntas de Dios.',
@@ -3836,7 +3859,7 @@ const sections = [
             {
                 id: 'levantate-familia',
                 name: 'LEVANTATE Y EDIFICA TU FAMILIA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '10. Soñar en Familia.',
@@ -3883,7 +3906,7 @@ const sections = [
             {
                 id: 'levantate-relaciones',
                 name: 'LEVANTATE Y EDIFICA RELACIONES:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '18. Edificar Relaciones.',
@@ -3915,7 +3938,7 @@ const sections = [
             {
                 id: 'levantate-grupo',
                 name: 'LEVANTATE Y EDIFICA TU GRUPO E IGLESIA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '23. Soñar con el Crecimiento.',
@@ -3957,7 +3980,7 @@ const sections = [
             {
                 id: 'levantate-relaciones',
                 name: 'LEVANTATE Y EDIFICA RELACIONES:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '30. Edificar Relaciones Poderosas.',
@@ -3989,7 +4012,7 @@ const sections = [
             {
                 id: 'levantate-provincia',
                 name: 'LEVANTATE Y EDIFICA TU PROVINCIA:',
-                icon: 'folder',
+                icon: 'folder' as const,
                 pdfs: [
                     {
                         versiculo: '35. Soñar con una Provincia Transformada.',
@@ -4018,91 +4041,91 @@ const sections = [
             {
                 id: 'gigantes-exodo',
                 name: '01. GIGANTES DE LA FE: Éxodo 3:5-6.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_1.pdf',
             },
             {
                 id: 'gigantes-genesis',
                 name: '02. GIGANTES DE LA FE: Génesis 22:7-8 y 31:42.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_2.pdf',
             },
             {
                 id: 'gigantes-exodo',
                 name: '03. GIGANTES DE LA FE: Éxodo 15:1-6.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_3.pdf',
             },
             {
                 id: 'gigantes-jabes',
                 name: '04. GIGANTES DE LA FE: Jabes 1° Crónicas 4:9-10.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_3.pdf',
             },
             {
                 id: 'gigantes-jueces',
                 name: '05. GIGANTES DE LA FE: Jueces 4:1-3.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_5.pdf',
             },
             {
                 id: 'gigantes-samuel',
                 name: '06. GIGANTES DE LA FE: Samuel 12:21-25.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_6.pdf',
             },
             {
                 id: 'gigantes-reyes',
                 name: '07. GIGANTES DE LA FE: 1° Reyes 18: 36-42.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_7.pdf',
             },
             {
                 id: 'gigantes-isaias',
                 name: '08. GIGANTES DE LA FE: Isaías 9: 2-7.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_7.pdf',
             },
             {
                 id: 'gigantes-isaias2',
                 name: '09. GIGANTES DE LA FE: Isaías 56:7.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_9.pdf',
             },
             {
                 id: 'gigantes-esdras',
                 name: '10. GIGANTES DE LA FE: Esdras 5:13-17.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_10.pdf',
             },
             {
                 id: 'gigantes-nehemias',
                 name: '11. GIGANTES DE LA FE: Nehemías 1:11.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_11.pdf',
             },
             {
                 id: 'gigantes-alabanza',
                 name: '12. GIGANTES DE LA FE: Alabanza extrema, Ana, Simeón, María.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_12.pdf',
             },
             {
                 id: 'gigantes-aprendemos',
                 name: '13. GIGANTES DE LA FE: Aprendemos de Jesús.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_13.pdf',
             },
             {
                 id: 'gigantes-discipulos',
                 name: '14. GIGANTES DE LA FE: Oramos con los primeros discípulos.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_14.pdf',
             },
             {
                 id: 'gigantes-evangelio',
                 name: '15. GIGANTES DE LA FE: Llenar todo del evangelio.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_15.pdf',
             },
         ],
@@ -4115,53 +4138,80 @@ const sections = [
             {
                 id: 'venciendo-tentacion',
                 name: '01. Venciendo la Tentación.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/1_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-corrucion',
                 name: '02. Venciendo la Corrupción.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/2_Guia_oracion.pdf',
             },
             {
                 id: 'venciendo-ignorancia',
                 name: '03. Venciendo la Ignorancia.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/3_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-temor',
                 name: '04. Venciendo el Temor.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/4_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-aislamiento',
                 name: '05. Venciendo el Aislamiento.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/4_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-rencor',
                 name: '06. Venciendo el Rencor.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/6_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-oscuridad',
                 name: '07. Venciendo la Oscuridad.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/7_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-soberbia',
                 name: '08. Venciendo la Soberbia.',
-                icon: 'file',
+                icon: 'file' as const,
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/8_Guia_Oracion.pdf',
             },
         ],
     },
 ]
 
-import { db } from './db/index.ts'
+import { db } from './db/'
+import { sections, items, pdfs } from './db/schema'
+
+async function main() {
+    for (const section of sectionsData) {
+        const [newSection] = await db
+            .insert(sections)
+            .values({ title: section.title, description: section.description, emoji: section.emoji })
+            .returning()
+
+        for (const item of section.content) {
+            const [newItem] = await db
+                .insert(items)
+                .values({ name: item.name, type: item.icon, sectionId: newSection.id })
+                .returning()
+
+            if (item.icon === 'file') {
+                await db.insert(pdfs).values({ itemId: newItem.id, name: item.name, url: item.pdfPath })
+            } else {
+                for (const itemPdf of item.pdfs) {
+                    await db.insert(pdfs).values({ itemId: newItem.id, name: itemPdf.versiculo, url: itemPdf.filePath })
+                }
+            }
+        }
+    }
+}
+
+main()
