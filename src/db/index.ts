@@ -1,14 +1,7 @@
-import { drizzle } from 'drizzle-orm/node-postgres'
-import { Client } from 'pg'
 import 'dotenv/config'
+import { drizzle } from 'drizzle-orm/postgres-js'
+import postgres from 'postgres'
+import * as schema from './schema'
 
-const client = new Client({
-    connectionString: process.env.POSTGRES_URL!,
-    password: 'lolomta321',
-})
-
-await client.connect()
-
-export const db = drizzle(client)
-
-console.log('DATABASE_URL RAW =', JSON.stringify(process.env.POSTGRES_URL))
+const connection = postgres(process.env.POSTGRES_URL!)
+export const db = drizzle(connection, { schema })

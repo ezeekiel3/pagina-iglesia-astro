@@ -1,4 +1,37 @@
-const sectionsData = [
+type Section = {
+    title: string
+
+    description: string
+
+    emoji: string
+
+    content: (
+        | {
+              id: string
+
+              name: string
+
+              icon: 'folder'
+
+              pdfs: {
+                  versiculo: string
+
+                  filePath: string
+              }[]
+          }
+        | {
+              id: string
+
+              name: string
+
+              icon: 'file'
+
+              pdfPath: string
+          }
+    )[]
+}
+
+const sectionsData: Section[] = [
     {
         title: 'Estudios del Nuevo Testamento',
         description: 'Profundiza en las enseñanzas y mensajes del Nuevo Testamento',
@@ -4164,31 +4197,33 @@ const sectionsData = [
     },
 ]
 
-// import { db } from './db/'
-// import { sections, items, pdfs } from './db/schema'
+import { db } from './db/'
+import { sections, items, pdfs } from './db/schema'
 
-// async function main() {
-//     for (const section of sectionsData) {
-//         const [newSection] = await db
-//             .insert(sections)
-//             .values({ title: section.title, description: section.description, emoji: section.emoji })
-//             .returning()
+async function main() {
+    for (const section of sectionsData) {
+        const [newSection] = await db
+            .insert(sections)
+            .values({ title: section.title, description: section.description, emoji: section.emoji })
+            .returning()
 
-//         for (const item of section.content) {
-//             const [newItem] = await db
-//                 .insert(items)
-//                 .values({ name: item.name, type: item.icon, sectionId: newSection.id })
-//                 .returning()
+        for (const item of section.content) {
+            const [newItem] = await db
+                .insert(items)
+                .values({ name: item.name, type: item.icon, sectionId: newSection.id })
+                .returning()
 
-//             if (item.icon === 'file') {
-//                 await db.insert(pdfs).values({ itemId: newItem.id, name: item.name, url: item.pdfPath })
-//             } else {
-//                 for (const itemPdf of item.pdfs) {
-//                     await db.insert(pdfs).values({ itemId: newItem.id, name: itemPdf.versiculo, url: itemPdf.filePath })
-//                 }
-//             }
-//         }
-//     }
-// }
+            if (item.icon === 'file') {
+                await db.insert(pdfs).values({ itemId: newItem.id, name: item.name, url: item.pdfPath })
+            } else {
+                for (const itemPdf of item.pdfs) {
+                    await db.insert(pdfs).values({ itemId: newItem.id, name: itemPdf.versiculo, url: itemPdf.filePath })
+                }
+            }
+        }
+        console.log('inserted section', { section })
+    }
+    console.log('done')
+}
 
-// main()
+main()

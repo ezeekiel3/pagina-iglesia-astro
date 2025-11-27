@@ -55,12 +55,12 @@ const SectionsArr = [
 ]
 console.log('DATABASE_URL RAW =', JSON.stringify(process.env.POSTGRES_URL))
 
-// async function main() {
-//     for (const section of SectionsArr) {
-//         await db.insert(sections).values({
-//             title: section.titleSection,
-//             description: section.descriptionSection,
-//             emoji: section.emojiSection,
-//         })
-//     }
-// }
+async function main() {
+    for (const section of SectionsArr) {
+        await db.insert(sections).values({
+            title: section.titleSection,
+            description: section.descriptionSection,
+            emoji: section.emojiSection,
+        })
+    }
+}
