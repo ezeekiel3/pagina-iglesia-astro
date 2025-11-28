@@ -17,15 +17,15 @@ const sections = await getSections()
             </p>
         </div>
         {
-            sections.map((section, i) => {
+            sections.map((section) => {
                 return (
                     <SeccionBiblica
-                        section={`${i + 1}`}
+                        section={`${section.id}`}
                         titleSection={section.title}
                         descriptionSection={section.description}
-                        cantidadMaterial={section.amount}
+                        cantidadMaterial={"456"}
                         emoji={section.emoji}
-                        contenido={section.content}
+                        contenido={[]}
                         client:load
                     />
                 )
