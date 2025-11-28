@@ -1,31 +1,21 @@
 type Section = {
     title: string
-
     description: string
-
     emoji: string
-
     content: (
         | {
               id: string
-
               name: string
-
               icon: 'folder'
-
               pdfs: {
                   versiculo: string
-
                   filePath: string
               }[]
           }
         | {
               id: string
-
               name: string
-
               icon: 'file'
-
               pdfPath: string
           }
     )[]
