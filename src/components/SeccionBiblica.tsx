@@ -10,9 +10,9 @@ type SeccionBiblicaProps = {
     contenido: {
         id: string
         name: string
-        icon: string
+        icon: 'folder' | 'file'
         pdfs?: { versiculo: string; filePath: string }[]
-        pdfPath?: string
+        pdfPath?: string | null
     }[]
 }
 

@@ -4,9 +4,9 @@ type SectionItemProps = {
     itemSection: {
         id: string
         name: string
-        icon: string
+        icon: 'folder' | 'file'
         pdfs?: { versiculo: string; filePath: string }[]
-        pdfPath?: string
+        pdfPath?: string | null
     }
     showMore: boolean
 }
@@ -61,7 +61,7 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                     </p>
                 ) : (
                     <a
-                        href={itemSection.pdfPath}
+                        href={itemSection.pdfPath!}
                         className='xl:text-xl text-lg text-logo font-semibold w-full h-full py-4'
                         target='_blank'>
                         {itemSection.name}
