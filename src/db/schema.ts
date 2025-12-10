@@ -1,12 +1,15 @@
 import { pgEnum, pgTable, varchar, serial, integer, text } from 'drizzle-orm/pg-core'
+import { relations } from 'drizzle-orm'
 
 export const itemTypeEnum = pgEnum('item_type', ['folder', 'file'])
+export const pageEnum = pgEnum('page', ['main', 'kids'])
 
 export const sections = pgTable('sections', {
     id: serial('id').primaryKey(),
     title: text().notNull(),
     description: text().notNull(),
     emoji: varchar({ length: 8 }).notNull(),
+    page: pageEnum().notNull(),
 })
 
 export const items = pgTable('items', {
@@ -27,3 +30,22 @@ export const pdfs = pgTable('pdfs', {
     name: text().notNull(),
     url: text().notNull(),
 })
+
+export const sectionsRelations = relations(sections, ({ many }) => ({
+    items: many(items),
+}))
+
+export const itemsRelations = relations(items, ({ one, many }) => ({
+    section: one(sections, {
+        fields: [items.sectionId],
+        references: [sections.id],
+    }),
+    pdfs: many(pdfs),
+}))
+
+export const pdfsRelations = relations(pdfs, ({ one }) => ({
+    item: one(items, {
+        fields: [pdfs.itemId],
+        references: [items.id],
+    }),
+}))

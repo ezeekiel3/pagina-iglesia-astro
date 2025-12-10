@@ -17,7 +17,7 @@ const sections = await getSections()
             </p>
         </div>
         {
-            sections.map((section) => <SeccionBiblica section='Seccion 1' titleSection={section.title} descriptionSection={section.description} cantidadMaterial='456' emoji={section.emoji} contenido={section.contenido}/>)
+            sections.map((section) => <SeccionBiblica section={section}, pageValue='main' client:load/>)
         }
     </main>
 </Layout>

@@ -30,7 +30,7 @@ const sectionsData: Section[] = [
             {
                 id: 'evangelio',
                 name: 'Los Cuatro Evangelios',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01 Lucas 1:1-4',
@@ -565,7 +565,7 @@ const sectionsData: Section[] = [
             {
                 id: 'hechos',
                 name: 'Hechos',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01 Hechos 1:1-11',
@@ -892,7 +892,7 @@ const sectionsData: Section[] = [
             {
                 id: 'romanos',
                 name: 'Romanos',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Romanos 1:1-7',
@@ -1027,7 +1027,7 @@ const sectionsData: Section[] = [
             {
                 id: 'corintios',
                 name: 'Cartas de los Corintios',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. 1° Corintios 1: 1-9',
@@ -1246,7 +1246,7 @@ const sectionsData: Section[] = [
             {
                 id: 'galatas',
                 name: 'Galatas',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Gálatas 1:1-5',
@@ -1317,7 +1317,7 @@ const sectionsData: Section[] = [
             {
                 id: 'efesios',
                 name: 'Efesios',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Efesios 1:1-8',
@@ -1388,7 +1388,7 @@ const sectionsData: Section[] = [
             {
                 id: 'filipenses',
                 name: 'Filipenses',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Filipenses 1:1-11',
@@ -1439,7 +1439,7 @@ const sectionsData: Section[] = [
             {
                 id: 'colosenses',
                 name: 'Colosenses',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Colosenses 1:1-12',
@@ -1494,7 +1494,7 @@ const sectionsData: Section[] = [
             {
                 id: 'tesalonica',
                 name: 'Cartas de Tesalonica',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. 1° Tesalonicenses 1:1-10',
@@ -1549,7 +1549,7 @@ const sectionsData: Section[] = [
             {
                 id: 'timoteo',
                 name: 'Cartas a Timoteo',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. 1° Timoteo 1:1-11',
@@ -1656,7 +1656,7 @@ const sectionsData: Section[] = [
             {
                 id: 'tito',
                 name: 'Tito',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Tito 1:1-4',
@@ -1691,7 +1691,7 @@ const sectionsData: Section[] = [
             {
                 id: 'filemon',
                 name: 'Filemon',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: 'Filemón.',
@@ -1702,7 +1702,7 @@ const sectionsData: Section[] = [
             {
                 id: 'hebreos',
                 name: 'Hebreos',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Hebreos 1:1-14',
@@ -1821,7 +1821,7 @@ const sectionsData: Section[] = [
             {
                 id: 'santiago',
                 name: 'Santiago',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Santiago 1:1-8',
@@ -1868,7 +1868,7 @@ const sectionsData: Section[] = [
             {
                 id: 'pedro',
                 name: 'Cartas de Pedro',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. 1 Pedro 1:1-9',
@@ -1943,7 +1943,7 @@ const sectionsData: Section[] = [
             {
                 id: 'juan',
                 name: 'Cartas de Juan',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. 1° Juan 1:1-10',
@@ -1978,7 +1978,7 @@ const sectionsData: Section[] = [
             {
                 id: 'judas',
                 name: 'Judas',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Judas 1:1-11.',
@@ -1993,7 +1993,7 @@ const sectionsData: Section[] = [
             {
                 id: 'apocalipsis',
                 name: 'Apocalipsis',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Apocalipsis 1:1-20',
@@ -2099,308 +2099,308 @@ const sectionsData: Section[] = [
             {
                 id: 'salvador',
                 name: '01 Jesus, El Salvador.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/01_JESUS_EL_SALVADOR.pdf',
             },
             {
                 id: 'senior',
                 name: '02 Jesus, El Señor.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/02_JESUS_EL_SENOR.pdf',
             },
             {
                 id: 'maestro',
                 name: '03 Jesus, El Maestro.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/03_JESUS_EL_MAESTRO.pdf',
             },
             {
                 id: 'profeta',
                 name: '04 Jesus, El Profeta.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/04_JESUS_EL_PROFETA.pdf',
             },
             {
                 id: 'logos',
                 name: '05 Jesús, El Logos',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/05_JESUS_EL_LOGOS.pdf',
             },
             {
                 id: 'mesias',
                 name: '06 Jesús, El Mesías',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/06_JESUS_EL_MESIAS.pdf',
             },
             {
                 id: 'renuevo',
                 name: '07 Jesús, El Renuevo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/07_JESUS_EL_RENUEVO.pdf',
             },
             {
                 id: 'hijo-hombre',
                 name: '08 Jesús, El Hijo del Hombre',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/08_JESUS_EL_HIJO_DE_HOMBRE.pdf',
             },
             {
                 id: 'hijo-dios',
                 name: '09 Jesús, Hijo de Dios',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/09_JESUS_HIJO_DE_DIOS.pdf',
             },
             {
                 id: 'puerta',
                 name: '10 Jesús, La Puerta',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/10_JESUS_LA_PUERTA.pdf',
             },
             {
                 id: 'camino',
                 name: '11 Jesús, El Camino',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/11_JESUS_EL-CAMINO.pdf',
             },
             {
                 id: 'verdad',
                 name: '12 Jesús, La Verdad',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/12_JESUS_LA_VERDAD.pdf',
             },
             {
                 id: 'vida',
                 name: '13 Jesús, La Vida',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/13_JESUS_LA_VIDA.pdf',
             },
             {
                 id: 'resurreccion',
                 name: '14 Jesús, La Resurrección',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/14_JESUS_LA_RESURRECCION.pdf',
             },
             {
                 id: 'amen',
                 name: '15 Jesús, El Amén',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/15_JESUS_EL_AMEN.pdf',
             },
             {
                 id: 'alfa-omega',
                 name: '16 Jesús, El Alfa y La Omega',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/16_JESUS_EL_ALFA_Y_LA_OMEGA.pdf',
             },
             {
                 id: 'admirable',
                 name: '17 Jesús, Admirable',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/17_JESUS_ADMIRABLE.pdf',
             },
             {
                 id: 'consejero',
                 name: '18 Jesús, Consejero',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/17_JESUS_ADMIRABLE.pdf',
             },
             {
                 id: 'Dios-fuerte',
                 name: '19 Jesús, Dios Fuerte',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/19_JESUS_DIOS_FUERTE.pdf',
             },
             {
                 id: 'Padre-Eterno',
                 name: '20 Jesús, Padre Eterno',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/20_JESUS_PADRE_ETERNO.pdf',
             },
             {
                 id: 'principe-paz',
                 name: '21 Jesús, Príncipe de Paz',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/21_JESUS_PRINCIPE_DE_PAZ.pdf',
             },
             {
                 id: 'raiz',
                 name: '22 Jesús, La Raíz',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/22_JESUS_LA_RAIZ.pdf',
             },
             {
                 id: 'leon',
                 name: '23 Jesús, El León',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/23_JESUS_EL_LEON.pdf',
             },
             {
                 id: 'pastor',
                 name: '24 Jesús, El Buen Pastor',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/24_JESUS_EL_BUEN_PASTOR.pdf',
             },
             {
                 id: 'vid-verdadera',
                 name: '25 Jesús, La Vid Verdadera',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/25_JESUS_LA_VID_VERDADERA.pdf',
             },
             {
                 id: 'pan-vida',
                 name: '26 Jesús, El Pan de la Vida',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/26_JESUS_EL_PAN_DE_VIDA.pdf',
             },
             {
                 id: 'mediador',
                 name: '27 Jesús, El Medidador',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/27_JESUS_EL_MEDIADOR.pdf',
             },
             {
                 id: 'justo',
                 name: '28 Jesús, El Justo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/28_JESUS_EL_JUSTO.pdf',
             },
             {
                 id: 'testigo',
                 name: '29 Jesús, El Testigo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/29_JESUS_EL_TESTIGO_FIEL.pdf',
             },
             {
                 id: 'libertador',
                 name: '30 Jesús, El Libertador',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/30_JESUS_EL_LIBERTADOR.pdf',
             },
             {
                 id: 'santo',
                 name: '31 Jesús, El Santo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/30_JESUS_EL_LIBERTADOR.pdf',
             },
             {
                 id: 'luz-mundo',
                 name: '32 Jesús, La Luz del Mundo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/32_JESUS_LA_LUZ_DEL_MUNDO.pdf',
             },
             {
                 id: 'apostol',
                 name: '33 Jesús, El Apóstol',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/33_JESUS_EL_APOSTOL.pdf',
             },
             {
                 id: 'fiel-verdadero',
                 name: '34 Jesús, Fiel y Verdadero',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/34_JESUS_FIEL_Y_VERDADERO.pdf',
             },
             {
                 id: 'esposo',
                 name: '35 Jesús, El Esposo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/35_JESUS_EL_ESPOSO.pdf',
             },
             {
                 id: 'redentor',
                 name: '36 Jesús, El Redentor',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/36_JESUS_EL_REDENTOR.pdf',
             },
             {
                 id: 'autor-vida',
                 name: '37 Jesús, Autor de la Vida',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/37_JESUS_AUTOR_DE_LA_VIDA.pdf',
             },
             {
                 id: 'sumo-sacerdote',
                 name: '38 Jesús, Sumo Sacerdote',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/38_%20JESUS_SUMO_SACERDOTE.pdf',
             },
             {
                 id: 'cabeza-iglesia',
                 name: '39 Jesús, Cabeza de la Iglesia',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/39_JESUS_CABEZA_DE_LA_IGLESIA.pdf',
             },
             {
                 id: 'juez',
                 name: '40 Jesús, el Juez',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/40_JESUS_EL_JUEZ.pdf',
             },
             {
                 id: 'yo-soy',
                 name: '41 Jesús, el Yo Soy',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/41_JESUS_EL_YO_SOY.pdf',
             },
             {
                 id: 'postrer-adan',
                 name: '42 Jesús, el Postrer Adán',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/42_JESUS_EL_POSTRER_ADAN.pdf',
             },
             {
                 id: 'creador',
                 name: '43 Jesús, el Creador',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/43_JESUS_EL_CREADOR.pdf',
             },
             {
                 id: 'cordero-Dios',
                 name: '44 Jesús, el Cordero de Dios',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/44_JESUS_EL_CORDERO_DE_DIOS.pdf',
             },
             {
                 id: 'rey-siglos',
                 name: '45 Jesús, el Rey de los Siglos',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/45_JESUS_REY_DE_LOS_SIGLOS.pdf',
             },
             {
                 id: 'amado',
                 name: '46 Jesús, el Amado',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/46_JESUS_EL_AMADO.pdf',
             },
             {
                 id: 'primogenito-creacion',
                 name: '47 Jesús, Primogénito de la Creación',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/47_PRIMOGENITO_DE_LA_CREACION.pdf',
             },
             {
                 id: 'nuestra-paz',
                 name: '48 Jesús, nuestra Paz',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/48_JESUS_NUESTRA_PAZ.pdf',
             },
             {
                 id: 'fuente',
                 name: '49 Jesús, la Fuente',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/49_JESUS_LA_FUENTE.pdf',
             },
             {
                 id: 'piedra-angulo',
                 name: '50 Jesús, la Piedra del Ángulo',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/nombres_jesus/50_JESUS_LA_PIEDRA_DEL_ANGULO.pdf',
             },
@@ -2414,25 +2414,25 @@ const sectionsData: Section[] = [
             {
                 id: 'primeros-pasos',
                 name: 'Primeros Pasos en la vida Cristiana',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/LOS_PRIMEROS_PASOS.pdf',
             },
             {
                 id: 'didaktikos',
                 name: 'Didaktikos, Aptos Para Enseñar',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/DIDAKTIKOS_2015.pdf',
             },
             {
                 id: 'manual',
                 name: 'Manual para Grupos de Bendicion y Crecimiento',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/discipulado/Manual_GBC.pdf',
             },
             {
                 id: 'bases',
                 name: 'Bases y Principios de crecimiento de la Iglesia',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/discipulado/BASES%20Y%20PRIMER%20PRINCIPIOS%20DE%20CRECIMIENTO.pdf',
             },
@@ -2446,7 +2446,7 @@ const sectionsData: Section[] = [
             {
                 id: 'principio',
                 name: 'CRISTO EL FUNDAMENTO DEL PRINCIPIO DE TODO EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Génesis.',
@@ -2478,7 +2478,7 @@ const sectionsData: Section[] = [
             {
                 id: 'historia',
                 name: 'CRISTO EL FUNDAMENTO DE LA HISTORIA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '06. Josué.',
@@ -2505,7 +2505,7 @@ const sectionsData: Section[] = [
             {
                 id: 'restauracion',
                 name: 'CRISTO EL FUNDAMENTO DE LA RESTAURACIÓN EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '10. Esdras.',
@@ -2532,7 +2532,7 @@ const sectionsData: Section[] = [
             {
                 id: 'alabanza',
                 name: 'CRISTO EL FUNDAMENTO DE LA ALABANZA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '14. Los Salmos.',
@@ -2559,7 +2559,7 @@ const sectionsData: Section[] = [
             {
                 id: 'profecia',
                 name: 'CRISTO EL FUNDAMENTO DE LA PROFECÍA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '18. Isaías.',
@@ -2591,7 +2591,7 @@ const sectionsData: Section[] = [
             {
                 id: 'justicia',
                 name: 'CRISTO EL FUNDAMENTO DE LA JUSTICIA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '23. Oseas.',
@@ -2618,7 +2618,7 @@ const sectionsData: Section[] = [
             {
                 id: 'integridad',
                 name: 'CRISTO EL FUNDAMENTO DE LA INTEGRIDAD EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '27. Nahúm y Habacuc.',
@@ -2645,7 +2645,7 @@ const sectionsData: Section[] = [
             {
                 id: 'evangelio-hechos',
                 name: 'CRISTO EL FUNDAMENTO DEL EVANGELIO Y LOS HECHOS EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '31. Mateo.',
@@ -2677,7 +2677,7 @@ const sectionsData: Section[] = [
             {
                 id: 'gracia',
                 name: 'CRISTO EL FUNDAMENTO DE LA GRACIA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '36. Romanos.',
@@ -2704,7 +2704,7 @@ const sectionsData: Section[] = [
             {
                 id: 'riqueza-amor',
                 name: 'CRISTO EL FUNDAMENTO DE NUESTRA RIQUEZA Y AMOR EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '40. Efesios.',
@@ -2736,7 +2736,7 @@ const sectionsData: Section[] = [
             {
                 id: 'ministerio',
                 name: 'CRISTO EL FUNDAMENTO DE NUESTRO MINISTERIO EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '45. 1° Timoteo.',
@@ -2763,7 +2763,7 @@ const sectionsData: Section[] = [
             {
                 id: 'perseverancia',
                 name: 'CRISTO EL FUNDAMENTO DE LA PERSEVERANCIA EN:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '49. Santiago.',
@@ -2797,7 +2797,7 @@ const sectionsData: Section[] = [
             {
                 id: 'inicios',
                 name: 'EL CONSEJO DE DIOS DESDE LOS INICIOS:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. El Valor de Todo el Consejo de Dios.',
@@ -2829,7 +2829,7 @@ const sectionsData: Section[] = [
             {
                 id: 'precursores',
                 name: 'EL CONSEJO DE DIOS A LOS PRECURSORES:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '06. Noé.',
@@ -2856,7 +2856,7 @@ const sectionsData: Section[] = [
             {
                 id: 'liderazgo',
                 name: 'EL CONSEJO DE DIOS PARA EL LIDERAZGO:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '10. José.',
@@ -2883,7 +2883,7 @@ const sectionsData: Section[] = [
             {
                 id: 'tiempos-turbulentos',
                 name: 'EL CONSEJO DE DIOS EN TIEMPOS TURBULENTOS:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '14. Jueces.',
@@ -2942,7 +2942,7 @@ const sectionsData: Section[] = [
             {
                 id: 'carisma',
                 name: 'EL CONSEJO DE DIOS POR MEDIO DEL CARISMA PROFÉTICO:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '23. El Carisma Profético.',
@@ -2969,7 +2969,7 @@ const sectionsData: Section[] = [
             {
                 id: 'profetas',
                 name: 'EL CONSEJO DE DIOS POR MEDIO DE LOS PROFETAS MAYORES:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '27. Isaías I.',
@@ -3001,7 +3001,7 @@ const sectionsData: Section[] = [
             {
                 id: 'restauracion',
                 name: 'EL CONSEJO DE DIOS PARA LA RESTAURACION:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '32. Esdras y Nehemías.',
@@ -3028,7 +3028,7 @@ const sectionsData: Section[] = [
             {
                 id: 'sabiduria',
                 name: 'EL CONSEJO DE DIOS MEDIANTE LA SABIDURÍA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '36. Job.',
@@ -3055,7 +3055,7 @@ const sectionsData: Section[] = [
             {
                 id: 'evangelios',
                 name: 'EL CONSEJO DE DIOS MEDIANTE LOS EVANGELIOS:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '40. Las Bienventuranzas.',
@@ -3087,7 +3087,7 @@ const sectionsData: Section[] = [
             {
                 id: 'iglesia',
                 name: 'EL CONSEJO DE DIOS PARA LA IGLESIA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '45. El Espíritu Santo.',
@@ -3114,7 +3114,7 @@ const sectionsData: Section[] = [
             {
                 id: 'fe',
                 name: 'EL CONSEJO DE DIOS PARA LA SUSTENTACIÓN DE LA FE:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '49. La Doctrina de la Gracia.',
@@ -3148,335 +3148,335 @@ const sectionsData: Section[] = [
             {
                 id: 'Dios',
                 name: '01. Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: '',
             },
             {
                 id: 'omnipotente',
                 name: '02. El Omnipotente.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/2_MI_EXPERIENCIA_CON_EL_OMNIPOTENTE,_EL_TODOPODEROSO.docx',
             },
             {
                 id: 'altisimo',
                 name: '03. El Altísimo.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/3_MI_EXPERIENCIA_CON_EL_ALTiSIMO.docx',
             },
             {
                 id: 'eterno',
                 name: '04. El Dios Eterno.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/4_MI_EXPERIENCIA_CON_EL_DIOS_ETERNO.docx',
             },
             {
                 id: 'gloria',
                 name: '05. El Dios de Gloria.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/5_MI_EXPERIENCIA_CON_EL_DIOS_DE_GLORIA.docx',
             },
             {
                 id: 'rey',
                 name: '06. Dios Nuestro Rey.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/6_MI_EXPERIENCIA_CON_DIOS_NUESTRO_REY.docx',
             },
             {
                 id: 'defensa-Dios',
                 name: '07. La Defensa de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/7_MI_EXPERIENCIA_CON_LA_DEFENSA_DE_DIOS.docx',
             },
             {
                 id: 'fortaleza-Dios',
                 name: '08. La Fortaleza de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/8_MI_EXPERIENCIA_CON_LA_FORTALEZA_DE_DIOS.docx',
             },
             {
                 id: 'libertador',
                 name: '09. Dios mi Libertador.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/9_MI_EXPERIENCIA_CON_DIOS_MI_LIBERTADOR.docx',
             },
             {
                 id: 'redentor',
                 name: '10. Dios mi Redentor.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/10%20_MI_EXPERIENCIA_CON_MI_REDENTOR.docx',
             },
             {
                 id: 'resucitado',
                 name: '11. Cristo Resucitado.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/11_MI_EXPERIENCIA_CON_EL_RESUCITADO.docx',
             },
             {
                 id: 'salvador',
                 name: '12. Dios mi Salvador.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/12_MI_EXPERIENCIA_CON_DIOS_MI_SALVADOR.docx',
             },
             {
                 id: 'sanador',
                 name: '13. Dios mi Sanador.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/13_MI_EXPERIENCIA_CON_DIOS_MI_SANADOR.docx',
             },
             {
                 id: 'senior',
                 name: '14. Dios mi Señor.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/14_Mi_experiencia_con_Dios_mi_Se%C3%B1or.docx',
             },
             {
                 id: 'esperanza',
                 name: '15. Dios mi Esperanza.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/15_MI_EXPERIENCIA_CON_DIOS_MI_ESPERANZA.docx',
             },
             {
                 id: 'paz',
                 name: '16. El Dios de Paz.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/16_MI_EXPERIENCIA_CON_EL_DIOS_DE_PAZ.docx',
             },
             {
                 id: 'ejercitos',
                 name: '17. El Señor de los Ejercitos.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/17_Mi_experiencia_con_el_Senor_de_los_ejercitos.docx',
             },
             {
                 id: 'soberano',
                 name: '18. Dios Soberano.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/18_MI_EXPERIENCIA_CON_DIOS_SOBERANO.docx',
             },
             {
                 id: 'juez',
                 name: '19. Dios el Juez.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/19_MI_EXPERIENCIA_CON_DIOS_EL_JUEZ.docx',
             },
             {
                 id: 'Dios-padre',
                 name: '20. El Dios de Nuestros Padres.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/20_MI_EXPERIENCIA_CON_EL_DIOS_DE_NUESTROS_PADRES.docx',
             },
             {
                 id: 'misericordioso',
                 name: '21. Dios Misericordioso.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/20_MI_EXPERIENCIA_CON_EL_DIOS_DE_NUESTROS_PADRES.docx',
             },
             {
                 id: 'bondad',
                 name: '22. La Bondad de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/22_MI_EXPERIENCIA_CON_LA_BONDAD_DE_DIOS.docx',
             },
             {
                 id: 'amor',
                 name: '23. El Amor de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/23_MI_EXPERIENCIA_CON_EL_AMOR_DE_DIOS.docx',
             },
             {
                 id: 'celos',
                 name: '24. Los Celos de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/24_MI_EXPERIENCIA_CON_LOS_CELOS_DE_DIOS.docx',
             },
             {
                 id: 'santidad',
                 name: '25. La Santidad de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/25_MI_EXPERIENCIA_CON_LA_SANTIDAD_DE_DIOS.docx',
             },
             {
                 id: 'fuego',
                 name: '26. El Fuego de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/26_MI_EXPERIENCIA_CON_EL_FUEGO_DE_DIOS.docx',
             },
             {
                 id: 'luz',
                 name: '27. La Luz de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/27_MI_EXPERIENCIA_CON_LA_LUZ_DE_DIOS.docx',
             },
             {
                 id: 'dador',
                 name: '28. Dios el Dador de Vida.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/28_MI_EXPERIENCIA_CON_DIOS_EL_DADOR_DE_VIDA.docx',
             },
             {
                 id: 'fidelidad',
                 name: '29. La Fidelidad de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/29_MI_EXPERIENCIA_CON_LA_FIDELIDAD_DE_DIOS.docx',
             },
             {
                 id: 'oficios',
                 name: '30. Los Oficios de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/30_MI_EXPERIENCIA_CON_LOS_OFICIOS_DE_DIOS.docx',
             },
             {
                 id: 'pastoreo',
                 name: '31. El Pastoreo de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/31_MI_EXPERIENCIA_CON_EL_PASTOREO_DE_DIOS.docx',
             },
             {
                 id: 'primero-ultimo',
                 name: '32. Dios el Primero y el Último.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/32_MI_EXPERIENCIA_CON_DIOS_EL_PRIMERO_Y_EL_ULTIMO.docx',
             },
             {
                 id: 'yo-soy',
                 name: '33. El Yo Soy.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/33_MI_EXPERIENCIA_CON_EL_YO_SOY.docx',
             },
             {
                 id: 'verdad',
                 name: '34. El Dios de Verdad.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/34_MI_EXPERIENCIA_CON_EL_DIOS_DE_VERDAD.docx',
             },
             {
                 id: 'unico',
                 name: '35. El Único Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/35_MI_EXPERIENCIA_CON_EL_UNICO_DIOS.docx',
             },
             {
                 id: 'escudrinia-Dios',
                 name: '36. El Dios que Escudriña.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/36_MI_EXPERIENCIA_CON_DIOS_QUE_ESCUDRINA.docx',
             },
             {
                 id: 'revela',
                 name: '37. El Dios que Revela.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/37_MI_EXPERIENCIA_CON_DIOS_QUE_REVELA.docx',
             },
             {
                 id: 'perdona',
                 name: '38. El Dios que Perdona.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/38%20_MI_EXPERIENCIA_CON_EL_DIOS_QUE_PERDONA.docx',
             },
             {
                 id: 'consuela',
                 name: '39. El Dios que Consuela.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/39_MI_EXPERIENCIA_CON_DIOS_QUE_CONSUELA.docx',
             },
             {
                 id: 'padre',
                 name: '40. Dios el Padre.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/40_MI_EXPERIENCIA_CON_DIOS_EL_PADRE_(Eli).docx',
             },
             {
                 id: 'hijo',
                 name: '41. Dios el Hijo.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/41_MI_EXPERIENCIA_CON_DIOS_EL_HIJO_(Daniel).docx',
             },
             {
                 id: 'Espiritu-Santo',
                 name: '42. Dios Espíritu Santo.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/42_MI_EXPERIENCIA_CON_DIOS_EL_ESPIRITU_SANTO.docx',
             },
             {
                 id: 'uno',
                 name: '43. Dios Uno.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/43_MI_EXPERIENCIA_CON_DIOS_UNO.docx',
             },
             {
                 id: 'alabanza',
                 name: '44. El Dios de mi Alabanza.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/44_MI_EXPERIENCIA_CON_EL_DIOS_DE_MI_ALABANZA.docx',
             },
             {
                 id: 'amado',
                 name: '45. Dios el Amado.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/45_MI_EXPERIENCIA_CON_DIOS_EL_AMADO.docx',
             },
             {
                 id: 'amparo',
                 name: '46. El Amaparo de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/46_MI_EXPERIENCIA_CON_EL_AMPARO_DE_DIOS.docx',
             },
             {
                 id: 'escudo',
                 name: '47. El Escudo de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/47_MI_EXPERIENCIA_CON_EL_ESCUDO_DE_DIOS.docx',
             },
             {
                 id: 'nombres',
                 name: '48. Los nombres de Dios.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath:
                     'https://www.pueblonuevobautista.com.ar/3material/Bosquejos_2023/48_MI_EXPERIENCIA_CON_LOS_NOMBRES_DE_DIOS.docx',
             },
@@ -3490,7 +3490,7 @@ const sectionsData: Section[] = [
             {
                 id: 'noe',
                 name: 'NOÉ:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Avancemos en la Gracia Como Noé.',
@@ -3516,7 +3516,7 @@ const sectionsData: Section[] = [
             {
                 id: 'abraham',
                 name: 'ABRAHAM:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '05. Con Abraham Avanzamos en el Llamado.',
@@ -3548,7 +3548,7 @@ const sectionsData: Section[] = [
             {
                 id: 'isaac',
                 name: 'ISAAC:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '10. Avanzamos con Isaac en la Total Dependencia de Dios.',
@@ -3575,7 +3575,7 @@ const sectionsData: Section[] = [
             {
                 id: 'jacob',
                 name: 'JACOB:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '14. Avanzamos con Jacob en Busca de la Bendición.',
@@ -3607,7 +3607,7 @@ const sectionsData: Section[] = [
             {
                 id: 'jose',
                 name: 'JOSÉ:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '19. Avancemos con José Cuando se Rompen los Sueños.',
@@ -3634,7 +3634,7 @@ const sectionsData: Section[] = [
             {
                 id: 'moises',
                 name: 'MOISÉS:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '23. Avancemos con Moisés en el Origen del Éxodo.',
@@ -3681,7 +3681,7 @@ const sectionsData: Section[] = [
             {
                 id: 'josue',
                 name: 'JOSUÉ:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '31. Avancemos con Josué en los Preparativos.',
@@ -3708,7 +3708,7 @@ const sectionsData: Section[] = [
             {
                 id: 'jueces-ruth',
                 name: 'JUECES Y RUTH:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '35. Avancemos Corrigiendo el Rumbo.',
@@ -3740,7 +3740,7 @@ const sectionsData: Section[] = [
             {
                 id: 'samuel-saul',
                 name: 'SAMUEL Y SAÚL:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '40. Avancemos en el Canto Profético de Ana.',
@@ -3777,7 +3777,7 @@ const sectionsData: Section[] = [
             {
                 id: 'anio-nuevo',
                 name: 'MIRANDO AL NUEVO AÑO:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '46. Avancemos aprendiendo de la Navidad.',
@@ -3801,7 +3801,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-vida',
                 name: 'LEVANTATE Y EDIFICA TU NUEVA VIDA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '01. Soñando.',
@@ -3827,7 +3827,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-preguntas',
                 name: 'EDIFICADOS POR LA PREGUNTAS:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '05. Aprender de las Preguntas de Dios.',
@@ -3859,7 +3859,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-familia',
                 name: 'LEVANTATE Y EDIFICA TU FAMILIA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '10. Soñar en Familia.',
@@ -3906,7 +3906,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-relaciones',
                 name: 'LEVANTATE Y EDIFICA RELACIONES:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '18. Edificar Relaciones.',
@@ -3938,7 +3938,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-grupo',
                 name: 'LEVANTATE Y EDIFICA TU GRUPO E IGLESIA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '23. Soñar con el Crecimiento.',
@@ -3980,7 +3980,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-relaciones',
                 name: 'LEVANTATE Y EDIFICA RELACIONES:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '30. Edificar Relaciones Poderosas.',
@@ -4012,7 +4012,7 @@ const sectionsData: Section[] = [
             {
                 id: 'levantate-provincia',
                 name: 'LEVANTATE Y EDIFICA TU PROVINCIA:',
-                icon: 'folder' as const,
+                icon: 'folder',
                 pdfs: [
                     {
                         versiculo: '35. Soñar con una Provincia Transformada.',
@@ -4041,91 +4041,91 @@ const sectionsData: Section[] = [
             {
                 id: 'gigantes-exodo',
                 name: '01. GIGANTES DE LA FE: Éxodo 3:5-6.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_1.pdf',
             },
             {
                 id: 'gigantes-genesis',
                 name: '02. GIGANTES DE LA FE: Génesis 22:7-8 y 31:42.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_2.pdf',
             },
             {
                 id: 'gigantes-exodo',
                 name: '03. GIGANTES DE LA FE: Éxodo 15:1-6.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_3.pdf',
             },
             {
                 id: 'gigantes-jabes',
                 name: '04. GIGANTES DE LA FE: Jabes 1° Crónicas 4:9-10.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_3.pdf',
             },
             {
                 id: 'gigantes-jueces',
                 name: '05. GIGANTES DE LA FE: Jueces 4:1-3.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_5.pdf',
             },
             {
                 id: 'gigantes-samuel',
                 name: '06. GIGANTES DE LA FE: Samuel 12:21-25.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_6.pdf',
             },
             {
                 id: 'gigantes-reyes',
                 name: '07. GIGANTES DE LA FE: 1° Reyes 18: 36-42.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_7.pdf',
             },
             {
                 id: 'gigantes-isaias',
                 name: '08. GIGANTES DE LA FE: Isaías 9: 2-7.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_7.pdf',
             },
             {
                 id: 'gigantes-isaias2',
                 name: '09. GIGANTES DE LA FE: Isaías 56:7.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_9.pdf',
             },
             {
                 id: 'gigantes-esdras',
                 name: '10. GIGANTES DE LA FE: Esdras 5:13-17.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_10.pdf',
             },
             {
                 id: 'gigantes-nehemias',
                 name: '11. GIGANTES DE LA FE: Nehemías 1:11.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_11.pdf',
             },
             {
                 id: 'gigantes-alabanza',
                 name: '12. GIGANTES DE LA FE: Alabanza extrema, Ana, Simeón, María.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_12.pdf',
             },
             {
                 id: 'gigantes-aprendemos',
                 name: '13. GIGANTES DE LA FE: Aprendemos de Jesús.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_13.pdf',
             },
             {
                 id: 'gigantes-discipulos',
                 name: '14. GIGANTES DE LA FE: Oramos con los primeros discípulos.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_14.pdf',
             },
             {
                 id: 'gigantes-evangelio',
                 name: '15. GIGANTES DE LA FE: Llenar todo del evangelio.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Gigantes/Orando_Gigantes_15.pdf',
             },
         ],
@@ -4138,50 +4138,1368 @@ const sectionsData: Section[] = [
             {
                 id: 'venciendo-tentacion',
                 name: '01. Venciendo la Tentación.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/1_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-corrucion',
                 name: '02. Venciendo la Corrupción.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/2_Guia_oracion.pdf',
             },
             {
                 id: 'venciendo-ignorancia',
                 name: '03. Venciendo la Ignorancia.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/3_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-temor',
                 name: '04. Venciendo el Temor.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/4_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-aislamiento',
                 name: '05. Venciendo el Aislamiento.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/4_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-rencor',
                 name: '06. Venciendo el Rencor.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/6_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-oscuridad',
                 name: '07. Venciendo la Oscuridad.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/7_Guia_Oracion.pdf',
             },
             {
                 id: 'venciendo-soberbia',
                 name: '08. Venciendo la Soberbia.',
-                icon: 'file' as const,
+                icon: 'file',
                 pdfPath: 'https://www.pueblonuevobautista.com.ar/3material/G_O_Mas_que_Vencedores/8_Guia_Oracion.pdf',
+            },
+        ],
+    },
+]
+
+const sectionsKidsData: Section[] = [
+    {
+        title: 'ESTUDIOS PARA NIÑOS ',
+        description: 'Materiales para que los niños conozcan y aprendan las obras poderosas de Dios.',
+        emoji: '✨',
+        content: [
+            {
+                id: 'obras-jesus',
+                name: 'Sus Obras',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '15. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_15.pdf',
+                    },
+                    {
+                        versiculo: '16. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_16.pdf',
+                    },
+                    {
+                        versiculo: '17. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_17.pdf',
+                    },
+                    {
+                        versiculo: '18. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_18.pdf',
+                    },
+                    {
+                        versiculo: '19. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_19.pdf',
+                    },
+                    {
+                        versiculo: '20. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_20.pdf',
+                    },
+                    {
+                        versiculo: '21. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_21.pdf',
+                    },
+                    {
+                        versiculo: '22. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_22.pdf',
+                    },
+                    {
+                        versiculo: '23. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_23.pdf',
+                    },
+                    {
+                        versiculo: '24. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_24.pdf',
+                    },
+                    {
+                        versiculo: '25. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_25.pdf',
+                    },
+                    {
+                        versiculo: '26. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_26.pdf',
+                    },
+                    {
+                        versiculo: '27. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_27.pdf',
+                    },
+                    {
+                        versiculo: '28. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_28.pdf',
+                    },
+                    {
+                        versiculo: '29. Jesús, sus Obras.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Jesus_nenes_29.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'sermon-monte',
+                name: 'El Sermon del Monte',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath:
+                            'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_SermondelMonte_nenes_Tapa.jpg',
+                    },
+                    {
+                        versiculo: '01. Mateo 5:1-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Mateo 5:13-20.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Mateo 5:21-30.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Mateo 5:31-48.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Mateo 6:1-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Mateo 6:19-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Mateo 6:25-34.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Mateo 7:1-12, Lucas 5:11-13; Lucas 6:37-42.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Mateo 7:13-23, Lucas 13:22-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Mateo 7:24-29; Lucas 6:46-49.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/El_Sermon_nenes_10.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'secretos-reino',
+                name: 'Los Secretos del Reino',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_Tapa.jpg',
+                    },
+                    {
+                        versiculo: '01. Mateo 13:1-9; 18-23; Marcos 4:1-20; Lucas 8:4-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Marcos 4:21-34; Lucas 8:16-18; 13:18-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Mateo 13:24-30.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Mateo 20:1-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Lucas 14:1-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Lucas 14:28.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Lucas 15:8-32.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Lucas 16:1-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Lucas 17:5-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Lucas 17:11-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Lucas 18:9-14; 19:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Los_Secretos_nenes_11.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'romanos',
+                name: 'Carta a los Romanos',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_Tapa.jpg',
+                    },
+                    {
+                        versiculo: '01. Romanos 1:1-2.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Romanos 1:8-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Romanos 1:1:16-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Romanos 3:23, 6:23,5:8, 10:9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Romanos 5:1-11, 8:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Romanos 4:16 22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Romanos 5:1-2.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Romanos 8:28-39.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Romanos 6:11-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Romanos 6:15-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Romanos 7:1-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Romanos 8:28-39 (1).',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. Romanos 8:28-39 (2).',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. Romanos 8:35-39.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '15. Romanos 8:28-39.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_15.pdf',
+                    },
+                    {
+                        versiculo: '16. Romanos 8:1-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_16.pdf',
+                    },
+                    {
+                        versiculo: '17. Romanos 8:14-17, 19-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_17.pdf',
+                    },
+                    {
+                        versiculo: '18. Romanos 7:21-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_18.pdf',
+                    },
+                    {
+                        versiculo: '19. Romanos 8:28-30; 37-39.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_19.pdf',
+                    },
+                    {
+                        versiculo: '20. Romanos 9:19-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_20.pdf',
+                    },
+                    {
+                        versiculo: '21. Romanos 10:13-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_21.pdf',
+                    },
+                    {
+                        versiculo: '22. Romanos 11:33.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_22.pdf',
+                    },
+                    {
+                        versiculo: '23. Romanos 12:4-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_23.pdf',
+                    },
+                    {
+                        versiculo: '24. Romanos 12:9-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_24.pdf',
+                    },
+                    {
+                        versiculo: '25. Romanos 12:16-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_25.pdf',
+                    },
+                    {
+                        versiculo: '26. Romanos 13:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_26.pdf',
+                    },
+                    {
+                        versiculo: '27. Romanos 14:1-4.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_27.pdf',
+                    },
+                    {
+                        versiculo: '28. Romanos 15:4-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_28.pdf',
+                    },
+                    {
+                        versiculo: '29. Romanos 7:25',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Romanos_nenes_29.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'galatas',
+                name: 'Carta a los Galatas',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Gálatas 1:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Gálatas 2:3-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Gálatas 4:6-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Gálatas 5:13-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Gálatas 5:22-23.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Galatas_nenes_05.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'efesios',
+                name: 'Carta a los Efesios',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_Tapa.jpg',
+                    },
+                    {
+                        versiculo: '01. Efesios 1:1-2.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Efesios 1:9-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Efesios 1:15-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Efesios 2:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Efesios 2:11-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Efesios 2:19-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Efesios 3:14-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Efesios 4:1-2.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Efesios 4:11-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Efesios 4:22-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Efesios 4:26-27.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Efesios 5:1-2a.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. Efesios 5:7-8.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. Efesios 6:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '15. Efesios 6:10-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Efesios_nenes_15.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'filipenses',
+                name: 'Carta a los Filipenses',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Filipenses 1:1-2.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Filipenses 1:12-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Filipenses 1:27-30.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Filipenses 2:1-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Filipenses 2:12-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Filipenses 2:19-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Filipenses 3:8-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Filipenses 3:15-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Filipenses 4:8-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Filipenses 4:1-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Filipenses 4:8-23.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Filipenses_nenes_11.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'colosenses',
+                name: 'Carta a los Colosenses',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Colosenses 1:1-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Colosenses 1:13-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Colosenses 1:25-28.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Colosenses 2:6-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Colosenses 2:13-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Colosenses 2:18-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Colosenses 3:1-8.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Colosenses 3:9-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Colosenses 3:16-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Colosenses 3:22-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Colosenses 4:2-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Colosenses 4:12-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Colosenses_nenes_12.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'timoteo',
+                name: 'Cartas para Timoteo',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. 1° Timoteo 1:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. 1° Timoteo 1:12-20.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. 1° Timoteo 2:1-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. 1° Timoteo 2:8-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. 1° Timoteo 3:1-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. 1° Timoteo 3:8-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. 1° Timoteo 3:14-16; 4:1-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. 1° Timoteo 4:6-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. 1° Timoteo 4:6-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. 1° Timoteo 5:1-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. 1° Timoteo 5:17-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. 1° Timoteo 5:24-25; 6:1-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. 1° Timoteo 6:6-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. 1° Timoteo 6:13-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Timoteo_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '01. 2° Timoteo 1:1-5.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. 2° Timoteo 1:6-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. 2° Timoteo 1:12-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. 2° Timoteo 2:1-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. 2° Timoteo 2:8-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. 2° Timoteo 2:14-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. 2° Timoteo 2:20-26.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. 2° Timoteo 3:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. 2° Timoteo 3:12-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. 2° Timoteo 4:1-8.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. 2° Timoteo 4:9-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Timoteo_nenes_11.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'tito',
+                name: 'Carta para Tito',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Tito 1:1-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Tito 1.10-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Tito 2:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Tito 2:11-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Tito 3.1-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Tito 3.8-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Tito_nenes_06.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'hebreos',
+                name: 'Carta a los Hebreos',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Hebreos 1:1-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Hebreos 2:1-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Hebreos 2:10-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Hebreos 3:1-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Hebreos 4:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Hebreos 4:12-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Hebreos 5:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Hebreos 5:11-14; 6:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Hebreos 6:10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Hebreos 6:11-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Hebreos 7:1-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Hebreos - Repaso.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. Hebreos 8:1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. Hebreos 4:1.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '15. Hebreos 11:1-4.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_15.pdf',
+                    },
+                    {
+                        versiculo: '16. Hebreos 10:5-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_16.pdf',
+                    },
+                    {
+                        versiculo: '17. Hebreos 10:15-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_17.pdf',
+                    },
+                    {
+                        versiculo: '18. Hebreos 10:26-39.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_18.pdf',
+                    },
+                    {
+                        versiculo: '19. Hebreos 11:1-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_19.pdf',
+                    },
+                    {
+                        versiculo: '20. Hebreos 11:13-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_20.pdf',
+                    },
+                    {
+                        versiculo: '21. Hebreos 11:23-31.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_21.pdf',
+                    },
+                    {
+                        versiculo: '22. Hebreos 11:33-40.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_22.pdf',
+                    },
+                    {
+                        versiculo: '23. Hebreos 12:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_23.pdf',
+                    },
+                    {
+                        versiculo: '24. Hebreos 12:12-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_24.pdf',
+                    },
+                    {
+                        versiculo: '25. Hebreos 12:18-29.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_25.pdf',
+                    },
+                    {
+                        versiculo: '26. Hebreos 13:1-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_26.pdf',
+                    },
+                    {
+                        versiculo: '27. Hebreos 13:7-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_27.pdf',
+                    },
+                    {
+                        versiculo: '28. Hebreos 13:15-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Hebreos_nenes_28.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'santiago',
+                name: 'Carta de Santiago',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Santiago 1:1-8.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Santiago 1:12-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Santiago 1:19-27.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Santiago 2:1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Santiago 2:14-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Santiago 3:1-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Santiago 3:13-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Santiago 4:1-12.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Santiago 5:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Santiago 5:12-20.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Santiago_nenes_10.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'pedro',
+                name: 'Cartas de Pedro',
+                icon: 'folder',
+                pdfs: [
+                    { versiculo: 'Descargar Tapa', filePath: '' },
+                    {
+                        versiculo: '01. 1° Pedro 1:1-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. 1° Pedro 1:10-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. 1° Pedro 1:17-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. 1° Pedro 2:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. 1° Pedro 2:11-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. 1° Pedro 2:18-25.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. 1° Pedro 3:1-7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. 1° Pedro 3:8-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. 1° Pedro 4:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. 1° Pedro 4:12-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. 1° Pedro 5:1-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Pedro_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '01. 2° Pedro 1:1-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. 2° Pedro 1:12-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. 2° Pedro 2:1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. 2° Pedro 2:6-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. 2° Pedro 3: 1-9.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. 2° Pedro 3: 10-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Pedro_nenes_06.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'juan',
+                name: 'Cartas de Juan',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/123_Juan_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. 1° Juan 1:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. 1° Juan 2:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. 1° Juan 2:15-29.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. 1° Juan 3:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. 1° Juan 3:19-24; 4:1-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. 1° Juan 4:7-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. 1° Juan 5:1-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/1_Juan_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '01. 2° Juan 1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/2_Juan_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '01. 3° Juan 1:1-15.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/3_Juan_nenes_01.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'apocalipsis',
+                name: 'Apocalipsis',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_Tapa.jpg',
+                    },
+                    {
+                        versiculo: '01. Apocalipsis 1:1-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Apocalipsis 2:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Apocalipsis 2:18-29; 3:1-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Apocalipsis 3:7-22.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Apocalipsis 4:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Apocalipsis 5:1-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Apocalipsis 6:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Apocalipsis 7:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Apocalipsis 8:1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: '10. Apocalipsis 8:1-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: '11. Apocalipsis 10:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: '12. Apocalipsis 11:1-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: '13. Apocalipsis 12:1-17.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: '14. Apocalipsis 13:1-14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_14.pdf',
+                    },
+                    {
+                        versiculo: '15. Apocalipsis 14:6-13.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_15.pdf',
+                    },
+                    {
+                        versiculo: '16. Apocalipsis 15:2-4.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_16.pdf',
+                    },
+                    {
+                        versiculo: '17. Apocalipsis 16:7.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_17.pdf',
+                    },
+                    {
+                        versiculo: '18. Apocalipsis 17:3–6; 14.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_18.pdf',
+                    },
+                    {
+                        versiculo: '19. Apocalipsis 18:1-24.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_19.pdf',
+                    },
+                    {
+                        versiculo: '20. Apocalipsis 19:1-10.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_20.pdf',
+                    },
+                    {
+                        versiculo: '21. Apocalipsis 20:1-6.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_21.pdf',
+                    },
+                    {
+                        versiculo: '22. Apocalipsis 21:1,4, 22,23, 27.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_22.pdf',
+                    },
+                    {
+                        versiculo: '23. Apocalipsis 22:1-21.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Apocalipsis_nenes_23.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'habitos',
+                name: 'Habitos para el crecimiento de los niños',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_Tapa.pdf',
+                    },
+                    {
+                        versiculo: '01. Nehemías 1:1-11.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: '02. Nehemías 2:1-8.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: '03. Nehemías 2:10-19; 3:1-32.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: '04. Nehemías 4:6-23.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: '05. Nehemías 5:1-19.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: '06. Nehemías 6:1-16.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: '07. Nehemías 8:1-18.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: '08. Nehemías 9:1-3.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: '09. Nehemías 12:27-47.',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Nehemias_nenes_09.pdf',
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        title: 'Discipulados para niños',
+        description:
+            'Materiales para ayudar a los niños a crecer en su relación con Jesús y vivir como sus discípulos cada día.',
+        emoji: '👣',
+        content: [
+            {
+                id: 'pasos-basicos',
+                name: 'Los Pasos Básicos',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/PASOS_NINOS_Tapa.pdf',
+                    },
+                    {
+                        versiculo: 'N° 01. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: 'N° 02. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: 'N° 03. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: 'N° 04. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: 'N° 05. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: 'N° 06. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: 'N° 07. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: 'N° 08. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: 'N° 09. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: 'N° 10. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: 'N° 11. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: 'N° 12. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: 'N° 13. Pasos Básicos',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Pasos_nenes_13.pdf',
+                    },
+                ],
+            },
+            {
+                id: 'didaktikos-kids',
+                name: 'διδακτικóς para Niños',
+                icon: 'folder',
+                pdfs: [
+                    {
+                        versiculo: 'Descargar Tapa',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/PASOS_NINOS_Tapa.pdf',
+                    },
+                    {
+                        versiculo: 'N°01. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_01.pdf',
+                    },
+                    {
+                        versiculo: 'N°02. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_02.pdf',
+                    },
+                    {
+                        versiculo: 'N°03. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_03.pdf',
+                    },
+                    {
+                        versiculo: 'N°04. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_04.pdf',
+                    },
+                    {
+                        versiculo: 'N°05. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_05.pdf',
+                    },
+                    {
+                        versiculo: 'N°06. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_06.pdf',
+                    },
+                    {
+                        versiculo: 'N°07. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_07.pdf',
+                    },
+                    {
+                        versiculo: 'N°08. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_08.pdf',
+                    },
+                    {
+                        versiculo: 'N°09. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_09.pdf',
+                    },
+                    {
+                        versiculo: 'N°10. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_10.pdf',
+                    },
+                    {
+                        versiculo: 'N°11. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_11.pdf',
+                    },
+                    {
+                        versiculo: 'N°12. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_12.pdf',
+                    },
+                    {
+                        versiculo: 'N°13. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_13.pdf',
+                    },
+                    {
+                        versiculo: 'N°14. διδακτικóς para Niños',
+                        filePath: 'https://www.pueblonuevobautista.com.ar/4nenes/estudios/Didaktikos_nenes_14.pdf',
+                    },
+                ],
             },
         ],
     },
@@ -4194,18 +5512,48 @@ async function main() {
     for (const section of sectionsData) {
         const [newSection] = await db
             .insert(sections)
-            .values({ title: section.title, description: section.description, emoji: section.emoji })
+            .values({ title: section.title, description: section.description, emoji: section.emoji, page: 'main' })
             .returning()
 
         for (const item of section.content) {
-            const [newItem] = await db
-                .insert(items)
-                .values({ name: item.name, type: item.icon, sectionId: newSection.id })
-                .returning()
-
             if (item.icon === 'file') {
+                const [newItem] = await db
+                    .insert(items)
+                    .values({ name: item.name, type: item.icon, sectionId: newSection.id, url: item.pdfPath })
+                    .returning()
                 await db.insert(pdfs).values({ itemId: newItem.id, name: item.name, url: item.pdfPath })
             } else {
+                const [newItem] = await db
+                    .insert(items)
+                    .values({ name: item.name, type: item.icon, sectionId: newSection.id })
+                    .returning()
+                for (const itemPdf of item.pdfs) {
+                    await db.insert(pdfs).values({ itemId: newItem.id, name: itemPdf.versiculo, url: itemPdf.filePath })
+                }
+            }
+        }
+        console.log('inserted section', { section })
+    }
+    console.log('done')
+
+    for (const section of sectionsKidsData) {
+        const [newSection] = await db
+            .insert(sections)
+            .values({ title: section.title, description: section.description, emoji: section.emoji, page: 'kids' })
+            .returning()
+
+        for (const item of section.content) {
+            if (item.icon === 'file') {
+                const [newItem] = await db
+                    .insert(items)
+                    .values({ name: item.name, type: item.icon, sectionId: newSection.id, url: item.pdfPath })
+                    .returning()
+                await db.insert(pdfs).values({ itemId: newItem.id, name: item.name, url: item.pdfPath })
+            } else {
+                const [newItem] = await db
+                    .insert(items)
+                    .values({ name: item.name, type: item.icon, sectionId: newSection.id })
+                    .returning()
                 for (const itemPdf of item.pdfs) {
                     await db.insert(pdfs).values({ itemId: newItem.id, name: itemPdf.versiculo, url: itemPdf.filePath })
                 }

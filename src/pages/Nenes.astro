@@ -1,11 +1,14 @@
 ---
+import { getSections } from '../db/getSections'
 import Layout from '../layouts/Layout.astro'
+import SeccionBiblica from '../components/SeccionBiblica'
+const sections = await getSections()
 
 Layout
 ---
 
 <Layout>
-    <main class='flex flex-col items-center h-full w-full'>
+    <main class='flex flex-col items-center h-auto w-full'>
         <h1 class='font-logo text-2xl text-logo font-bold mt-7'>Nuestros Niños y Niñas</h1>
         <div class='flex flex-col items-center mt-5 w-1/2'>
             <p class='text-lg font-merriweather'>
@@ -30,6 +33,10 @@ Layout
                 <a href='https://pepeglobal.org/es/descargas/' target='_blank'>Pepe Network</a>
                 <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
             </button>
+            <h2 class="text-logo font-bold font-logo text-2xl">Material de Estudio para niños</h2>
         </div>
+        {
+            sections.map((sections) => <SeccionBiblica section={sections} pageValue={'kids'} client:load/>)
+        }
     </main>
 </Layout>

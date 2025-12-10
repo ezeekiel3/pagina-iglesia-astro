@@ -1,13 +1,8 @@
 import { useState, useEffect } from 'react'
+import type { Section } from '../db/getSections'
 
 type SectionItemProps = {
-    itemSection: {
-        id: string
-        name: string
-        icon: 'folder' | 'file'
-        pdfs?: { versiculo: string; filePath: string }[]
-        pdfPath?: string | null
-    }
+    itemSection: Section['items'][number]
     showMore: boolean
 }
 
@@ -22,13 +17,13 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                 showMore ? 'visible' : 'invisible'
             }`}>
             <div
-                className={`flex flex-row pl-7 gap-3 ${itemSection.icon === 'folder' ? 'py-4' : ''} items-center`}
+                className={`flex flex-row pl-7 gap-3 ${itemSection.type === 'folder' ? 'py-4' : ''} items-center`}
                 onClick={() => {
-                    if (itemSection.icon === 'folder' && hoveringTitle === false) {
+                    if (itemSection.type === 'folder' && hoveringTitle === false) {
                         setOpenFolder(!openFolder)
                     }
                 }}>
-                {itemSection.icon === 'folder' ? (
+                {itemSection.type === 'folder' ? (
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         height='24px'
@@ -47,7 +42,7 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                         <path d='M360-460h40v-80h40q17 0 28.5-11.5T480-580v-40q0-17-11.5-28.5T440-660h-80v200Zm40-120v-40h40v40h-40Zm120 120h80q17 0 28.5-11.5T640-500v-120q0-17-11.5-28.5T600-660h-80v200Zm40-40v-120h40v120h-40Zm120 40h40v-80h40v-40h-40v-40h40v-40h-80v200ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z' />
                     </svg>
                 )}
-                {itemSection.icon === 'folder' ? (
+                {itemSection.type === 'folder' ? (
                     <p
                         className='xl:text-xl text-lg text-logo font-semibold'
                         onMouseEnter={() => setHoveringTitle(true)}
@@ -61,13 +56,13 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                     </p>
                 ) : (
                     <a
-                        href={itemSection.pdfPath!}
+                        href={itemSection.url!}
                         className='xl:text-xl text-lg text-logo font-semibold w-full h-full py-4'
                         target='_blank'>
                         {itemSection.name}
                     </a>
                 )}
-                {itemSection.icon === 'folder' ? (
+                {itemSection.type === 'folder' ? (
                     openFolder ? (
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -95,10 +90,10 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                 <div className='flex flex-col gap-5 items-center mb-5'>
                     {itemSection.pdfs?.map((element) => (
                         <a
-                            href={element.filePath}
+                            href={element.url}
                             className='text-logo border xl:w-1/2 w-3/4 border-opacity-25 text-center border-black hover:bg-logo hover:text-white pl-5 py-3 text-lg font-medium rounded-lg duration-200'
                             target='_blank'>
-                            {element.versiculo}
+                            {element.name}
                         </a>
                     ))}
                 </div>
