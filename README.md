@@ -1,48 +1,19 @@
-# Astro Starter Kit: Basics
+🕊️ Remasterización del Sitio Web de la Iglesia
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este proyecto es una remasterización completa del sitio web actual de la iglesia, con un diseño más moderno, limpio y agradable para los visitantes.
+La nueva versión mantiene la esencia y el contenido del sitio original, pero incorpora mejoras visuales y técnicas para brindar una experiencia más actual.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+✨ Principales mejoras
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Interfaz renovada: diseño más ordenado, legible y adaptado a pantallas modernas.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Animaciones suaves: transiciones y efectos visuales que mejoran la interacción sin distraer.
 
-## 🚀 Project Structure
+Interactividad básica: algunos elementos reaccionan al desplazamiento o al cursor para dar una sensación más dinámica.
 
-Inside of your Astro project, you'll see the following folders and files:
+Código más organizado: estructura actualizada para facilitar mantenimiento y futuras mejoras.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+🎯 Objetivo
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Ofrecer una versión mejorada del sitio actual que mantenga su contenido, pero con un aspecto más moderno y una experiencia más fluida para los usuarios.
+img width="2448" height="633" alt="logo2" src="https://github.com/user-attachments/assets/8431da11-c3dc-479a-b2e9-39fad827bb32" />
