@@ -48,6 +48,11 @@ export default function SectionItem({ itemSection, showMore }: SectionItemProps)
                         onMouseEnter={() => setHoveringTitle(true)}
                         onMouseLeave={() => setHoveringTitle(false)}>
                         {itemSection.name}
+                        <button
+                            className={`${hoveringTitle ? 'inline' : 'hidden'}`}
+                            onClick={() => setEditingTitle(true)}>
+                            editar
+                        </button>
                     </p>
                 ) : (
                     <a

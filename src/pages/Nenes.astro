@@ -10,7 +10,7 @@ Layout
 <Layout>
     <main class='flex flex-col items-center h-auto w-full'>
         <h1 class='font-logo text-2xl text-logo font-bold mt-7'>Nuestros Niños y Niñas</h1>
-        <div class='flex flex-col items-center mt-5 w-1/2'>
+        <div class='flex flex-col items-center mt-5 xl:w-1/2 w-3/4'>
             <p class='text-lg font-merriweather'>
                 Jesús dijo: “Dejen que los niños vengan a mí, y no se lo impidan, porque el reino de Dios es de quienes
                 son como ellos.”
@@ -33,7 +33,7 @@ Layout
                 <a href='https://pepeglobal.org/es/descargas/' target='_blank'>Pepe Network</a>
                 <div class='bg-logo transition-all top-0 left-0 duration-300 absolute h-full w-0'></div>
             </button>
-            <h2 class="text-logo font-bold font-logo text-2xl">Material de Estudio para niños</h2>
+            <h2 class="text-logo font-bold font-logo text-2xl text-center xl:text-left">Material de Estudio para Niños</h2>
         </div>
         {
             sections.map((sections) => <SeccionBiblica section={sections} pageValue={'kids'} client:load/>)

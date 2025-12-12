@@ -3,8 +3,8 @@ const { lugar } = Astro.props
 ---
 
 <div class='flex w-full h-full flex-col items-center gap-5 mb-20'>
-    <h2 class='text-logo text-2xl font-bold font-logo mb-5'>{lugar}</h2>
-    <div class='grid grid-rows-2 grid-cols-3 gap-12'>
+    <h2 class='text-logo text-2xl font-bold font-logo mb-5 xl:text-left text-center'>{lugar}</h2>
+    <div class='grid grid-rows-1 grid-cols-1 xl:grid-rows-2 xl:grid-cols-3 gap-12'>
         <slot />
     </div>
 </div>

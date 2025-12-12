@@ -25,16 +25,16 @@ Layout
 
 <Layout>
     <main class='flex w-full h-auto items-center flex-col'>
-        <h1 class='text-logo font-logo text-2xl mt-8 font-bold'>Centro de Desarrollo Cristiano Pueblo Nuevo</h1>
+        <h1 class='text-logo font-logo text-2xl mt-8 font-bold xl:text-left text-center'>Centro de Desarrollo Cristiano Pueblo Nuevo</h1>
         <Image src={fotoscamping} alt='' class='mt-5 rounded-lg' />
-        <p class='text-lg font-merriweather w-1/2 leading-10 mt-5'>
+        <p class='text-lg font-merriweather xl:w-1/2 leading-10 mt-5 w-3/4'>
             La Iglesia cuenta con un predio en La Balandra, Partido de Berisso, de dos hectáreas y media, que
             denominamos Centro de Desarrollo Cristiano, totalmente parquizado y arbolado donde llevamos a cabo reuniones
             especiales de la iglesia, bautismos, campamentos para niños, adolescentes, jóvenes y familias; retiros
             espirituales, vigilias de oración, cursos de entrenamientos de líderes, encuentros deportivos y conciertos
             juveniles , reuniones de pastores, y donde además, celebramos bodas y cumpleaños.
         </p>
-        <p class='text-lg font-merriweather leading-10 mt-5 mb-10 w-1/2'>
+        <p class='text-lg font-merriweather leading-10 mt-5 mb-10 xl:w-1/2 w-3/4'>
             El lugar cuenta con un edificio de tres pisos; en planta baja un salón actos para 400 personas sentadas. En
             un primer piso dos salones uno con capacidad de 50 personas, y otro para 20, baños y habitaciones y en
             segundo piso con habitaciones, todo amueblado. Para su área de servicios tiene cocina y una batería de
@@ -62,5 +62,30 @@ Layout
             <Image src={parque2} alt='' class='h-96 w-96 rounded-lg' />
             <Image src={parque3} alt='' class='h-96 w-96 rounded-lg' />
         </CdcImages>
+        <h2 class="text-logo font-bold text-3xl mb-10">Reservas</h2>
+        <div class="w-4/5">
+            <div class="flex flex-col w-auto gap-5">
+                 <a href="tel:2214644748" class="rounded flex gap-2 p-2 items-center text-logo hover:text-white hover:bg-logo transition duration-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path fill="currentColor" d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                    464-4748
+                </a>
+                <a href="tel:2214642384" class="rounded flex gap-2 p-2 items-center text-logo hover:text-white hover:bg-logo transition duration-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path fill="currentColor" d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                    464-2384
+                </a>
+                <p class="text-xl">Gladys Celadilla</p>
+                <a href="tel:02215978524" class="rounded flex gap-2 p-2 items-center text-logo hover:text-white hover:bg-logo transition duration-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path fill="currentColor" d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z"/></svg>
+                    02215978524
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5492215978524" class="rounded flex gap-2 p-2 items-center text-logo hover:text-white hover:bg-logo transition duration-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path fill="currentColor" d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg>
+                    5492215978524
+                </a>
+            </div>
+            <p class="mt-6 text-lg">de Lunes a Viernes de 08 a 13 hs</p>
+        </div>
     </main>
 </Layout>
