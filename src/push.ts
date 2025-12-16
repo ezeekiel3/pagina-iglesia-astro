@@ -5505,8 +5505,14 @@ const sectionsKidsData: Section[] = [
     },
 ]
 
+import fs from 'fs'
+import path from 'path'
+import https from 'https'
+import http from 'http'
 import { db } from './db/'
 import { sections, items, pdfs } from './db/schema'
+const pdfsArrMain: string[] = []
+const pdfsArrKids: string[] = []
 
 async function main() {
     for (const section of sectionsData) {
@@ -5564,4 +5570,103 @@ async function main() {
     console.log('done')
 }
 
-main()
+function downloadAllPdf() {
+    for (const secciones of sectionsData) {
+        for (const contenido of secciones.content) {
+            if (contenido.icon === 'folder') {
+                for (let i = 0; i < contenido.pdfs.length; i++) {
+                    pdfsArrMain.push(contenido.pdfs[i].filePath)
+                }
+            } else {
+                pdfsArrMain.push(contenido.pdfPath)
+            }
+        }
+    }
+
+    for (const secciones of sectionsKidsData) {
+        for (const contenido of secciones.content) {
+            if (contenido.icon === 'folder') {
+                for (let i = 0; i < contenido.pdfs.length; i++) {
+                    pdfsArrKids.push(contenido.pdfs[i].filePath)
+                }
+            } else {
+                pdfsArrKids.push(contenido.pdfPath)
+            }
+        }
+    }
+
+    const BASE_PATH = 'C:/Users/compupc/Documents/material-iglesia'
+    const MAIN_DIR = path.join(BASE_PATH, 'main')
+    const KIDS_DIR = path.join(BASE_PATH, 'kids')
+
+    const CONCURRENT_DOWNLOADS = 5
+
+    const getExtensionFromUrl = (url: string): string => {
+        try {
+            const pathname = new URL(url).pathname
+            const ext = path.extname(pathname)
+            return ext || '.pdf'
+        } catch {
+            return '.pdf'
+        }
+    }
+
+    const downloadFile = (url: string, filePath: string): Promise<void> =>
+        new Promise((resolve, reject) => {
+            const protocol = url.startsWith('https') ? https : http
+
+            protocol
+                .get(url, (response) => {
+                    if (response.statusCode !== 200) {
+                        reject(new Error(`Status ${response.statusCode}`))
+                        return
+                    }
+
+                    const stream = fs.createWriteStream(filePath)
+                    response.pipe(stream)
+
+                    stream.on('finish', () => {
+                        stream.close()
+                        resolve()
+                    })
+                })
+                .on('error', reject)
+        })
+
+    const downloadBatch = async (links: string[], outputDir: string, prefix: string) => {
+        let index = 0
+
+        const workers = Array.from({ length: CONCURRENT_DOWNLOADS }, async () => {
+            while (index < links.length) {
+                const currentIndex = index++
+                const url = links[currentIndex]
+
+                const ext = getExtensionFromUrl(url)
+                const fileName = `${prefix}_${currentIndex + 1}${ext}`
+                const filePath = path.join(outputDir, fileName)
+
+                try {
+                    await downloadFile(url, filePath)
+                    console.log(`✔ ${fileName}`)
+                } catch (err) {
+                    console.error(`✖ Error en ${fileName}`)
+                }
+            }
+        })
+
+        await Promise.all(workers)
+    }
+
+    const start = async () => {
+        console.log('📥 Descargando material MAIN...')
+        await downloadBatch(pdfsArrMain, MAIN_DIR, 'main')
+
+        console.log('📥 Descargando material KIDS...')
+        await downloadBatch(pdfsArrKids, KIDS_DIR, 'kids')
+
+        console.log('✅ Descarga completa')
+    }
+    start()
+}
+// main()
+downloadAllPdf()
