@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CitySelector from '../components/CitySelector.tsx'
+
+Layout
+---
+<Layout>
+    <main class="flex w-full h-screen flex-col items-center">
+        <h1 class="xl:text-3xl font-bold font-sans xl:w-1/3 text-center xl:m-10 text-logo m-3 text-xl">Congregaciones de Pueblo Nuevo</h1>
+        <CitySelector client:load/>
+    </main>
+</Layout>

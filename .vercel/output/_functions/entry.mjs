@@ -1,0 +1,44 @@
+import { renderers } from './renderers.mjs';
+import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_qLFwgQzZ.mjs';
+import { manifest } from './manifest_D8EnQEma.mjs';
+
+const serverIslandMap = new Map();;
+
+const _page0 = () => import('./pages/_image.astro.mjs');
+const _page1 = () => import('./pages/agenda.astro.mjs');
+const _page2 = () => import('./pages/api/upload-pdf.astro.mjs');
+const _page3 = () => import('./pages/cdc.astro.mjs');
+const _page4 = () => import('./pages/material.astro.mjs');
+const _page5 = () => import('./pages/nenes.astro.mjs');
+const _page6 = () => import('./pages/nuestracomunidad.astro.mjs');
+const _page7 = () => import('./pages/ubicaciones.astro.mjs');
+const _page8 = () => import('./pages/index.astro.mjs');
+const pageMap = new Map([
+    ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
+    ["src/pages/Agenda.astro", _page1],
+    ["src/pages/api/upload-pdf.ts", _page2],
+    ["src/pages/Cdc.astro", _page3],
+    ["src/pages/Material.astro", _page4],
+    ["src/pages/Nenes.astro", _page5],
+    ["src/pages/NuestraComunidad.astro", _page6],
+    ["src/pages/Ubicaciones.astro", _page7],
+    ["src/pages/index.astro", _page8]
+]);
+
+const _manifest = Object.assign(manifest, {
+    pageMap,
+    serverIslandMap,
+    renderers,
+    actions: () => import('./noop-entrypoint.mjs'),
+    middleware: () => import('./_noop-middleware.mjs')
+});
+const _args = {
+    "middlewareSecret": "9c8509c7-0d37-4f5e-a05f-4da42cea6f01",
+    "skewProtection": false
+};
+const _exports = createExports(_manifest, _args);
+const __astrojsSsrVirtualEntry = _exports.default;
+const _start = 'start';
+if (Object.prototype.hasOwnProperty.call(serverEntrypointModule, _start)) ;
+
+export { __astrojsSsrVirtualEntry as default, pageMap };

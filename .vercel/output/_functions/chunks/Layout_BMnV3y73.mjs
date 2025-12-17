@@ -1,0 +1,289 @@
+import { b as createAstro, c as createComponent, e as addAttribute, n as renderHead, r as renderComponent, d as renderSlot, a as renderTemplate } from './astro/server_CWYKJYLk.mjs';
+import 'piccolore';
+import { jsxs, jsx } from 'react/jsx-runtime';
+import { useState, useEffect } from 'react';
+/* empty css                          */
+
+const logoHeader = new Proxy({"src":"/pagina-iglesia-astro/_astro/logo1.CKroCrmu.png","width":609,"height":405,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/img/logo1.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const menuImg = new Proxy({"src":"/pagina-iglesia-astro/_astro/menu.BzrBl02q.png","width":96,"height":96,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/img/menu.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const closeImg = new Proxy({"src":"/pagina-iglesia-astro/_astro/close.D6IBavBg.png","width":96,"height":96,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/img/close.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const arrowRight = new Proxy({"src":"/pagina-iglesia-astro/_astro/arrowRight.B_SfYfgd.png","width":96,"height":96,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/img/arrowRight.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+const arrowBack = new Proxy({"src":"/pagina-iglesia-astro/_astro/arrowBack.CxjxD2zG.png","width":96,"height":96,"format":"png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/img/arrowBack.png";
+							}
+							
+							return target[name];
+						}
+					});
+
+function HeaderButton({ buttonText, children }) {
+  const [hoveringButton, setHoveringButton] = useState(false);
+  const [hoveringDropdown, setHoveringDropdown] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [buttonName, setButtonName] = useState("");
+  children = children && !Array.isArray(children) ? [children] : children;
+  useEffect(() => {
+    if (openMenu) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [openMenu]);
+  return /* @__PURE__ */ jsxs("div", { className: "xl:relative xl:block flex", children: [
+    /* @__PURE__ */ jsx(
+      "button",
+      {
+        className: "text-xl xl:flex hidden text-logo transition-colors duration-200 hover:text-orange-300",
+        onClick: () => setHoveringButton(true),
+        onMouseEnter: () => setHoveringButton(true),
+        onMouseLeave: () => setHoveringButton(false),
+        children: buttonText
+      }
+    ),
+    /* @__PURE__ */ jsx("button", { className: "xl:hidden flex", onClick: () => setOpenMenu(true), children: /* @__PURE__ */ jsx("img", { src: menuImg.src, alt: "", className: "h-12" }) }),
+    /* @__PURE__ */ jsx(
+      "ul",
+      {
+        className: `absolute z-10 min-w-full xl:flex hidden flex-col bg-white rounded-md overflow-hidden transition-all duration-200 shadow text-logo
+                ${children && (hoveringButton || hoveringDropdown) ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`,
+        onMouseEnter: () => setHoveringDropdown(true),
+        onMouseLeave: () => setHoveringDropdown(false),
+        children
+      }
+    ),
+    /* @__PURE__ */ jsx(
+      "div",
+      {
+        onClick: () => setOpenMenu(false),
+        className: `xl:hidden fixed inset-0 z-20 bg-gray-900 bg-opacity-50 transition-opacity duration-300 ${openMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`
+      }
+    ),
+    /* @__PURE__ */ jsx(
+      "div",
+      {
+        className: `xl:hidden fixed top-0 z-20 right-0 h-full w-64 bg-orange-100 shadow-lg transform transition-transform duration-300 ${openMenu ? "translate-x-0" : "translate-x-full"}`,
+        children: /* @__PURE__ */ jsxs("div", { className: "p-4 h-full", children: [
+          /* @__PURE__ */ jsx("button", { children: hoveringButton ? /* @__PURE__ */ jsx(
+            "img",
+            {
+              src: arrowBack.src,
+              alt: "",
+              className: "h-11 fixed top-4 z-20",
+              onClick: () => setHoveringButton(false)
+            }
+          ) : /* @__PURE__ */ jsx("img", { src: closeImg.src, alt: "", className: "h-11", onClick: () => setOpenMenu(false) }) }),
+          /* @__PURE__ */ jsx("nav", { className: "h-2/3", children: /* @__PURE__ */ jsxs("ul", { className: "flex items-center justify-center text-xl text-logo gap-8 h-full flex-col", children: [
+            /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center transition-all duration-300 ${hoveringButton ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"}`,
+                children: [
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      className: `hover:text-orange-300 transition-all duration-300`,
+                      onClick: () => {
+                        setHoveringButton(true);
+                        setButtonName("Iglesia");
+                      },
+                      children: "Iglesia"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx("img", { src: arrowRight.src, alt: "", className: "h-6" })
+                ]
+              }
+            ),
+            buttonName === "Iglesia" ? /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${hoveringButton ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`,
+                children: [
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Creemos en" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/Ubicaciones", children: "Ubicaciones" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/Agenda", children: "Agenda" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/NuestraComunidad", children: "Nuestra Comunidad" }) })
+                ]
+              }
+            ) : "",
+            /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center transition-all duration-300 ${hoveringButton ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"}`,
+                children: [
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      className: "hover:text-orange-300 transition-all duration-300",
+                      onClick: () => {
+                        setHoveringButton(true);
+                        setButtonName("Material");
+                      },
+                      children: "Material"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx("img", { src: arrowRight.src, alt: "", className: "h-6" })
+                ]
+              }
+            ),
+            buttonName === "Material" ? /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${hoveringButton ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`,
+                children: [
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/Material", children: "Estudio Inductivos" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Discipulado" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Otros Escritos" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Guías de Oración" }) })
+                ]
+              }
+            ) : "",
+            /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center transition-all duration-300 ${hoveringButton ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"}`,
+                children: [
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      className: "hover:text-orange-300 transition-all duration-300",
+                      onClick: () => {
+                        setHoveringButton(true);
+                        setButtonName("Niños");
+                      },
+                      children: "Niños"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx("img", { src: arrowRight.src, alt: "", className: "h-6" })
+                ]
+              }
+            ),
+            buttonName === "Niños" ? /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${hoveringButton ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`,
+                children: [
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/Nenes", children: "Trabajo" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Material" }) })
+                ]
+              }
+            ) : "",
+            /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center w-1/2 leading-7 transition-all duration-300 ${hoveringButton ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"}`,
+                children: [
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      className: "hover:text-orange-300 transition-all duration-100",
+                      onClick: () => {
+                        setHoveringButton(true);
+                        setButtonName("Centro de Desarrollo");
+                      },
+                      children: "Centro de Desarrollo"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx("img", { src: arrowRight.src, alt: "", className: "h-6" })
+                ]
+              }
+            ),
+            buttonName === "Centro de Desarrollo" ? /* @__PURE__ */ jsxs(
+              "li",
+              {
+                className: `flex items-center justify-center h-full flex-col text-xl gap-8 absolute z-10 transition-all duration-300 ${hoveringButton ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`,
+                children: [
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/Cdc", children: "Descripción" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Ubicación" }) }),
+                  /* @__PURE__ */ jsx("button", { children: /* @__PURE__ */ jsx("a", { href: "/pagina-iglesia-astro/#", children: "Reservas" }) })
+                ]
+              }
+            ) : "",
+            /* @__PURE__ */ jsx(
+              "li",
+              {
+                className: `flex items-center transition-all duration-300 ${hoveringButton ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"}`,
+                children: /* @__PURE__ */ jsx("button", { className: "hover:text-orange-300 transition-all duration-300", children: "Contacto" })
+              }
+            )
+          ] }) })
+        ] })
+      }
+    )
+  ] });
+}
+
+const $$Astro = createAstro("https://ezeekiel3.github.io");
+const $$Layout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$Layout;
+  return renderTemplate`<html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/pagina-iglesia-astro/favicon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>Iglesia Pueblo Nuevo</title>${renderHead()}</head> <header class="bg-orange-200 flex justify-center bg-opacity-50 w-full px-4" data-astro-cid-sckkx6r4> <div class="container flex justify-between items-center" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/" data-astro-cid-sckkx6r4> <img${addAttribute(logoHeader.src, "src")} class="h-14 p-2" data-astro-cid-sckkx6r4> </a> <div class="xl:flex hidden xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center" data-astro-cid-sckkx6r4> ${renderComponent($$result, "HeaderButton", HeaderButton, { "buttonText": "Iglesia", "client:load": true, "client:component-hydration": "load", "client:component-path": "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/components/HeaderButton.tsx", "client:component-export": "default", "data-astro-cid-sckkx6r4": true }, { "default": ($$result2) => renderTemplate` <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Creemos en...</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/Ubicaciones" data-astro-cid-sckkx6r4>Ubicaciones</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/Agenda" data-astro-cid-sckkx6r4>Agenda</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/NuestraComunidad" data-astro-cid-sckkx6r4>Nuestra Comunidad</a> </li> ` })} ${renderComponent($$result, "HeaderButton", HeaderButton, { "buttonText": "Material", "client:load": true, "client:component-hydration": "load", "client:component-path": "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/components/HeaderButton.tsx", "client:component-export": "default", "data-astro-cid-sckkx6r4": true }, { "default": ($$result2) => renderTemplate` <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/Material" data-astro-cid-sckkx6r4>Estudios Inductivos</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Discipulados</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Otros Escritos</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Guias De Oración</a> </li> ` })} ${renderComponent($$result, "HeaderButton", HeaderButton, { "buttonText": "Ni\xF1os", "client:load": true, "client:component-hydration": "load", "client:component-path": "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/components/HeaderButton.tsx", "client:component-export": "default", "data-astro-cid-sckkx6r4": true }, { "default": ($$result2) => renderTemplate` <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/Nenes" data-astro-cid-sckkx6r4>Trabajo</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Material</a> </li> ` })} ${renderComponent($$result, "HeaderButton", HeaderButton, { "buttonText": "Centro de Desarrollo", "client:load": true, "client:component-hydration": "load", "client:component-path": "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/components/HeaderButton.tsx", "client:component-export": "default", "data-astro-cid-sckkx6r4": true }, { "default": ($$result2) => renderTemplate` <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="/pagina-iglesia-astro/Cdc" data-astro-cid-sckkx6r4>Descripción</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Ubicación</a> </li> <li class="py-2 px-6 hover:text-white gap-4 hover:bg-logo transition-colors duration-200" data-astro-cid-sckkx6r4> <a href="#" data-astro-cid-sckkx6r4>Reservas</a> </li> ` })} ${renderComponent($$result, "HeaderButton", HeaderButton, { "buttonText": "Contacto", "data-astro-cid-sckkx6r4": true })} </div> <div class="xl:hidden flex xl:items-center xl:gap-8 xl:bg-transparent xl:justify-center" data-astro-cid-sckkx6r4> ${renderComponent($$result, "HeaderButton", HeaderButton, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/components/HeaderButton.tsx", "client:component-export": "default", "data-astro-cid-sckkx6r4": true })} </div> </div> </header> ${renderSlot($$result, $$slots["default"])} <footer class="w-full bg-logo flex-col flex items-center mt-14 pb-10" data-astro-cid-sckkx6r4> <h1 class="text-white xl:text-4xl py-5 mb-5" data-astro-cid-sckkx6r4>Nos gustaría que nos contactes</h1> <div class="flex h-full xl:justify-around xl:flex-row flex-col xl:ml-0 ml-5 w-10/12 xl:gap-0 gap-10" data-astro-cid-sckkx6r4> <div class="flex flex-col gap-5 w-11/12" data-astro-cid-sckkx6r4> <h3 class="text-white xl:text-xl text-base xl:font-logo" data-astro-cid-sckkx6r4>Nuestras Redes</h3> <a href="mailto:info@pueblonuevobautista.com" target="_blank" class="rounded flex gap-2 xl:font-semibold text-white hover:bg-white hover:text-logo items-center p-2 transition duration-100" data-astro-cid-sckkx6r4> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" data-astro-cid-sckkx6r4><path fill="currentColor" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" data-astro-cid-sckkx6r4></path></svg>
+info@pueblonuevobautista.com.ar
+</a> <a href="https://www.facebook.com/iglesiapueblonuevoberisso/" class="rounded flex gap-2 xl:font-semibold text-white hover:bg-white hover:text-logo items-center p-2 transition duration-100" target="_blank" data-astro-cid-sckkx6r4> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24px" height="24px" viewBox="0 0 256 256" xml:space="preserve" data-astro-cid-sckkx6r4> <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" data-astro-cid-sckkx6r4> <path fill="currentColor" d="M 83.254 90 H 59.253 c -1.104 0 -2 -0.896 -2 -2 V 54.696 c 0 -1.104 0.896 -2 2 -2 h 9.42 l 1.158 -8.979 H 59.253 c -1.104 0 -2 -0.896 -2 -2 v -8.286 c 0 -3.571 0.874 -8.319 8.432 -8.319 l 4.873 -0.002 v -7.801 c -1.871 -0.154 -4.797 -0.32 -8.015 -0.32 c -9.2 0 -14.693 5.666 -14.693 15.156 v 9.572 c 0 1.104 -0.896 2 -2 2 h -9.208 v 8.979 h 9.208 c 1.104 0 2 0.896 2 2 V 88 c 0 1.104 -0.896 2 -2 2 H 6.747 C 3.027 90 0 86.974 0 83.253 V 6.747 C 0 3.026 3.027 0 6.747 0 h 76.507 C 86.974 0 90 3.026 90 6.747 v 76.506 C 90 86.974 86.974 90 83.254 90 z M 61.253 86 h 22.001 C 84.769 86 86 84.768 86 83.253 V 6.747 C 86 5.232 84.769 4 83.254 4 H 6.747 C 5.232 4 4 5.232 4 6.747 v 76.506 C 4 84.768 5.232 86 6.747 86 H 43.85 V 56.696 h -9.208 c -1.104 0 -2 -0.896 -2 -2 V 41.717 c 0 -1.104 0.896 -2 2 -2 h 9.208 v -7.572 c 0 -11.816 7.163 -19.156 18.693 -19.156 c 4.763 0 8.981 0.356 10.278 0.529 c 0.994 0.132 1.736 0.98 1.736 1.982 v 11.608 c 0 1.104 -0.895 2 -1.999 2 l -6.873 0.003 c -3.995 0 -4.433 1.383 -4.433 4.319 v 6.286 h 10.853 c 0.575 0 1.122 0.248 1.502 0.679 c 0.38 0.432 0.555 1.006 0.481 1.577 l -1.674 12.979 c -0.129 0.997 -0.978 1.744 -1.983 1.744 h -9.179 V 86 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" data-astro-cid-sckkx6r4></path> </g> </svg>
+Iglesia Pueblo Nuevo Berisso
+</a> <a href="https://www.instagram.com/iglesiapueblonuevoberisso/?hl=es-la" class="gap-2 rounded flex p-2 xl:font-semibold text-white hover:text-logo hover:bg-white transition duration-100 items-center" data-astro-cid-sckkx6r4> <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-astro-cid-sckkx6r4> <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7.46494 1.066C8.63828 1.01222 9.01228 1 12 1C14.9883 1 15.3617 1.01283 16.5344 1.066C17.7059 1.11917 18.5059 1.30556 19.2056 1.5775C19.9395 1.85381 20.6043 2.28674 21.1538 2.84617C21.7133 3.3956 22.1463 4.06046 22.4225 4.79439C22.6944 5.49411 22.8802 6.29406 22.934 7.46494C22.9878 8.63828 23 9.01228 23 12C23 14.9877 22.9872 15.3617 22.934 16.5351C22.8808 17.7059 22.6944 18.5059 22.4225 19.2056C22.1414 19.9286 21.7649 20.5427 21.1538 21.1538C20.6044 21.7133 19.9395 22.1463 19.2056 22.4225C18.5059 22.6944 17.7059 22.8802 16.5351 22.934C15.3617 22.9878 14.9877 23 12 23C9.01228 23 8.63828 22.9872 7.46494 22.934C6.29406 22.8808 5.49411 22.6944 4.79439 22.4225C4.07144 22.1414 3.45728 21.7649 2.84617 21.1538C2.28664 20.6044 1.85368 19.9395 1.5775 19.2056C1.30556 18.5059 1.11978 17.7059 1.066 16.5351C1.01222 15.3617 1 14.9883 1 12C1 9.01167 1.01283 8.63828 1.066 7.46556C1.11917 6.29406 1.30556 5.49411 1.5775 4.79439C1.85381 4.06051 2.28674 3.39568 2.84617 2.84617C3.39559 2.28664 4.06045 1.85368 4.79439 1.5775C5.49411 1.30556 6.29406 1.11978 7.46494 1.066ZM16.4452 3.046C15.2853 2.99344 14.937 2.98183 12 2.98183C9.063 2.98183 8.71467 2.99344 7.55478 3.046C6.48228 3.09489 5.89989 3.27394 5.51244 3.42489C4.99911 3.62411 4.63244 3.86244 4.24744 4.24744C3.86306 4.63244 3.62411 4.99911 3.42489 5.51244C3.27394 5.89989 3.09489 6.48228 3.046 7.55478C2.99344 8.71467 2.98183 9.063 2.98183 12C2.98183 14.937 2.99344 15.2853 3.046 16.4452C3.09489 17.5177 3.27394 18.1001 3.42489 18.4876C3.60111 18.9654 3.88219 19.3976 4.24744 19.7526C4.60234 20.1178 5.03461 20.3989 5.51244 20.5751C5.89989 20.7261 6.48228 20.9051 7.55478 20.954C8.71467 21.0066 9.06239 21.0182 12 21.0182C14.9376 21.0182 15.2853 21.0066 16.4452 20.954C17.5177 20.9051 18.1001 20.7261 18.4876 20.5751C19.0009 20.3759 19.3676 20.1376 19.7526 19.7526C20.1178 19.3977 20.3989 18.9654 20.5751 18.4876C20.7261 18.1001 20.9051 17.5177 20.954 16.4452C21.0066 15.2853 21.0182 14.937 21.0182 12C21.0182 9.063 21.0066 8.71467 20.954 7.55478C20.9051 6.48228 20.7261 5.89989 20.5751 5.51244C20.3759 4.99911 20.1376 4.63244 19.7526 4.24744C19.3676 3.86306 19.0009 3.62411 18.4876 3.42489C18.1001 3.27394 17.5177 3.09489 16.4452 3.046ZM10.5955 15.3909C11.0408 15.5754 11.518 15.6703 12 15.6703C12.9735 15.6703 13.907 15.2836 14.5953 14.5953C15.2837 13.907 15.6704 12.9734 15.6704 12C15.6704 11.0266 15.2837 10.093 14.5953 9.40468C13.907 8.71636 12.9735 8.32966 12 8.32966C11.518 8.32966 11.0408 8.4246 10.5955 8.60905C10.1501 8.7935 9.74553 9.06385 9.40471 9.40468C9.06389 9.7455 8.79353 10.1501 8.60908 10.5954C8.42463 11.0407 8.3297 11.518 8.3297 12C8.3297 12.482 8.42463 12.9593 8.60908 13.4046C8.79353 13.8499 9.06389 14.2545 9.40471 14.5953C9.74553 14.9361 10.1501 15.2065 10.5955 15.3909ZM8.00205 8.00201C9.06238 6.94168 10.5005 6.34599 12 6.34599C13.4996 6.34599 14.9377 6.94168 15.998 8.00201C17.0583 9.06234 17.654 10.5005 17.654 12C17.654 13.4995 17.0583 14.9376 15.998 15.998C14.9377 17.0583 13.4996 17.654 12 17.654C10.5005 17.654 9.06238 17.0583 8.00205 15.998C6.94172 14.9376 6.34603 13.4995 6.34603 12C6.34603 10.5005 6.94172 9.06234 8.00205 8.00201ZM18.9077 7.18838C19.1583 6.93773 19.2991 6.59779 19.2991 6.24333C19.2991 5.88886 19.1583 5.54892 18.9077 5.29828C18.657 5.04764 18.3171 4.90683 17.9626 4.90683C17.6082 4.90683 17.2682 5.04764 17.0176 5.29828C16.7669 5.54892 16.6261 5.88886 16.6261 6.24333C16.6261 6.59779 16.7669 6.93773 17.0176 7.18838C17.2682 7.43902 17.6082 7.57983 17.9626 7.57983C18.3171 7.57983 18.657 7.43902 18.9077 7.18838Z" fill="#000000" data-astro-cid-sckkx6r4></path> </svg>
+iglesiapueblonuevoberisso
+</a> <a href="https://www.youtube.com/channel/UCn_R1HK925a77O-rQ_MuLqA/videos?view=0" target="_blank" class="rounded gap-2 flex p-2 items-center xl:font-semibold text-white hover:text-logo hover:bg-white transition duration-100" data-astro-cid-sckkx6r4> <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-astro-cid-sckkx6r4> <path fill="currentColor" d="M20.5245 6.00694C20.3025 5.81544 20.0333 5.70603 19.836 5.63863C19.6156 5.56337 19.3637 5.50148 19.0989 5.44892C18.5677 5.34348 17.9037 5.26005 17.1675 5.19491C15.6904 5.06419 13.8392 5 12 5C10.1608 5 8.30956 5.06419 6.83246 5.1949C6.09632 5.26005 5.43231 5.34348 4.9011 5.44891C4.63628 5.50147 4.38443 5.56337 4.16403 5.63863C3.96667 5.70603 3.69746 5.81544 3.47552 6.00694C3.26514 6.18846 3.14612 6.41237 3.07941 6.55976C3.00507 6.724 2.94831 6.90201 2.90314 7.07448C2.81255 7.42043 2.74448 7.83867 2.69272 8.28448C2.58852 9.18195 2.53846 10.299 2.53846 11.409C2.53846 12.5198 2.58859 13.6529 2.69218 14.5835C2.74378 15.047 2.81086 15.4809 2.89786 15.8453C2.97306 16.1603 3.09841 16.5895 3.35221 16.9023C3.58757 17.1925 3.92217 17.324 4.08755 17.3836C4.30223 17.461 4.55045 17.5218 4.80667 17.572C5.32337 17.6733 5.98609 17.7527 6.72664 17.8146C8.2145 17.9389 10.1134 18 12 18C13.8865 18 15.7855 17.9389 17.2733 17.8146C18.0139 17.7527 18.6766 17.6733 19.1933 17.572C19.4495 17.5218 19.6978 17.461 19.9124 17.3836C20.0778 17.324 20.4124 17.1925 20.6478 16.9023C20.9016 16.5895 21.0269 16.1603 21.1021 15.8453C21.1891 15.4809 21.2562 15.047 21.3078 14.5835C21.4114 13.6529 21.4615 12.5198 21.4615 11.409C21.4615 10.299 21.4115 9.18195 21.3073 8.28448C21.2555 7.83868 21.1874 7.42043 21.0969 7.07448C21.0517 6.90201 20.9949 6.72401 20.9206 6.55976C20.8539 6.41236 20.7349 6.18846 20.5245 6.00694Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-sckkx6r4></path> <path fill="currentColor" d="M14.5385 11.5L10.0962 14.3578L10.0962 8.64207L14.5385 11.5Z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-sckkx6r4></path> </svg>
+Pueblo Nuevo Berisso</a> </div> <div class="flex flex-col gap-5 w-11/12" data-astro-cid-sckkx6r4> <h3 class="text-white xl:text-xl font-logo" data-astro-cid-sckkx6r4>Telefonos</h3> <a href="tel:2214644748" class="rounded flex gap-2 p-2 items-center text-white hover:text-logo hover:bg-white transition duration-100" data-astro-cid-sckkx6r4> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" data-astro-cid-sckkx6r4><path fill="currentColor" d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" data-astro-cid-sckkx6r4></path></svg>
+464-4748
+</a> <a href="tel:2214642384" class="rounded flex gap-2 p-2 items-center text-white hover:text-logo hover:bg-white transition duration-100" data-astro-cid-sckkx6r4> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" data-astro-cid-sckkx6r4><path fill="currentColor" d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" data-astro-cid-sckkx6r4></path></svg>
+464-2384
+</a> </div> <div class="flex flex-col gap-5 w-11/12" data-astro-cid-sckkx6r4> <h3 class="text-white xl:text-xl xl:font-logo" data-astro-cid-sckkx6r4>Horarios</h3> <p class="text-white xl:font-semibold" data-astro-cid-sckkx6r4>Lunes a Viernes de 08 a 13 hs</p> </div> </div> </footer>  </html>`;
+}, "/home/pclinuxroom/Documentos/pagina-iglesia-astro/src/layouts/Layout.astro", void 0);
+
+export { $$Layout as $ };

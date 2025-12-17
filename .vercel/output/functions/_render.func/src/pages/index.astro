@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logoBody from '../img/logo2.png'
+import Conocenos from '../components/Conocenos.tsx';
+import CreemosEn from "../components/CreemosEn.tsx";
+import { Image } from 'astro:assets';
+---
+
+<Layout>
+	<main class='flex justify-center w-full min-h-full'>
+		<div class='container flex items-center flex-col'>
+			<div class='my-6'>
+				<Image src={logoBody} alt="" class='xl:h-80 xl:w-full h-28'/>
+			</div>
+			<h2 class='text-logo xl:text-5xl my-6 text-2xl font-sans'>Una Iglesia, muchos lugares</h2>
+			<Conocenos client:load />
+			<CreemosEn client:load />
+		</div>
+	</main>
+</Layout>

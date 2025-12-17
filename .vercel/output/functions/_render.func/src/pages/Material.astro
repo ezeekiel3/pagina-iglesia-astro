@@ -1,0 +1,23 @@
+---
+import { getSections } from '../db/getSections'
+export const prerender = false
+import Layout from '../layouts/Layout.astro'
+
+import SeccionBiblica from '../components/SeccionBiblica.tsx'
+
+const sections = await getSections()
+---
+
+<Layout>
+    <main class='h-auto w-full flex flex-col items-center'>
+        <div class='flex flex-col items-center mt-10 gap-4'>
+            <h1 class='text-logo font-roboto font-bold xl:text-3xl text-2xl'>Materiales de Estudio Bíblico</h1>
+            <p class='xl:text-xl opacity-75 text-base text-center xl:text-start'>
+                Recursos para profundizar en la Palabra de Dios y crecer en tu fe
+            </p>
+        </div>
+        {
+            sections.map((section) => <SeccionBiblica section={section}, pageValue='main' client:load/>)
+        }
+    </main>
+</Layout>
