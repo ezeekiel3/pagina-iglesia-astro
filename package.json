@@ -21,6 +21,7 @@
         "@types/pg": "^8.15.6",
         "@types/react": "^19.0.2",
         "@types/react-dom": "^19.0.2",
+        "@vercel/blob": "^2.0.0",
         "astro": "^5.16.2",
         "auth-astro": "^4.2.0",
         "dotenv": "^17.2.3",

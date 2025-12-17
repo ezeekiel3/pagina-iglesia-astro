@@ -5,14 +5,15 @@ import tailwind from '@astrojs/tailwind'
 
 import react from '@astrojs/react'
 
-import vercel from '@astrojs/vercel';
+import vercel from '@astrojs/vercel'
 
-import auth from 'auth-astro';
+// import auth from 'auth-astro'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), auth()],
-  site: 'https://ezeekiel3.github.io',
-  base: 'pagina-iglesia-astro',
-  adapter: vercel(),
+    integrations: [tailwind(), react()],
+    site: 'https://ezeekiel3.github.io',
+    base: 'pagina-iglesia-astro',
+    output: 'server',
+    adapter: vercel(),
 })

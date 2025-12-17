@@ -5595,7 +5595,7 @@ function downloadAllPdf() {
         }
     }
 
-    const BASE_PATH = 'C:/Users/compupc/Documents/material-iglesia'
+    const BASE_PATH = '/home/pclinuxroom/Documentos/material-iglesia'
     const MAIN_DIR = path.join(BASE_PATH, 'main')
     const KIDS_DIR = path.join(BASE_PATH, 'kids')
 
